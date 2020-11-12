@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-@import url(//db.onlinewebfonts.com/c/449b1c567da51480d590112112addcd6?family=CommercialScript+BT);
+@import url("https://db.onlinewebfonts.com/c/449b1c567da51480d590112112addcd6?family=CommercialScript+BT");
 @font-face {
   font-family: "NEXON Lv1 Gothic";
   src: url("/img/font/NEXON Lv1 Gothic OTF.eot");
@@ -429,7 +429,7 @@ nav .contact-email .contact-inner {
 }
 
 nav .contact-email .contact-inner span {
-  background: url("/img/contact-icon-email-black.png") no-repeat;
+  background: url("portfolio/img/contact-icon-email-black.png") no-repeat;
 }
 
 nav .contact-email .contact-inner .email {
@@ -581,12 +581,12 @@ aside .contact .contact-box .contact-email .contact-inner li {
 }
 
 aside .contact .contact-box .contact-email .contact-inner .icon-email {
-  background: url("/img/contact-icon-email-red.png") no-repeat;
+  background: url("portfolio/img/contact-icon-email-red.png") no-repeat;
 }
 
 aside .contact .contact-box .contact-email .contact-inner .icon-name {
   height: 30px;
-  background: url("/img/contact-icon-name-red.png") no-repeat;
+  background: url("portfolio/img/contact-icon-name-red.png") no-repeat;
 }
 
 aside .contact .contact-box .contact-email .contact-inner .name, aside .contact .contact-box .contact-email .contact-inner .email {
