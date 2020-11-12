@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
         function headerColor(name){
             console.log(filename);
-            if(filename == '/portfolio/index.html'){
+            if(filename == '/portfolio/'){
                 window.addEventListener('scroll',function(){
                     if(window.scrollY > 1000){
                         changeColor('#fff');
@@ -52,6 +52,8 @@ window.addEventListener('DOMContentLoaded',function(){
                 });
             }
         }
+
+        document.addEventListener('load',cursorPos);
 
         document.addEventListener('mousemove',cursorPos);
 
