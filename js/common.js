@@ -27,8 +27,7 @@ window.addEventListener('DOMContentLoaded',function(){
         headerColor(triggerSpan);
 
         function headerColor(name){
-            console.log(filename);
-            if(filename == '/portfolio/index.html'){
+            if(filename == '/portfolio/'){
                 window.addEventListener('scroll',function(){
                     if(window.scrollY > 1000){
                         changeColor('#fff');
