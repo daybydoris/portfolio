@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프론트엔드 개발자 정영신 포트폴리오</title>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+
+    <script defer src="js/common.js"></script>
+
+</head>
+<body>
+    <div class="cursor"></div>
+    <header>
+        <div class="h_container">
+            <div class="logo">
+                <a href="#" class="black atvBtn">
+                    <svg width="90" height="70" viewBox="0 0 90 70">
+                        <text x="0" y="30%">Jeong</text>
+                        <text x="0" y="60%">Young</text>
+                        <text x="0" y="90%">Shin</text>
+                    </svg>
+                </a>
+            </div>
+            <div class="menu-trigger black atvBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- nav -->
+        <div class="nav-wrap"></div>
+        <nav>
+            <div class="menu">
+                <a href="#" id="about">About.</a>
+                <a href="#" id="projects">Projects.</a>
+            </div>
+            <div class="contact-email">
+                <h3>Contact</h3>
+                <div class="contact-inner">
+                    <span></span>
+                    <a href="mailto:graphicodev@gmail.com" class="email atvBtn">graphicodev@gmail.com</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- contact -->
+    <aside>
+        <div class="contact">
+            <a href="#">
+                <div class="contact-label white atvBtn">
+                    <h3>Contact</h3>
+                </div>
+            </a>
+            <div class="contact-box">
+                <div class="contact-txt">
+                    <h2>I'm waiting<br>for you <b>:)</b></h2>
+                    <p>궁금한 점이 있으시면 이메일로 연락 부탁드립니다.</p>
+                </div>
+                <div class="contact-email">
+                    <h3>Contact</h3>
+                    <div class="contact-inner">
+                        <ul>
+                            <li>
+                                <span class="icon-name"></span>
+                                <p class="name">정영신</p>
+                            </li>
+                            <li>
+                                <span class="icon-email"></span>
+                                <a href="mailto:graphicodev@gmail.com" class="email atvBtn">graphicodev@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- main -->
+    <main>
+        <article class="index-about">
+            <!-- canvas -->
+            <canvas>
+
+            </canvas>
+
+            <div class="txt-wrap">
+                <h2 class="index-txt">
+                    Hello.
+                    I’m a</br>
+                    <div class="front">
+                        Frontend</br>
+                        Developer</br>
+                        <span class="txt-back">
+                            Frontend</br>
+                            Developer
+                        </span>
+                    </div>
+                    Jeong Young Shin.</br>
+                </h2>
+                <div class="btn-wrap atvBtn">
+                    <a href="#" class="detail-btn">about +</a>
+                    <a href="#" class="circle"></a>
+                </div>
+            </div>
+            <div class="scroll">
+                <div class="scroll-icon">
+                    <img src="img/index-icon-scroll.png" alt>
+                </div>
+            </div>
+        </article>
+        <article class="index-project">
+
+            <div class="txt-wrap">
+                <h2 class="index-txt">
+                    <div class="front">
+                        Projects.
+                        <span class="txt-back">Projects.</span>
+                    </div>
+                </h2>
+                
+                <div class="btn-wrap atvBtn">
+                    <a href="#" class="detail-btn">view more projets +</a>
+                    <a href="#" class="circle"></a>
+                </div>
+            </div>
+
+            <!-- slider -->
+            <div class="slider">
+                <div class="slider-con">
+                    <div class="img-box">
+                        <img src="img/project-coffee-thumb.jpg" alt>
+                    </div>
+                    <!-- <div class="title">
+                        Coffee for you.
+                    </div> -->
+                    <div class="svg-box">
+                        <svg width="100%" height="120" viewBox="0 0 100% 120">
+                            <text x="50%" y="50%" text-anchor="middle" class="title">Coffee for you.</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="slider-con">
+                    <div class="img-box">
+                        <img src="img/project-raon-thumb.jpg" alt>
+                    </div>
+                    <div class="svg-box">
+                        <svg width="100%" height="120" viewBox="0 0 100% 120">
+                            <text x="50%" y="50%" text-anchor="middle" class="title">Raon corp.</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="slider-con">
+                    <div class="img-box">
+                        <img src="img/project-coffee-thumb.jpg" alt>
+                    </div>
+                    <div class="svg-box">
+                        <svg width="100%" height="120" viewBox="0 0 100% 120">
+                            <text x="50%" y="50%" text-anchor="middle" class="title">Coffee for you.</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/slick.js"></script>
+    
+    <script>
+        $(".slider").slick({
+          slidesToShow: 1,
+          autoplay: false,
+          autoplaySpeed: 4000,
+          centerMode: true,
+          arrows: false,
+          slidesPerRow:1
+        });
+      </script>
+</body>
+</html>

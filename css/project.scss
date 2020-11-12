@@ -1,0 +1,101 @@
+@import url('css/common.css');
+
+
+/* mixin */
+
+@mixin list-order($val){
+    @if $val == odd {
+      flex-direction: row;
+    //   .project-prev{
+
+    //   }
+    }
+    @else if $val == even {
+      flex-direction: row-reverse;
+      .project-prev{
+          text-align: right;
+          p{
+              display: inline-block;
+          }
+      }
+
+    }
+  }
+
+
+.rotate{
+    transform: rotate(5deg);
+}
+  
+body{
+    background:#151515;
+}
+article.project{
+    width:68%;
+    padding:200px 0;
+    margin:0 auto;
+
+    .index-txt{
+        color:#fff;
+        margin-bottom:200px;
+
+        .txt-back{
+            bottom:0;
+        }
+    }
+    .project-inner{
+        .project-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            margin-bottom:250px;
+
+            .thumb{
+                width:55%;
+                img{
+                    width:100%;
+                }
+            }
+            .project-prev{
+                width:40%;
+                .title-svg{
+                    margin-bottom:30px;
+                }
+                .title{
+                    font-size:70px;
+                    font-weight: bold;
+
+                    fill:transparent;
+                    stroke-width: 0.5;
+                    stroke: rgba(255,255,255,0.7);
+                }
+                .responsive{
+                    margin-bottom:20px;
+                    font-weight: bold;
+
+                    #pc,#tablet,#mobile{
+                        color:#99785f;
+                    }
+                    span{
+                        color:#545454;
+                    }
+                }
+                .prev-txt{
+                    width:60%;
+                    font-weight: 100;
+                    color:#f5f5f5;
+                }
+            }
+            .responsive{
+                p{display:inline-block;}
+            }
+        }
+        .odd{
+            @include list-order(odd);
+        }
+        .even{
+            @include list-order(even);
+        }
+    }
+}

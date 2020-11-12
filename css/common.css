@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+@import url(//db.onlinewebfonts.com/c/449b1c567da51480d590112112addcd6?family=CommercialScript+BT);
+@font-face {
+  font-family: "NEXON Lv1 Gothic";
+  src: url("/img/font/NEXON Lv1 Gothic OTF.eot");
+  src: url("/img/font/NEXON Lv1 Gothic OTF.woff");
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic Light";
+  src: url("/img/font/NEXON Lv1 Gothic OTF Light.eot");
+  src: url("/img/font/NEXON Lv1 Gothic OTF Light.woff");
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic Bold";
+  src: url("/img/font/NEXON Lv1 Gothic OTF Bold.eot");
+  src: url("/img/font/NEXON Lv1 Gothic OTF Bold.woff");
+}
+
+@font-face {
+  font-family: "NEXON Lv2 Gothic";
+  src: url("/img/font/NEXON Lv2 Gothic.eot");
+  src: url("/img/font/NEXON Lv2 Gothic.woff");
+}
+
+@font-face {
+  font-family: "NEXON Lv2 Gothic Light";
+  src: url("/img/font/NEXON Lv2 Gothic Light.eot");
+  src: url("/img/font/NEXON Lv2 Gothic Light.woff");
+}
+
+@font-face {
+  font-family: "NEXON Lv2 Gothic Bold";
+  src: url("/img/font/NEXON Lv2 Gothic Bold.eot");
+  src: url("/img/font/NEXON Lv2 Gothic Bold.woff");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat, "NEXON Lv2 Gothic";
+  letter-spacing: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: Montserrat, "NEXON Lv1 Gothic Bold";
+  margin: 0;
+  padding: 0;
+}
+
+html p,
+body p {
+  font-family: Montserrat, "NEXON Lv2 Gothic Light";
+  margin: 0;
+  padding: 0;
+}
+
+html ul,
+html li,
+body ul,
+body li {
+  list-style: none;
+  padding: 0;
+}
+
+html a,
+body a {
+  text-decoration: none;
+  color: #151515;
+  font-family: Montserrat, "NEXON Lv1 Gothic Light", "NEXON Lv2 Gothic";
+}
+
+html a, html button, html div,
+body a,
+body button,
+body div {
+  outline: 0;
+}
+
+html img,
+body img {
+  margin: 0 auto;
+}
+
+html .cursor,
+body .cursor {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #e8001b;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  opacity: 0.8;
+  z-index: 50;
+  pointer-events: none;
+}
+
+html .cursor.active,
+body .cursor.active {
+  pointer-events: none;
+  mix-blend-mode: difference;
+  isolation: isolate;
+  -webkit-animation: cursor 0.3s forwards;
+          animation: cursor 0.3s forwards;
+}
+
+@-webkit-keyframes cursor {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    background: #e8001b;
+    border: none;
+    opacity: 0.5;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+    background: #e8001b;
+    border: none;
+    opacity: 0.5;
+  }
+}
+
+.btn-wrap {
+  display: inline-block;
+  margin: 25px 15px;
+  position: relative;
+}
+
+.btn-wrap .detail-btn {
+  font-size: 15px;
+  font-weight: 500;
+  color: #737373;
+  letter-spacing: 5px;
+  display: inline-block;
+}
+
+.btn-wrap .circle {
+  width: 40px;
+  height: 40px;
+  background: #e8001b;
+  border-radius: 50px;
+  position: absolute;
+  left: -15px;
+  top: -2px;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.index-txt {
+  font-size: 60px;
+}
+
+.index-txt .front {
+  position: relative;
+}
+
+.index-txt .front .txt-back {
+  font-family: "CommercialScript BT";
+  font-size: 60px;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 10px;
+  color: #e8001b;
+  position: absolute;
+  left: 0;
+  mix-blend-mode: difference;
+  isolation: isolate;
+}
+
+header {
+  width: 100%;
+  height: 125px;
+  position: fixed;
+  z-index: 20;
+}
+
+header .h_container.white .menu-trigger span {
+  background: #fff;
+}
+
+header .h_container {
+  padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .h_container .logo {
+  z-index: 20;
+}
+
+header .h_container .logo text {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header .h_container .logo .black {
+  fill: #151515;
+}
+
+header .h_container .logo .white {
+  fill: #fff;
+}
+
+header .h_container .menu-trigger {
+  width: 50px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  z-index: 20;
+}
+
+header .h_container .menu-trigger span {
+  height: 1px;
+  display: block;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 20;
+}
+
+header .h_container .menu-trigger span:nth-of-type(1) {
+  width: 50%;
+  right: 0;
+  top: 0;
+}
+
+header .h_container .menu-trigger span:nth-of-type(2) {
+  width: 100%;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .h_container .menu-trigger span:nth-of-type(3) {
+  width: 75%;
+  right: 0;
+  bottom: 0;
+}
+
+header .h_container .menu-trigger.black span {
+  background: #151515;
+}
+
+header .h_container .menu-trigger.white span {
+  background: #fff;
+}
+
+header .h_container .menu-trigger:hover span:nth-of-type(1),
+header .h_container .menu-trigger:hover span:nth-of-type(3) {
+  width: 100%;
+}
+
+header .h_container .menu-trigger.active span:nth-of-type(1),
+header .h_container .menu-trigger.active span:nth-of-type(3) {
+  width: 100%;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header .h_container .menu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .h_container .menu-trigger.active span:nth-of-type(2) {
+  display: none;
+}
+
+header .h_container .menu-trigger.active span:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.nav-wrap {
+  width: 70px;
+  height: 70px;
+  background: #e8001b;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: 5;
+}
+
+nav.active {
+  opacity: 1;
+  display: block;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #e8001b;
+  z-index: 10;
+  opacity: 0;
+  display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+nav .menu {
+  width: 500px;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+nav .menu a {
+  display: inline-block;
+  font-size: 90px;
+  font-weight: bold;
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin: 20px 0;
+}
+
+nav .menu a:hover {
+  color: #fff;
+}
+
+nav .menu a:after {
+  display: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "CommercialScript BT";
+  font-size: 80px;
+  font-style: italic;
+  letter-spacing: 14px;
+  mix-blend-mode: difference;
+  isolation: isolate;
+}
+
+nav .menu a:hover:after {
+  display: block;
+  color: #e8001b;
+}
+
+nav .menu #about:after {
+  content: "About";
+}
+
+nav .menu #projects:after {
+  content: "Projects";
+}
+
+nav .contact-email {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}
+
+nav .contact-email .contact-inner {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .contact-email .contact-inner span {
+  background: url("/img/contact-icon-email-black.png") no-repeat;
+}
+
+nav .contact-email .contact-inner .email {
+  border-bottom: 1px solid rgba(21, 21, 21, 0.3);
+}
+
+.contact-email {
+  width: 250px;
+}
+
+.contact-email h3 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.contact-email .contact-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-email .contact-inner span {
+  width: 32px;
+  height: 21px;
+  display: inline-block;
+}
+
+.contact-email .contact-inner .email {
+  padding-bottom: 5px;
+}
+
+aside .contact .contact-label {
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 8px;
+  margin: 0;
+  -webkit-transform: rotate(90deg) translateY(90%);
+          transform: rotate(90deg) translateY(90%);
+  position: fixed;
+  left: 0;
+  top: 70%;
+  z-index: 4;
+}
+
+aside .contact .contact-label.black {
+  color: #fff;
+  background: #151515;
+}
+
+aside .contact .contact-label.white {
+  color: #151515;
+  background: #fff;
+}
+
+aside .contact .contact-label:hover {
+  -webkit-animation: label 0.3s;
+          animation: label 0.3s;
+  -webkit-transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+@-webkit-keyframes label {
+  0% {
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
+  }
+  50% {
+    -webkit-transform: rotate(90deg) translateY(87%);
+            transform: rotate(90deg) translateY(87%);
+  }
+  100% {
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
+  }
+}
+
+@keyframes label {
+  0% {
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
+  }
+  50% {
+    -webkit-transform: rotate(90deg) translateY(87%);
+            transform: rotate(90deg) translateY(87%);
+  }
+  100% {
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
+  }
+}
+
+aside .contact .contact-box {
+  position: fixed;
+  left: -100%;
+  top: 58%;
+  width: 100%;
+  height: 30vh;
+  background: #151515;
+  z-index: 3;
+}
+
+aside .contact .contact-box .contact-txt {
+  width: 70%;
+  margin: 300px auto 0 auto;
+  opacity: 0;
+}
+
+aside .contact .contact-box .contact-txt h2 {
+  font-size: 70px;
+  color: #fff;
+}
+
+aside .contact .contact-box .contact-txt h2 b {
+  color: #e8001b;
+}
+
+aside .contact .contact-box .contact-txt p {
+  color: #9a9a9a;
+  font-size: 15px;
+}
+
+aside .contact .contact-box .contact-email {
+  width: 70%;
+  margin: 60px auto;
+  opacity: 0;
+}
+
+aside .contact .contact-box .contact-email .contact-inner {
+  width: 100%;
+  margin: 0;
+}
+
+aside .contact .contact-box .contact-email .contact-inner li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+}
+
+aside .contact .contact-box .contact-email .contact-inner .icon-email {
+  background: url("/img/contact-icon-email-red.png") no-repeat;
+}
+
+aside .contact .contact-box .contact-email .contact-inner .icon-name {
+  height: 30px;
+  background: url("/img/contact-icon-name-red.png") no-repeat;
+}
+
+aside .contact .contact-box .contact-email .contact-inner .name, aside .contact .contact-box .contact-email .contact-inner .email {
+  color: #ececec;
+  margin-left: 10px;
+}
+
+aside .contact .contact-box .contact-email .contact-inner .name {
+  display: inline-block;
+}
+
+aside .contact .contact-box .contact-email .contact-inner .email {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 6px;
+}
+
+aside .contact-box.active {
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+
+aside .contact-box.active .contact-txt,
+aside .contact-box.active .contact-email {
+  opacity: 1;
+}
+/*# sourceMappingURL=common.css.map */

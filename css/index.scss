@@ -1,0 +1,151 @@
+@import url('css/common.css');
+
+
+$black: #151515;
+$red: #e8001b;
+
+article{
+    width:100%;
+}
+
+
+article.index-about{
+    height:1080px;
+    position: relative;
+
+    canvas{
+        position: absolute;
+        left:0; top:0;
+        width:100%;
+        height:100vh;
+        background:#fff;
+    
+        z-index:-1;
+    }
+
+    .txt-wrap{
+        width:60%;
+        margin:0 auto;
+
+        padding:290px 0;
+
+        .index-txt{
+            .front{
+                height:150px;
+
+                .txt-back{
+                    top:5%;
+                }
+            }
+        }
+        
+    }
+    .btn-wrap{
+        isolation: isolate;
+    }
+    .circle{
+        mix-blend-mode: color-burn;
+        background:#151515;
+        opacity: 0.6;
+    }
+    .btn-wrap:hover .circle{
+        width:120%;
+      }
+
+    .scroll{
+
+        position: absolute;
+        left:50%; bottom:15%;
+        width:15px;
+        margin:0 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        
+        .scroll-icon{
+            opacity: .7;
+        }
+        .scroll-icon:after{
+            content:'';
+            width:1px;
+            height:70px;
+            background:#151515;
+            display: block;
+            margin:5px auto;
+
+            opacity:0.5;
+        }
+    }
+    
+}
+
+article.index-project{
+    background:$black;
+
+    padding:150px 0;
+
+    .txt-wrap{
+        width:60%;
+        margin:0 auto;
+        margin-bottom:100px;
+
+        .index-txt{
+            color:#fff;
+            .front{
+                height:70px;
+                .txt-back{
+                    top:6%;
+                }
+            }
+        }
+        
+    }
+    .circle{
+        mix-blend-mode: exclusion;
+        background:#151515;
+    }
+    .btn-wrap:hover .circle{
+        width:110%;
+    }
+
+    .slider{
+
+        .slider-con{
+            margin:0 auto;
+            width:40%;
+
+            position: relative;
+            background-clip:text;
+            
+            .img-box{
+                width:100%;
+                margin:0 auto;
+
+                position: relative;
+
+                img{
+                    opacity: 0.6;
+                }
+            }
+            .svg-box{
+                svg{
+                    position: absolute;
+                    left:0; bottom:-15%;
+                    .title{
+                        font-size:70px;
+                        font-weight: bold;
+                        fill:transparent;
+                        stroke-width: 1;
+                        stroke:#fff;
+
+                    }
+                }
+            }
+        }
+    }
+
+    
+}

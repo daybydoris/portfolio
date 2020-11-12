@@ -1,0 +1,146 @@
+@import url("css/common.css");
+article {
+  width: 100%;
+}
+
+article.index-about {
+  height: 1080px;
+  position: relative;
+}
+
+article.index-about canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: -1;
+}
+
+article.index-about .txt-wrap {
+  width: 60%;
+  margin: 0 auto;
+  padding: 290px 0;
+}
+
+article.index-about .txt-wrap .index-txt .front {
+  height: 150px;
+}
+
+article.index-about .txt-wrap .index-txt .front .txt-back {
+  top: 5%;
+}
+
+article.index-about .btn-wrap {
+  isolation: isolate;
+}
+
+article.index-about .circle {
+  mix-blend-mode: color-burn;
+  background: #151515;
+  opacity: 0.6;
+}
+
+article.index-about .btn-wrap:hover .circle {
+  width: 120%;
+}
+
+article.index-about .scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  width: 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+article.index-about .scroll .scroll-icon {
+  opacity: .7;
+}
+
+article.index-about .scroll .scroll-icon:after {
+  content: '';
+  width: 1px;
+  height: 70px;
+  background: #151515;
+  display: block;
+  margin: 5px auto;
+  opacity: 0.5;
+}
+
+article.index-project {
+  background: #151515;
+  padding: 150px 0;
+}
+
+article.index-project .txt-wrap {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+article.index-project .txt-wrap .index-txt {
+  color: #fff;
+}
+
+article.index-project .txt-wrap .index-txt .front {
+  height: 70px;
+}
+
+article.index-project .txt-wrap .index-txt .front .txt-back {
+  top: 6%;
+}
+
+article.index-project .circle {
+  mix-blend-mode: exclusion;
+  background: #151515;
+}
+
+article.index-project .btn-wrap:hover .circle {
+  width: 110%;
+}
+
+article.index-project .slider .slider-con {
+  margin: 0 auto;
+  width: 40%;
+  position: relative;
+  background-clip: text;
+}
+
+article.index-project .slider .slider-con .img-box {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+article.index-project .slider .slider-con .img-box img {
+  opacity: 0.6;
+}
+
+article.index-project .slider .slider-con .svg-box svg {
+  position: absolute;
+  left: 0;
+  bottom: -15%;
+}
+
+article.index-project .slider .slider-con .svg-box svg .title {
+  font-size: 70px;
+  font-weight: bold;
+  fill: transparent;
+  stroke-width: 1;
+  stroke: #fff;
+}
+/*# sourceMappingURL=index.css.map */

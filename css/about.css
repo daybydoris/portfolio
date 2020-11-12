@@ -1,0 +1,178 @@
+@import url("css/common.css");
+article.about {
+  height: 1080px;
+  position: relative;
+}
+
+article.about .txt-wrap {
+  position: absolute;
+  left: 45%;
+  top: 23%;
+  width: 50%;
+}
+
+article.about .txt-wrap .index-txt {
+  margin-bottom: 40px;
+}
+
+article.about .txt-wrap .index-txt .txt-back {
+  bottom: -2px;
+}
+
+article.about .txt-wrap p {
+  width: 65%;
+  line-height: 1.7;
+  color: #737373;
+  font-weight: 300;
+}
+
+article.about .scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  width: 15px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+article.about .scroll .scroll-icon {
+  opacity: .7;
+}
+
+article.about .scroll .scroll-icon:after {
+  content: '';
+  width: 1px;
+  height: 70px;
+  background: #151515;
+  display: block;
+  margin: 5px auto;
+  opacity: 0.5;
+}
+
+article.skills {
+  position: relative;
+}
+
+article.skills .line {
+  width: 1px;
+  height: 1000px;
+  background: #151515;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -20.9%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+article.skills .skills-inner {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article.skills .skills-inner .skills-title {
+  width: 40%;
+  text-align: right;
+}
+
+article.skills .skills-inner .skills-title h2 {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+article.skills .skills-inner .skills-wrap {
+  width: 40%;
+  position: relative;
+}
+
+article.skills .skills-inner .skills-wrap .btn-wrap {
+  position: absolute;
+  left: 0;
+  top: -15%;
+  isolation: isolate;
+}
+
+article.skills .skills-inner .skills-wrap .btn-wrap .circle {
+  mix-blend-mode: color-burn;
+  top: -4px;
+}
+
+article.skills .skills-inner .skills-wrap .btn-wrap:hover .circle {
+  width: 108%;
+}
+
+article.skills .skills-inner .skills-wrap h3 {
+  font-size: 25px;
+}
+
+article.skills .skills-inner .skills-wrap span {
+  font-size: 15px;
+  color: #737373;
+  font-weight: 300;
+}
+
+article.skills .skills-inner .skills-wrap .familiar, article.skills .skills-inner .skills-wrap .tried, article.skills .skills-inner .skills-wrap .etc {
+  margin-bottom: 80px;
+}
+
+article.skills .skills-inner .skills-wrap .familiar h3, article.skills .skills-inner .skills-wrap .tried h3, article.skills .skills-inner .skills-wrap .etc h3 {
+  margin-bottom: 40px;
+}
+
+article.skills .skills-inner .skills-wrap .familiar .skill-list, article.skills .skills-inner .skills-wrap .tried .skill-list, article.skills .skills-inner .skills-wrap .etc .skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  padding-left: 20px;
+}
+
+article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item, article.skills .skills-inner .skills-wrap .tried .skill-list .skill-item, article.skills .skills-inner .skills-wrap .etc .skill-list .skill-item {
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item img, article.skills .skills-inner .skills-wrap .tried .skill-list .skill-item img, article.skills .skills-inner .skills-wrap .etc .skill-list .skill-item img {
+  margin: 0;
+  width: 50px;
+}
+
+article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item span, article.skills .skills-inner .skills-wrap .tried .skill-list .skill-item span, article.skills .skills-inner .skills-wrap .etc .skill-list .skill-item span {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,550 @@
+// Montsrrat
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap");
+
+// Cookie
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+//CommercialScript BT
+@import url(//db.onlinewebfonts.com/c/449b1c567da51480d590112112addcd6?family=CommercialScript+BT);
+
+// Nexon Lv1 Gothic
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic";
+  src: url("/img/font/NEXON\ Lv1\ Gothic\ OTF.eot");
+  src: url("/img/font/NEXON\ Lv1\ Gothic\ OTF.woff");
+}
+@font-face {
+  font-family: "NEXON Lv1 Gothic Light";
+  src: url("/img/font/NEXON\ Lv1\ Gothic\ OTF\ Light.eot");
+  src: url("/img/font/NEXON\ Lv1\ Gothic\ OTF\ Light.woff");
+}
+@font-face {
+  font-family: "NEXON Lv1 Gothic Bold";
+  src: url("/img/font/NEXON\ Lv1\ Gothic\ OTF\ Bold.eot");
+  src: url("/img/font/NEXON\ Lv1\ Gothic\ OTF\ Bold.woff");
+}
+
+// Nexon Lv2 Gothic
+
+@font-face {
+  font-family: "NEXON Lv2 Gothic";
+  src: url("/img/font/NEXON\ Lv2\ Gothic.eot");
+  src: url("/img/font/NEXON\ Lv2\ Gothic.woff");
+}
+@font-face {
+  font-family: "NEXON Lv2 Gothic Light";
+  src: url("/img/font/NEXON\ Lv2\ Gothic\ Light.eot");
+  src: url("/img/font/NEXON\ Lv2\ Gothic\ Light.woff");
+}
+@font-face {
+  font-family: "NEXON Lv2 Gothic Bold";
+  src: url("/img/font/NEXON\ Lv2\ Gothic\ Bold.eot");
+  src: url("/img/font/NEXON\ Lv2\ Gothic\ Bold.woff");
+}
+
+$black: #151515;
+$red: #e8001b;
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, "NEXON Lv2 Gothic";
+  letter-spacing: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+
+  // cursor:none;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    font-family: Montserrat, "NEXON Lv1 Gothic Bold";
+    margin: 0;
+    padding: 0;
+  }
+  p{
+    font-family: Montserrat, "NEXON Lv2 Gothic Light";
+    margin:0;
+    padding:0;
+  }
+  ul,
+  li {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: $black;
+    font-family: Montserrat, "NEXON Lv1 Gothic Light", "NEXON Lv2 Gothic";
+  }
+  a, button, div{
+    outline:0;
+  }
+  img{margin:0 auto;}
+
+
+  // cursor
+
+  .cursor{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    background:transparent;
+    border:1px solid $red;
+    border-radius: 50%;
+
+    position: absolute;
+    left:0; top:0;
+
+    transform-origin: center;
+
+    transition:0.1s;
+    opacity:0.8;
+
+    z-index: 50;
+
+    pointer-events: none;
+  }
+  .cursor.active{
+    pointer-events: none;
+    
+    mix-blend-mode: difference;
+    isolation: isolate;
+
+    animation: cursor 0.3s forwards;
+
+    @keyframes cursor {
+      0%{
+        transform:scale(1);
+      }
+      50%{
+        transform:scale(0);
+      }
+      100%{
+        transform:scale(3);
+        background:$red;
+        border:none;
+        opacity:0.5;
+      }
+    }
+
+  }
+  }
+
+  .btn-wrap{
+    display: inline-block;
+    margin:25px 15px;
+    position: relative;
+
+    .detail-btn{
+      font-size:15px;
+      font-weight: 500;
+      color:#737373;
+      letter-spacing: 5px;
+
+      display: inline-block;
+
+    }
+    .circle{
+      width:40px;
+      height:40px;
+      background:$red;
+      border-radius: 50px;
+
+      position: absolute;
+      left:-15px; top:-2px;
+
+      transform: translateY(-20%);
+
+      transition:0.5s;
+    }
+  }
+
+
+.index-txt{
+  font-size:60px;
+  .front{
+      position: relative;
+
+      .txt-back{
+          font-family:"CommercialScript BT";
+          font-size:60px;
+          font-weight: normal;
+          font-style: italic;
+          letter-spacing: 10px;
+
+          color:$red;
+
+          position: absolute;
+          left:0;
+
+          mix-blend-mode: difference;
+          isolation: isolate;
+      }
+  }
+}
+
+// header
+
+header {
+  width: 100%;
+  height: 125px;
+
+  position: fixed;
+  z-index: 20;
+
+  .h_container.white{
+    .menu-trigger{
+      span{
+        background: #fff;
+      }
+    }
+  }
+  .h_container {
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+      z-index:20;
+
+      text{
+        font-size:25px;
+        font-weight: bold;
+      }
+      .black{
+        fill:#151515;
+      }
+      .white{
+        fill:#fff;
+      }
+    }
+
+    // menu-trigger
+
+    .menu-trigger {
+      width: 50px;
+      height: 25px;
+
+      position: relative;
+
+      cursor: pointer;
+      
+      z-index:20;
+
+      span {
+        height: 1px;
+        display: block;
+
+        position: absolute;
+
+        transition: 0.3s;
+
+        z-index:20;
+      }
+      span:nth-of-type(1) {
+        width: 50%;
+        right: 0;
+        top: 0;
+      }
+      span:nth-of-type(2) {
+        width: 100%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      span:nth-of-type(3) {
+        width: 75%;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .menu-trigger.black{
+      span{
+        background:#151515;
+      }
+    }
+    .menu-trigger.white{
+      span{
+        background:#fff;
+      }
+    }
+    .menu-trigger:hover span:nth-of-type(1),
+    .menu-trigger:hover span:nth-of-type(3) {
+      width: 100%;
+    }
+    .menu-trigger.active span:nth-of-type(1),
+    .menu-trigger.active span:nth-of-type(3) {
+      width: 100%;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    .menu-trigger.active span:nth-of-type(1) {
+      transform: rotate(45deg);
+    }
+    .menu-trigger.active span:nth-of-type(2) {
+      display: none;
+    }
+    .menu-trigger.active span:nth-of-type(3) {
+      transform: rotate(-45deg);
+    }
+
+    
+  }
+  
+}
+.nav-wrap{
+  width:70px;
+  height:70px;
+
+  background:$red;
+  border-radius: 50%;
+
+  position: absolute;
+  right:0; top:50%;
+
+  transform:scale(0);
+  transform-origin: center;
+  z-index: 5;
+}
+
+
+// nav
+nav.active {
+  opacity:1;
+  display: block;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: $red;
+  z-index: 10;
+
+  opacity:0;
+  display: none;
+
+  transition:1s;
+
+  .menu {
+    width: 500px;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    a {
+      display: inline-block;
+      font-size: 90px;
+      font-weight: bold;
+      position: relative;
+
+      transition: 0.2s;
+
+      margin: 20px 0;
+    }
+    a:hover {
+      color: #fff;
+    }
+    a:after {
+      display: none;
+      transition: 0.3s;
+      z-index: 0;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      font-family: "CommercialScript BT";
+      font-size: 80px;
+      font-style: italic;
+      letter-spacing: 14px;
+
+      mix-blend-mode: difference;
+
+      isolation: isolate;
+    }
+    a:hover:after {
+      display: block;
+      color: $red;
+    }
+    #about:after {
+      content: "About";
+    }
+    #projects:after {
+      content: "Projects";
+    }
+  }
+
+  .contact-email {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+
+    .contact-inner {
+      justify-content: space-between;
+      span {
+        background: url("/img/contact-icon-email-black.png") no-repeat;
+      }
+      .email {
+        border-bottom: 1px solid rgba(21, 21, 21, 0.3);
+      }
+    }
+  }
+}
+
+.contact-email {
+  width: 250px;
+
+  h3 {
+    font-size: 30px;
+    color: #fff;
+  }
+  .contact-inner {
+    display: flex;
+    align-items: center;
+    span {
+      width: 32px;
+      height: 21px;
+      display: inline-block;
+    }
+    .email {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+//aside
+aside {
+  .contact {
+    .contact-label {
+      display: inline-block;
+
+      text-align: center;
+
+      font-size: 30px;
+      font-weight: bold;
+
+      padding: 8px;
+      margin: 0;
+
+      transform: rotate(90deg) translateY(90%);
+
+      position: fixed;
+      left: 0;
+      top: 70%;
+
+      z-index: 4;
+
+    }
+    .contact-label.black{
+      color: #fff;
+      background: $black;
+    }
+    .contact-label.white{
+      color: #151515;
+      background: #fff;
+    }
+    .contact-label:hover{
+      animation: label 0.3s;
+      transition:all 0.3s cubic-bezier(.17,.67,.83,.67);
+
+      @keyframes label {
+        0%{
+           transform:rotate(90deg) translateY(90%);
+        }
+        50%{
+          transform:rotate(90deg) translateY(87%);
+        }
+        100%{
+          transform:rotate(90deg) translateY(90%);
+        }
+      }
+    }
+    .contact-box {
+      position: fixed;
+      left:-100%;
+      top:58%;
+
+      width: 100%;
+      height: 30vh;
+      background: $black;
+
+      z-index: 3;
+      .contact-txt {
+        width: 70%;
+        margin: 300px auto 0 auto;
+        opacity: 0;
+        h2 {
+          font-size: 70px;
+          color: #fff;
+
+          b {
+            color: $red;
+          }
+        }
+        p {
+          color: #9a9a9a;
+          font-size: 15px;
+        }
+      }
+      .contact-email {
+        width: 70%;
+        margin: 60px auto;
+        opacity: 0;
+
+        .contact-inner {
+          width: 100%;
+          margin:0;
+
+          li{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            margin:15px;
+          }
+          .icon-email {
+            background: url("/img/contact-icon-email-red.png") no-repeat;
+          }
+          .icon-name{
+            height:30px;
+            background: url("/img/contact-icon-name-red.png") no-repeat;
+          }
+          .name, .email {
+            color: #ececec;
+            margin-left: 10px;
+          }
+          .name{
+            display: inline-block;
+          }
+          .email{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom:6px;
+          }
+        }
+      }
+    }
+  }
+  .contact-box.active{
+    left:0; top:0;
+    height:100vh;
+  }
+  .contact-box.active .contact-txt,
+  .contact-box.active .contact-email{
+    opacity:1;
+  }
+}

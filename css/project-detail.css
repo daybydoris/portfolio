@@ -1,0 +1,321 @@
+@import url("css/common.css");
+/* mixin */
+body {
+  background: #151515;
+}
+
+article.project-detail {
+  width: 68%;
+  padding: 300px 0;
+  margin: 0 auto;
+}
+
+article.project-detail .index-txt {
+  color: #fff;
+}
+
+article.project-detail .index-txt .txt-back {
+  bottom: 0;
+}
+
+article.project-detail .detail-btn {
+  z-index: 1;
+  mix-blend-mode: luminosity;
+  isolation: isolate;
+}
+
+article.project-detail .circle {
+  opacity: 0.5;
+  z-index: 0;
+}
+
+article.project-detail .btn-wrap:hover .circle {
+  width: 120%;
+}
+
+article.project-detail .sec h3 {
+  color: #eeeeee;
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+
+article.project-detail .sec strong, article.project-detail .sec span {
+  font-size: 15px;
+  color: #dbdbdb;
+}
+
+article.project-detail .sec a, article.project-detail .sec p {
+  color: #dbdbdb;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+article.project-detail .sec-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 150px 0;
+}
+
+article.project-detail .sec-top div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article.project-detail .sec-top .top-title, article.project-detail .sec-top .top-time {
+  width: 22%;
+}
+
+article.project-detail .sec-top .top-overall {
+  margin-top: 50px;
+}
+
+article.project-detail .sec-top .top-overall p {
+  width: 89%;
+}
+
+article.project-detail .page-prev {
+  width: 100%;
+}
+
+article.project-detail .page-prev .inner {
+  width: 100%;
+}
+
+article.project-detail .page-prev .inner .page-prev-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+article.project-detail .page-prev .inner .page-prev-list .page-prev-item {
+  width: 33.3%;
+}
+
+article.project-detail .page-prev .inner .page-prev-list .page-prev-item img {
+  width: 100%;
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+article.project-detail .page-prev .inner .page-prev-list .page-prev-item img:hover {
+  opacity: 1;
+}
+
+article.project-detail .middle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 150px 0;
+}
+
+article.project-detail .middle .used-skill {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article.project-detail .middle .used-skill .skill-list {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+article.project-detail .middle .used-skill .skill-list .skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+
+article.project-detail .middle .used-skill .skill-list .skill-item img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+article.project-detail .middle .res-detail {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+article.project-detail .middle .res-detail .inner #pc, article.project-detail .middle .res-detail .inner #tablet, article.project-detail .middle .res-detail .inner #mobile {
+  color: #99785f;
+  font-weight: bold;
+}
+
+article.project-detail .middle .res-detail .inner #pc:after, article.project-detail .middle .res-detail .inner #pc:before,
+article.project-detail .middle .res-detail .inner #tablet:after, article.project-detail .middle .res-detail .inner #tablet:before,
+article.project-detail .middle .res-detail .inner #mobile:after, article.project-detail .middle .res-detail .inner #mobile:before {
+  content: '|';
+  color: #dbdbdb;
+  font-weight: normal;
+  margin: 0 15px;
+}
+
+article.project-detail .feature .tab {
+  text-align: center;
+  display: block;
+  margin-bottom: 150px;
+}
+
+article.project-detail .feature .tab a:before {
+  content: '|';
+  color: #dbdbdb;
+  margin: 0 40px;
+}
+
+article.project-detail .feature .tab a:nth-of-type(1):before {
+  content: '';
+  margin: 0;
+}
+
+article.project-detail .feature .tab a.active {
+  color: #99785f;
+  font-weight: bolder;
+}
+
+article.project-detail .feature-detail ul li {
+  margin-bottom: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+article.project-detail .feature-detail ul li .left {
+  width: 40%;
+}
+
+article.project-detail .feature-detail ul li .left .detail-box div {
+  margin-bottom: 40px;
+}
+
+article.project-detail .feature-detail ul li .left .detail-box p {
+  width: 90%;
+  margin-top: 30px;
+}
+
+article.project-detail .feature-detail ul li .figure-box {
+  width: 50%;
+  background: #eaeaea;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .prev, footer .next {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+footer .prev a, footer .next a {
+  width: 100%;
+  height: 100%;
+  display: inline;
+}
+
+footer text {
+  fill: transparent;
+  stroke-width: 1.5;
+}
+
+footer .prev {
+  background: #fff;
+}
+
+footer .prev text {
+  stroke: #151515;
+}
+
+footer .next {
+  background: #1b1b1b;
+}
+
+footer .next text {
+  stroke: #fff;
+}
+/*# sourceMappingURL=project-detail.css.map */

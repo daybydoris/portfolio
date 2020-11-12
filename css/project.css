@@ -1,0 +1,108 @@
+@import url("css/common.css");
+/* mixin */
+.rotate {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+body {
+  background: #151515;
+}
+
+article.project {
+  width: 68%;
+  padding: 200px 0;
+  margin: 0 auto;
+}
+
+article.project .index-txt {
+  color: #fff;
+  margin-bottom: 200px;
+}
+
+article.project .index-txt .txt-back {
+  bottom: 0;
+}
+
+article.project .project-inner .project-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 250px;
+}
+
+article.project .project-inner .project-item .thumb {
+  width: 55%;
+}
+
+article.project .project-inner .project-item .thumb img {
+  width: 100%;
+}
+
+article.project .project-inner .project-item .project-prev {
+  width: 40%;
+}
+
+article.project .project-inner .project-item .project-prev .title-svg {
+  margin-bottom: 30px;
+}
+
+article.project .project-inner .project-item .project-prev .title {
+  font-size: 70px;
+  font-weight: bold;
+  fill: transparent;
+  stroke-width: 0.5;
+  stroke: rgba(255, 255, 255, 0.7);
+}
+
+article.project .project-inner .project-item .project-prev .responsive {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+article.project .project-inner .project-item .project-prev .responsive #pc, article.project .project-inner .project-item .project-prev .responsive #tablet, article.project .project-inner .project-item .project-prev .responsive #mobile {
+  color: #99785f;
+}
+
+article.project .project-inner .project-item .project-prev .responsive span {
+  color: #545454;
+}
+
+article.project .project-inner .project-item .project-prev .prev-txt {
+  width: 60%;
+  font-weight: 100;
+  color: #f5f5f5;
+}
+
+article.project .project-inner .project-item .responsive p {
+  display: inline-block;
+}
+
+article.project .project-inner .odd {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+article.project .project-inner .even {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+article.project .project-inner .even .project-prev {
+  text-align: right;
+}
+
+article.project .project-inner .even .project-prev p {
+  display: inline-block;
+}
+/*# sourceMappingURL=project.css.map */
