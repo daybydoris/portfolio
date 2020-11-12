@@ -429,7 +429,7 @@ nav .contact-email .contact-inner {
 }
 
 nav .contact-email .contact-inner span {
-  background: url("portfolio/img/contact-icon-email-black.png") no-repeat;
+  background: url("../img/contact-icon-email-black.png") no-repeat;
 }
 
 nav .contact-email .contact-inner .email {
@@ -581,12 +581,12 @@ aside .contact .contact-box .contact-email .contact-inner li {
 }
 
 aside .contact .contact-box .contact-email .contact-inner .icon-email {
-  background: url("portfolio/img/contact-icon-email-red.png") no-repeat;
+  background: url("../img/contact-icon-email-red.png") no-repeat;
 }
 
 aside .contact .contact-box .contact-email .contact-inner .icon-name {
   height: 30px;
-  background: url("portfolio/img/contact-icon-name-red.png") no-repeat;
+  background: url("../img/contact-icon-name-red.png") no-repeat;
 }
 
 aside .contact .contact-box .contact-email .contact-inner .name, aside .contact .contact-box .contact-email .contact-inner .email {
