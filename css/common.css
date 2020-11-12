@@ -331,13 +331,13 @@ header .h_container .menu-trigger.active span:nth-of-type(3) {
 }
 
 .nav-wrap {
-  width: 70px;
-  height: 70px;
+  width: 224vw;
+  height: 224vw;
   background: #e8001b;
   border-radius: 50%;
   position: absolute;
-  right: 0;
-  top: 50%;
+  right: calc(100px - 112vw);
+  top: calc(90px - 112vw);
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: center;

@@ -306,14 +306,15 @@ header {
   
 }
 .nav-wrap{
-  width:70px;
-  height:70px;
+  width:224vw;
+  height:224vw;
 
   background:$red;
   border-radius: 50%;
 
   position: absolute;
-  right:0; top:50%;
+  right:calc(100px - 112vw);
+  top:calc(90px - 112vw);
 
   transform:scale(0);
   transform-origin: center;
@@ -397,7 +398,7 @@ nav {
     .contact-inner {
       justify-content: space-between;
       span {
-        background: url("img/contact-icon-email-black.png") no-repeat;
+        background: url("../img/contact-icon-email-black.png") no-repeat;
       }
       .email {
         border-bottom: 1px solid rgba(21, 21, 21, 0.3);
@@ -518,11 +519,11 @@ aside {
             margin:15px;
           }
           .icon-email {
-            background: url("img/contact-icon-email-red.png") no-repeat;
+            background: url("../img/contact-icon-email-red.png") no-repeat;
           }
           .icon-name{
             height:30px;
-            background: url("img/contact-icon-name-red.png") no-repeat;
+            background: url("../img/contact-icon-name-red.png") no-repeat;
           }
           .name, .email {
             color: #ececec;

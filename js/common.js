@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded',function(){
     aTag.forEach(function(a){
         a.addEventListener('mouseover',function(){
             cursorPointer.classList.add('active');
+
         });
         a.addEventListener('mouseleave',function(){
             cursorPointer.classList.remove('active');
@@ -37,10 +38,10 @@ window.addEventListener('DOMContentLoaded',function(){
         //menu-trigger 클릭하면 nav 나오게 하기
         if(menuTrigger.classList.contains('active')){
             navWrap.style.transition = "1s";
-            navWrap.style.transform = "scale(70)";
+            navWrap.style.transform = "scale(1)";
             setTimeout(function(){
                 nav.classList.add('active');
-            },500);
+            },800);
         }else{
             nav.classList.remove('active');
             setTimeout(function(){
