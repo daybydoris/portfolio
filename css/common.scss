@@ -397,7 +397,7 @@ nav {
     .contact-inner {
       justify-content: space-between;
       span {
-        background: url("/img/contact-icon-email-black.png") no-repeat;
+        background: url("img/contact-icon-email-black.png") no-repeat;
       }
       .email {
         border-bottom: 1px solid rgba(21, 21, 21, 0.3);
@@ -518,11 +518,11 @@ aside {
             margin:15px;
           }
           .icon-email {
-            background: url("/img/contact-icon-email-red.png") no-repeat;
+            background: url("img/contact-icon-email-red.png") no-repeat;
           }
           .icon-name{
             height:30px;
-            background: url("/img/contact-icon-name-red.png") no-repeat;
+            background: url("img/contact-icon-name-red.png") no-repeat;
           }
           .name, .email {
             color: #ececec;
