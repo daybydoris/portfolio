@@ -3,38 +3,38 @@
 @import url("https://db.onlinewebfonts.com/c/449b1c567da51480d590112112addcd6?family=CommercialScript+BT");
 @font-face {
   font-family: "NEXON Lv1 Gothic";
-  src: url("/img/font/NEXON Lv1 Gothic OTF.eot");
-  src: url("/img/font/NEXON Lv1 Gothic OTF.woff");
+  src: url("/portfolio/img/font/NEXON Lv1 Gothic OTF.eot");
+  src: url("/portfolio/img/font/NEXON Lv1 Gothic OTF.woff");
 }
 
 @font-face {
   font-family: "NEXON Lv1 Gothic Light";
-  src: url("/img/font/NEXON Lv1 Gothic OTF Light.eot");
-  src: url("/img/font/NEXON Lv1 Gothic OTF Light.woff");
+  src: url("/portfolio/img/font/NEXON Lv1 Gothic OTF Light.eot");
+  src: url("/portfolio/img/font/NEXON Lv1 Gothic OTF Light.woff");
 }
 
 @font-face {
   font-family: "NEXON Lv1 Gothic Bold";
-  src: url("/img/font/NEXON Lv1 Gothic OTF Bold.eot");
-  src: url("/img/font/NEXON Lv1 Gothic OTF Bold.woff");
+  src: url("/portfolio/img/font/NEXON Lv1 Gothic OTF Bold.eot");
+  src: url("/portfolio/img/font/NEXON Lv1 Gothic OTF Bold.woff");
 }
 
 @font-face {
   font-family: "NEXON Lv2 Gothic";
-  src: url("/img/font/NEXON Lv2 Gothic.eot");
-  src: url("/img/font/NEXON Lv2 Gothic.woff");
+  src: url("/portfolio/img/font/NEXON Lv2 Gothic.eot");
+  src: url("/portfolio/img/font/NEXON Lv2 Gothic.woff");
 }
 
 @font-face {
   font-family: "NEXON Lv2 Gothic Light";
-  src: url("/img/font/NEXON Lv2 Gothic Light.eot");
-  src: url("/img/font/NEXON Lv2 Gothic Light.woff");
+  src: url("/portfolio/img/font/NEXON Lv2 Gothic Light.eot");
+  src: url("/portfolio/img/font/NEXON Lv2 Gothic Light.woff");
 }
 
 @font-face {
   font-family: "NEXON Lv2 Gothic Bold";
-  src: url("/img/font/NEXON Lv2 Gothic Bold.eot");
-  src: url("/img/font/NEXON Lv2 Gothic Bold.woff");
+  src: url("/portfolio/img/font/NEXON Lv2 Gothic Bold.eot");
+  src: url("/portfolio/img/font/NEXON Lv2 Gothic Bold.woff");
 }
 
 * {
@@ -135,7 +135,7 @@ body .cursor {
 html .cursor.active,
 body .cursor.active {
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: darken;
   isolation: isolate;
   -webkit-animation: cursor 0.3s forwards;
           animation: cursor 0.3s forwards;
@@ -153,7 +153,7 @@ body .cursor.active {
   100% {
     -webkit-transform: scale(3);
             transform: scale(3);
-    background: #e8001b;
+    background: #ececec;
     border: none;
     opacity: 0.5;
   }
@@ -171,7 +171,7 @@ body .cursor.active {
   100% {
     -webkit-transform: scale(3);
             transform: scale(3);
-    background: #e8001b;
+    background: #ececec;
     border: none;
     opacity: 0.5;
   }
@@ -252,6 +252,9 @@ header .h_container {
 
 header .h_container .logo {
   z-index: 20;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  mix-blend-mode: difference;
 }
 
 header .h_container .logo text {
