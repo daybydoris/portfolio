@@ -5,23 +5,25 @@
           transform: rotate(5deg);
 }
 
-body {
-  background: #151515;
-}
-
 article.project {
-  width: 68%;
+  width: 100%;
   padding: 200px 0;
   margin: 0 auto;
 }
 
 article.project .index-txt {
+  width: 68%;
   color: #fff;
-  margin-bottom: 200px;
+  margin: 0 auto 200px auto;
 }
 
 article.project .index-txt .txt-back {
   bottom: 0;
+}
+
+article.project .project-inner {
+  width: 68%;
+  margin: 0 auto;
 }
 
 article.project .project-inner .project-item {

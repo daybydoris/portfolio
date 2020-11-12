@@ -91,6 +91,13 @@ body {
   }
   img{margin:0 auto;}
 
+  //background
+  .bg-black{
+    background:$black;
+  }
+  .bg-white{
+    background:#fff;
+  }
 
   // cursor
 
@@ -482,7 +489,6 @@ aside {
 
       width: 100%;
       height: 30vh;
-      background: $black;
 
       z-index: 3;
       .contact-txt {

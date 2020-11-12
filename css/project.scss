@@ -26,24 +26,23 @@
 .rotate{
     transform: rotate(5deg);
 }
-  
-body{
-    background:#151515;
-}
 article.project{
-    width:68%;
+    width:100%;
     padding:200px 0;
     margin:0 auto;
 
     .index-txt{
+        width:68%;
         color:#fff;
-        margin-bottom:200px;
+        margin:0 auto 200px auto;
 
         .txt-back{
             bottom:0;
         }
     }
     .project-inner{
+        width:68%;
+        margin:0 auto;
         .project-item{
             display: flex;
             justify-content: space-between;
