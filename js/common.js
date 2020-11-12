@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded',function(){
         headerColor(triggerSpan);
 
         function headerColor(name){
+            console.log(filename);
             if(filename == '/portfolio/index.html'){
                 window.addEventListener('scroll',function(){
                     if(window.scrollY > 1000){
@@ -72,7 +73,6 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
         //버튼 hover시 원 커지게 하기
-        console.log(aTag);
         aTag.forEach(function(a){
             a.addEventListener('mouseover',function(){
                 cursorPointer.classList.add('active');
