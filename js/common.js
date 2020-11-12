@@ -5,8 +5,6 @@ window.addEventListener('DOMContentLoaded',function(){
     $("header").load("/portfolio/inc_head_foot.html header .h_container", init);
 
     function init(){
-        
-
     
         const body = document.querySelector('body');
         const article = document.querySelector('article');
@@ -27,7 +25,8 @@ window.addEventListener('DOMContentLoaded',function(){
         headerColor(triggerSpan);
 
         function headerColor(name){
-            if(filename == '/portfolio/'){
+            console.log(filename);
+            if(filename == '/portfolio/index.html'){
                 window.addEventListener('scroll',function(){
                     if(window.scrollY > 1000){
                         changeColor('#fff');
@@ -81,7 +80,35 @@ window.addEventListener('DOMContentLoaded',function(){
             });
         });
 
+        //navigation
+        menuTrigger.addEventListener('click',triggerChange);
+        menuTrigger.addEventListener('click',navToggle);
+        // menuTrigger.addEventListener('click',stopScroll);
 
+        //menu-trigger 모양 변형
+        function triggerChange(){
+            menuTrigger.classList.toggle('active');
+        }
+
+        //nav open, close
+        function navToggle(){
+            if(menuTrigger.classList.contains('active')){
+                navWrap.style.transition = "1s";
+                navWrap.style.transform = "scale(1)";
+                body.classList.add("stopScroll");
+                
+                setTimeout(function(){
+                    nav.classList.add('active');
+                },800);
+            }else{
+                nav.classList.remove('active');
+                body.classList.remove("stopScroll");
+
+                setTimeout(function(){
+                    navWrap.style.transform = "scale(0)";
+                },300);
+            }
+        }
     }
 
 

@@ -112,6 +112,13 @@ body .bg-white {
   background: #fff;
 }
 
+html body.stopScroll,
+body body.stopScroll {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 html .cursor,
 body .cursor {
   display: inline-block;
@@ -254,7 +261,6 @@ header .h_container .logo {
   z-index: 20;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  mix-blend-mode: difference;
 }
 
 header .h_container .logo text {
@@ -433,6 +439,10 @@ nav .contact-email {
   position: absolute;
   right: 10%;
   bottom: 10%;
+}
+
+nav .contact-email h3 {
+  margin-bottom: 10px;
 }
 
 nav .contact-email .contact-inner {
