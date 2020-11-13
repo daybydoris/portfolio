@@ -7,16 +7,20 @@ window.addEventListener('DOMContentLoaded',function(){
     function init(){
     
         const body = document.querySelector('body');
+        const header = document.querySelector('header');
         const article = document.querySelector('article');
 
         const logo = document.querySelectorAll('.logo text');
         const menuTrigger = document.querySelector('.menu-trigger');
         const triggerSpan = document.querySelectorAll('.menu-trigger span');
-        const nav = document.querySelector('nav');
-        const navWrap = document.querySelector('.nav-wrap');
+        
 
         const cursorPointer = document.querySelector('.cursor');
         let aTag = document.querySelectorAll('.atvBtn');
+
+        const conLabel = document.querySelector('.contact-label');
+        const conBox = document.querySelector('.contact-box');
+        const conBoxWrap = document.querySelector('.contact-box-wrap');
 
 
         let filename = location.pathname;
@@ -24,6 +28,9 @@ window.addEventListener('DOMContentLoaded',function(){
         headerColor(logo);
         headerColor(triggerSpan);
 
+        //header 색상 변경
+        //index.html은 스크롤 이벤트
+        //나머지는 article 컬러에 따라서 변경
         function headerColor(name){
             console.log(filename);
             if(filename == '/portfolio/'){
@@ -42,6 +49,7 @@ window.addEventListener('DOMContentLoaded',function(){
                 }
             }
 
+            //색상 변경 함수
             function changeColor(color){
                 name.forEach(function(l){
                     if(l.tagName == 'text'){
@@ -52,8 +60,6 @@ window.addEventListener('DOMContentLoaded',function(){
                 });
             }
         }
-
-        document.addEventListener('load',cursorPos);
 
         document.addEventListener('mousemove',cursorPos);
 
@@ -82,35 +88,105 @@ window.addEventListener('DOMContentLoaded',function(){
             });
         });
 
-        //navigation
+
+        //menuTrigger 클릭 이벤트
         menuTrigger.addEventListener('click',triggerChange);
         menuTrigger.addEventListener('click',navToggle);
-        // menuTrigger.addEventListener('click',stopScroll);
+
 
         //menu-trigger 모양 변형
         function triggerChange(){
             menuTrigger.classList.toggle('active');
         }
 
-        //nav open, close
+
+
+        //스크롤 막기/허용
+        function stopScroll(){
+            body.classList.add("stopScroll");
+        }
+        function allowScroll(){
+            body.classList.remove("stopScroll");
+        }
+
+        //header 막기
+        function blockHeader(){
+            header.style.display = 'none';
+        }
+        function allowHeader(){
+            header.style.display = 'block';
+        }
+
+        //nav 열기/닫기
         function navToggle(){
+            const nav = document.querySelector('nav');
+            const navWrap = document.querySelector('.nav-wrap');
+
             if(menuTrigger.classList.contains('active')){
+
                 navWrap.style.transition = "1s";
                 navWrap.style.transform = "scale(1)";
-                body.classList.add("stopScroll");
+
+                stopScroll();
                 
                 setTimeout(function(){
                     nav.classList.add('active');
                 },800);
+
             }else{
+
                 nav.classList.remove('active');
-                body.classList.remove("stopScroll");
+
+                allowScroll();
 
                 setTimeout(function(){
                     navWrap.style.transform = "scale(0)";
                 },300);
             }
         }
+
+
+        //contact
+        conLabel.addEventListener('click', contactToggle);
+
+        //contact-box 열기/닫기
+        function contactToggle(e){
+            e.preventDefault();
+
+            const contact = document.querySelector('.contact');
+
+            if(!contact.classList.contains('active')){
+
+                contact.classList.add('active');
+
+                blockHeader();
+                stopScroll();
+                
+                //label 위치 변경
+                setTimeout(function(){
+                    conLabel.textContent = 'Close';
+                    conLabel.style = 'left:98.5vw';
+                },1000);
+                
+            }else{
+                contact.classList.remove('active');
+                conLabel.style = 'left:98%';
+
+                allowHeader();
+                allowScroll();
+
+                //label 위치 변경
+                setTimeout(function(){
+                    conLabel.style = 'left:100%';
+                    conLabel.textContent = 'Contact';
+
+                },1000);
+            }
+
+        }
+
+        
+
     }
 
 
