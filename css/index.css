@@ -24,6 +24,10 @@ article.index-about .txt-wrap {
   padding: 290px 0;
 }
 
+article.index-about .txt-wrap .index-txt {
+  text-align: left;
+}
+
 article.index-about .txt-wrap .index-txt .front {
   height: 150px;
 }
@@ -71,14 +75,30 @@ article.index-about .scroll .scroll-icon {
   opacity: .7;
 }
 
-article.index-about .scroll .scroll-icon:after {
-  content: '';
+article.index-about .scroll .line-wrap {
+  overflow: hidden;
+  position: relative;
+  height: 70px;
+}
+
+article.index-about .scroll .line-wrap .line {
   width: 1px;
   height: 70px;
   background: #151515;
   display: block;
   margin: 5px auto;
   opacity: 0.5;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+article.index-about .scroll .line-wrap .line.active {
+  top: 0;
 }
 
 article.index-project {

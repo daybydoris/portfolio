@@ -30,6 +30,7 @@ article.index-about{
         padding:290px 0;
 
         .index-txt{
+            text-align:left;
             .front{
                 height:150px;
 
@@ -68,15 +69,29 @@ article.index-about{
         .scroll-icon{
             opacity: .7;
         }
-        .scroll-icon:after{
-            content:'';
-            width:1px;
+        .line-wrap{
+            overflow: hidden;
+            position: relative;
             height:70px;
-            background:#151515;
-            display: block;
-            margin:5px auto;
+            .line{
+                width:1px;
+                height:70px;
+                background:#151515;
+                display: block;
+                margin:5px auto;
 
-            opacity:0.5;
+                opacity:0.5;
+
+                position: absolute;
+                left:50%; top:0;
+
+                transform:translateX(-50%);
+
+                transition:0.4s;
+            }
+            .line.active{
+                top:0;
+            }
         }
     }
     
