@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,44 +8,46 @@
 
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link href="css/aos.css" rel="stylesheet">
 
     <script defer src="js/common.js"></script>
 
 </head>
+
 <body class="bg-white">
     <header></header>
     <!-- contact -->
-<aside>
-    <div class="contact">
-        <a href="#" class="atvBtn">
-            <div class="contact-label black">
-                <h3>Contact</h3>
-            </div>
-        </a>
-        <div class="contact-box bg_black">
-            <div class="contact-txt">
-                <h2>I'm waiting<br>for you <b>:)</b></h2>
-                <p>궁금한 점이 있으시면 이메일로 연락 부탁드립니다.</p>
-            </div>
-            <div class="contact-email">
-                <h3>Contact</h3>
-                <div class="contact-inner">
-                    <ul>
-                        <li>
-                            <span class="icon-name"></span>
-                            <p class="name">정영신</p>
-                        </li>
-                        <li>
-                            <span class="icon-email"></span>
-                            <a href="mailto:graphicodev@gmail.com" class="email atvBtn">graphicodev@gmail.com</a>
-                        </li>
-                    </ul>
+    <aside>
+        <div class="contact">
+            <a href="#" class="atvBtn">
+                <div class="contact-label black">
+                    <h3>Contact</h3>
+                </div>
+            </a>
+            <div class="contact-box bg_black">
+                <div class="contact-txt">
+                    <h2>I'm waiting<br>for you <b>:)</b></h2>
+                    <p>궁금한 점이 있으시면 이메일로 연락 부탁드립니다.</p>
+                </div>
+                <div class="contact-email">
+                    <h3>Contact</h3>
+                    <div class="contact-inner">
+                        <ul>
+                            <li>
+                                <span class="icon-name"></span>
+                                <p class="name">정영신</p>
+                            </li>
+                            <li>
+                                <span class="icon-email"></span>
+                                <a href="mailto:graphicodev@gmail.com" class="email atvBtn">graphicodev@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</aside>
+    </aside>
     <!-- main -->
     <main>
         <article class="index-about bg-white">
@@ -55,17 +58,17 @@
 
             <div class="txt-wrap">
                 <h2 class="index-txt">
-                    Hello.</br>
-                    I’m a</br>
+                    <div data-aos="fade-up">Hello.</div>
+                    <div data-aos="fade-up" data-aos-delay="500">I’m a</div>
                     <div class="front">
-                        Frontend</br>
-                        Developer</br>
-                        <span class="txt-back">
-                            Frontend</br>
-                            Developer
-                        </span>
+                        <div data-aos="fade-up" data-aos-delay="600">Frontend</div>
+                        <div data-aos="fade-up" data-aos-delay="700">Developer</div>
                     </div>
-                    Jeong Young Shin.</br>
+                    <div class="txt-back" style="display:none;">
+                        <div data-aos="fade-up" data-aos-delay="600">Frontend</div>
+                        <div data-aos="fade-up" data-aos-delay="700">Developer</div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="1200">Jeong Young Shin.</div>
                 </h2>
                 <div class="btn-wrap atvBtn">
                     <a href="/portfolio/pages/about.html" class="detail-btn">about +</a>
@@ -75,6 +78,9 @@
             <div class="scroll">
                 <div class="scroll-icon">
                     <img src="img/index-icon-scroll.png" alt>
+                    <div class="line-wrap">
+                        <span class="line"></span>
+                    </div>
                 </div>
             </div>
         </article>
@@ -82,12 +88,12 @@
 
             <div class="txt-wrap">
                 <h2 class="index-txt">
-                    <div class="front">
+                    <div class="front" data-aos="fade-up" data-aos-delay="200">
                         Projects.
                         <span class="txt-back">Projects.</span>
                     </div>
                 </h2>
-                
+
                 <div class="btn-wrap atvBtn">
                     <a href="/portfolio/pages/project.html" class="detail-btn">view more projets +</a>
                     <a href="/portfolio/pages/project.html" class="circle"></a>
@@ -135,16 +141,24 @@
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="js/slick.js"></script>
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+
     <script>
         $(".slider").slick({
-          slidesToShow: 1,
-          autoplay: false,
-          autoplaySpeed: 4000,
-          centerMode: true,
-          arrows: false,
-          slidesPerRow:1
+            slidesToShow: 1,
+            autoplay: false,
+            autoplaySpeed: 4000,
+            centerMode: true,
+            arrows: false,
+            slidesPerRow: 1
         });
-      </script>
+
+        AOS.init({
+            duration: "500",
+            once: true
+        });
+    </script>
 </body>
+
 </html>
