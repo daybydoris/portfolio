@@ -7,10 +7,11 @@
 
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/about.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../css/aos.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script defer src="../js/common.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </head>
@@ -19,7 +20,7 @@
     <aside>
         <div class="contact">
             <a href="#" class="atvBtn">
-                <div class="contact-label">
+                <div class="contact-label black">
                     <h3>Contact</h3>
                 </div>
             </a>
@@ -47,17 +48,18 @@
         </div>
     </aside>
     <main>
-        <article class="about">
+        <article class="about bg-white">
             <canvas></canvas>
             <div class="txt-wrap">
                 <h2 class="index-txt">
-                    <div class="front">
+                    <div class="front" data-aos="fade-up" data-aos-delay="800">
                         Frontend developer<br>
-                            <span class="txt-back">
+                            <span class="txt-back" data-aos="fade-up" data-aos-delay="800">
                             Frontend developer
                             </span>
                     </div>
-                    Jeong Young Shin.
+                    <div data-aos="fade-up" data-aos-delay="1000">Jeong Young Shin.</div>
+                    
                 </h2>
                 <p class="about-txt">
                     다채로운 기술 구현이 가능한 웹의 매력에 빠져 프론트엔드 개발자를 꿈꾸게 되었습니다. 제가 설계한 대로 웹 화면이 구현되는 것에 즐거움을 느끼고 있습니다. 프론트뿐 아니라 디자인, 백엔드도 이해하는, 소통 가능한 개발자가 되고 싶습니다. 또한, 빠르고 효율적인 웹을 위해 멈추지 않고 공부하며 고민하는 프론트엔드 개발자가 되겠습니다.
@@ -69,7 +71,7 @@
                 </div>
             </div>
         </article>
-        <article class="skills">
+        <article class="skills bg-white">
             <span class="line"></span>
             <div class="skills-inner">
                 <div class="skills-title">
@@ -78,8 +80,8 @@
                 
                 <div class="skills-wrap">
                     <div class="btn-wrap">
-                        <a href="#" class="detail-btn">아래 스킬들을 이용한 프로젝트 보러가기</a>
-                        <a href="#" class="circle"></a>
+                        <a href="project.html" class="detail-btn locate atvBtn">아래 스킬들을 이용한 프로젝트 보러가기</a>
+                        <a href="project.html" class="circle locate atvBtn"></a>
                     </div>
                     <div class="familiar">
                         <h3>Familiar</h3>
@@ -93,7 +95,7 @@
                                 <span>CSS3</span>
                             </li>
                             <li class="skill-item">
-                                <img src="../img/about-icon-js.png" alt="Javascript">
+                                <img src="../img/about-icon-javascript.png" alt="Javascript">
                                 <span>Javascript</span>
                             </li>
                             <li class="skill-item">
