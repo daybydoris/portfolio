@@ -28,11 +28,7 @@ article.index-about .txt-wrap .index-txt {
   text-align: left;
 }
 
-article.index-about .txt-wrap .index-txt .front {
-  height: 150px;
-}
-
-article.index-about .txt-wrap .index-txt .front .txt-back {
+article.index-about .txt-wrap .index-txt .txt-back {
   top: 5%;
 }
 

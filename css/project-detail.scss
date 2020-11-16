@@ -8,11 +8,16 @@ body{
 }
 
 article.project-detail{
-    width:68%;
+    width:100%;
     padding:300px 0;
     margin:0 auto;
 
+    .art_inner{
+        width:68%;
+        margin:0 auto;
+    }
     .index-txt{
+        margin:0 auto;
         color:#fff;
         .txt-back{
             bottom:0;
@@ -67,6 +72,9 @@ article.project-detail{
             align-items: flex-start;
 
         }
+        .top-title{
+            text-transform: uppercase;
+        }
         .top-title,.top-time{
             width:22%;
         }
@@ -94,7 +102,12 @@ article.project-detail{
                 .page-prev-item{
                     width:33.3%;
 
-                    img{width:100%; opacity:0.5; transition:0.2s;}
+                    img{
+                        width:100%;
+                        opacity:0.5;
+                        transition:0.2s;
+                        vertical-align: middle;
+                    }
                     img:hover{opacity:1;}
                 }
             }
@@ -127,6 +140,8 @@ article.project-detail{
                     justify-content: space-between;
                     margin-right:40px;
                     margin-bottom:30px;
+                    text-transform: capitalize;
+                    
                     img{
                         width:50px;
                         margin-right:10px;

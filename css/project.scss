@@ -52,8 +52,13 @@ article.project{
 
             .thumb{
                 width:55%;
+                perspective: 1500px;
                 img{
                     width:100%;
+                    transition:0.3s;
+                }
+                &:hover img{
+                    transform:rotateX(10deg) rotateY(18deg) rotateZ(-3deg);
                 }
             }
             .project-prev{

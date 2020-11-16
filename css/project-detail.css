@@ -5,12 +5,18 @@ body {
 }
 
 article.project-detail {
-  width: 68%;
+  width: 100%;
   padding: 300px 0;
   margin: 0 auto;
 }
 
+article.project-detail .art_inner {
+  width: 68%;
+  margin: 0 auto;
+}
+
 article.project-detail .index-txt {
+  margin: 0 auto;
   color: #fff;
 }
 
@@ -77,6 +83,10 @@ article.project-detail .sec-top div {
           align-items: flex-start;
 }
 
+article.project-detail .sec-top .top-title {
+  text-transform: uppercase;
+}
+
 article.project-detail .sec-top .top-title, article.project-detail .sec-top .top-time {
   width: 22%;
 }
@@ -120,6 +130,7 @@ article.project-detail .page-prev .inner .page-prev-list .page-prev-item img {
   opacity: 0.5;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  vertical-align: middle;
 }
 
 article.project-detail .page-prev .inner .page-prev-list .page-prev-item img:hover {
@@ -181,6 +192,7 @@ article.project-detail .middle .used-skill .skill-list .skill-item {
           justify-content: space-between;
   margin-right: 40px;
   margin-bottom: 30px;
+  text-transform: capitalize;
 }
 
 article.project-detail .middle .used-skill .skill-list .skill-item img {

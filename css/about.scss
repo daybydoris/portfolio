@@ -12,7 +12,7 @@ article.about{
             margin-bottom:40px;
             .txt-back{
                 bottom:-2px;
-                mix-blend-mode: color;
+                mix-blend-mode: difference;
                 isolation: isolate;
                 opacity: 0.8;
             }
@@ -145,8 +145,6 @@ article.skills{
                     }
                 }
             }
-            .tried{}
-            .etc{}
         }
     }
 }
