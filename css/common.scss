@@ -52,155 +52,163 @@ $red: #e8001b;
   letter-spacing: 0;
 }
 
-html,
+html{
+  margin:0;
+  padding:0;
+}
 body {
   margin: 0;
   padding: 0;
+  opacity: 0;
 
   position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: Montserrat, "NEXON Lv1 Gothic Bold";
+  margin: 0;
+  padding: 0;
+}
+p{
+  font-family: Montserrat, "NEXON Lv2 Gothic Light";
+  margin:0;
+  padding:0;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $black;
+  font-family: Montserrat, "NEXON Lv1 Gothic Light", "NEXON Lv2 Gothic";
+}
+a, button, div{
+  outline:0;
+}
+img{margin:0 auto;}
 
-  // cursor:none;
+//background
+.bg-black{
+  background:$black;
+}
+.bg-white{
+  background:#fff;
+}
+body.stopScroll{
+  width:100%;
+  height:100vh;
+  overflow: hidden;
+}
+::selection {
+  background-color: black;
+  color: yellow;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-    font-family: Montserrat, "NEXON Lv1 Gothic Bold";
-    margin: 0;
-    padding: 0;
-  }
-  p{
-    font-family: Montserrat, "NEXON Lv2 Gothic Light";
-    margin:0;
-    padding:0;
-  }
-  ul,
-  li {
-    list-style: none;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-    color: $black;
-    font-family: Montserrat, "NEXON Lv1 Gothic Light", "NEXON Lv2 Gothic";
-  }
-  a, button, div{
-    outline:0;
-  }
-  img{margin:0 auto;}
 
-  //background
-  .bg-black{
-    background:$black;
-  }
-  .bg-white{
-    background:#fff;
-  }
-  body.stopScroll{
-    width:100%;
-    height:100vh;
-    overflow: hidden;
+// cursor
+
+.cursor{
+  display: inline-block;
+  width:30px;
+  height:30px;
+  background:transparent;
+  border:1px solid $red;
+  border-radius: 50%;
+
+  position: absolute;
+  left:0; top:0;
+
+  transform-origin: center;
+
+  transition:0.1s;
+  opacity:0.8;
+
+  z-index: 50;
+
+  pointer-events: none;
+}
+.cursor.active{
+  pointer-events: none;
+  
+  mix-blend-mode: darken;
+  isolation: isolate;
+
+  animation: cursor 0.3s forwards;
+
+  @keyframes cursor {
+    0%{
+      transform:scale(1);
+    }
+    50%{
+      transform:scale(0);
+    }
+    100%{
+      transform:scale(3);
+      background:#aaa;
+      border:none;
+      opacity:0.2;
+    }
   }
 
-  // cursor
+}
 
-  .cursor{
+.btn-wrap{
+  display: inline-block;
+  margin:25px 15px;
+  position: relative;
+
+  .detail-btn{
+    font-size:15px;
+    font-weight: 500;
+    color:#737373;
+    letter-spacing: 5px;
+
     display: inline-block;
-    width:30px;
-    height:30px;
-    background:transparent;
-    border:1px solid $red;
-    border-radius: 50%;
+
+  }
+  .circle{
+    width:40px;
+    height:40px;
+    background:$red;
+    border-radius: 50px;
 
     position: absolute;
-    left:0; top:0;
+    left:-15px; top:-2px;
 
-    transform-origin: center;
+    transform: translateY(-20%);
 
-    transition:0.1s;
-    opacity:0.8;
-
-    z-index: 50;
-
-    pointer-events: none;
+    transition:0.5s;
   }
-  .cursor.active{
-    pointer-events: none;
-    
-    mix-blend-mode: darken;
-    isolation: isolate;
-
-    animation: cursor 0.3s forwards;
-
-    @keyframes cursor {
-      0%{
-        transform:scale(1);
-      }
-      50%{
-        transform:scale(0);
-      }
-      100%{
-        transform:scale(3);
-        background:#ececec;
-        border:none;
-        opacity:0.5;
-      }
-    }
-
-  }
-  }
-
-  .btn-wrap{
-    display: inline-block;
-    margin:25px 15px;
-    position: relative;
-
-    .detail-btn{
-      font-size:15px;
-      font-weight: 500;
-      color:#737373;
-      letter-spacing: 5px;
-
-      display: inline-block;
-
-    }
-    .circle{
-      width:40px;
-      height:40px;
-      background:$red;
-      border-radius: 50px;
-
-      position: absolute;
-      left:-15px; top:-2px;
-
-      transform: translateY(-20%);
-
-      transition:0.5s;
-    }
-  }
-
-
+}
 .index-txt{
   font-size:60px;
+  text-transform: uppercase;
+  // overflow: hidden;
   .front{
       position: relative;
+      
 
       .txt-back{
-          font-family:"CommercialScript BT";
-          font-size:60px;
-          font-weight: normal;
-          font-style: italic;
-          letter-spacing: 10px;
+        position: absolute;
+        left:0;
 
-          color:$red;
+        font-family:"CommercialScript BT";
+        font-size:60px;
+        font-weight: normal;
+        font-style: italic;
+        letter-spacing: 15px;
 
-          position: absolute;
-          left:0;
-
-          mix-blend-mode: difference;
-          // isolation: isolate;
+        text-transform: lowercase;
+        
+        color:$red;
+        mix-blend-mode: difference;
+        // isolation: isolate;
       }
   }
 }
@@ -574,8 +582,4 @@ aside {
     left:0;
     transition:1s;
   }
-  // .contact-label.active{
-  //   left:calc(100% - 62);
-  //   transition:0.5s;
-  // }
 }

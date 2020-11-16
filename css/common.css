@@ -44,83 +44,80 @@
   letter-spacing: 0;
 }
 
-html,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
+  opacity: 0;
   position: relative;
 }
 
-html h1,
-html h2,
-html h3,
-html h4,
-html h5,
-html h6,
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Montserrat, "NEXON Lv1 Gothic Bold";
   margin: 0;
   padding: 0;
 }
 
-html p,
-body p {
+p {
   font-family: Montserrat, "NEXON Lv2 Gothic Light";
   margin: 0;
   padding: 0;
 }
 
-html ul,
-html li,
-body ul,
-body li {
+ul,
+li {
   list-style: none;
   padding: 0;
 }
 
-html a,
-body a {
+a {
   text-decoration: none;
   color: #151515;
   font-family: Montserrat, "NEXON Lv1 Gothic Light", "NEXON Lv2 Gothic";
 }
 
-html a, html button, html div,
-body a,
-body button,
-body div {
+a, button, div {
   outline: 0;
 }
 
-html img,
-body img {
+img {
   margin: 0 auto;
 }
 
-html .bg-black,
-body .bg-black {
+.bg-black {
   background: #151515;
 }
 
-html .bg-white,
-body .bg-white {
+.bg-white {
   background: #fff;
 }
 
-html body.stopScroll,
-body body.stopScroll {
+body.stopScroll {
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-html .cursor,
-body .cursor {
+::-moz-selection {
+  background-color: black;
+  color: yellow;
+}
+
+::selection {
+  background-color: black;
+  color: yellow;
+}
+
+.cursor {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -139,8 +136,7 @@ body .cursor {
   pointer-events: none;
 }
 
-html .cursor.active,
-body .cursor.active {
+.cursor.active {
   pointer-events: none;
   mix-blend-mode: darken;
   isolation: isolate;
@@ -160,9 +156,9 @@ body .cursor.active {
   100% {
     -webkit-transform: scale(3);
             transform: scale(3);
-    background: #ececec;
+    background: #aaa;
     border: none;
-    opacity: 0.5;
+    opacity: 0.2;
   }
 }
 
@@ -178,9 +174,9 @@ body .cursor.active {
   100% {
     -webkit-transform: scale(3);
             transform: scale(3);
-    background: #ececec;
+    background: #aaa;
     border: none;
-    opacity: 0.5;
+    opacity: 0.2;
   }
 }
 
@@ -214,6 +210,7 @@ body .cursor.active {
 
 .index-txt {
   font-size: 60px;
+  text-transform: uppercase;
 }
 
 .index-txt .front {
@@ -221,14 +218,15 @@ body .cursor.active {
 }
 
 .index-txt .front .txt-back {
+  position: absolute;
+  left: 0;
   font-family: "CommercialScript BT";
   font-size: 60px;
   font-weight: normal;
   font-style: italic;
-  letter-spacing: 10px;
+  letter-spacing: 15px;
+  text-transform: lowercase;
   color: #e8001b;
-  position: absolute;
-  left: 0;
   mix-blend-mode: difference;
 }
 
