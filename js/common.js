@@ -1,20 +1,28 @@
 'use strict';
 
-window.addEventListener('DOMContentLoaded',function(){
+window.addEventListener('DOMContentLoaded', function () {
 
     $("header").load("/portfolio/inc_head_foot.html header .h_container", init);
 
-    function init(){
-    
+    function init() {
+
+
+
+        //-----------------------------
+        // 변수 선언
+        //-----------------------------
+
         const body = document.querySelector('body');
+        const bodyWrap = document.querySelector('.body-wrap');
         const header = document.querySelector('header');
         const article = document.querySelector('article');
 
         const logo = document.querySelectorAll('.logo text');
         const menuTrigger = document.querySelector('.menu-trigger');
         const triggerSpan = document.querySelectorAll('.menu-trigger span');
-        const menuBtn = document.querySelectorAll('nav .menu');
-        
+        const menuBtn = document.querySelectorAll('nav .menu a');
+
+        const images = document.querySelectorAll('.disappear');
 
         const cursorPointer = document.querySelector('.cursor');
         let aTag = document.querySelectorAll('.atvBtn');
@@ -24,97 +32,155 @@ window.addEventListener('DOMContentLoaded',function(){
         const conBoxWrap = document.querySelector('.contact-box-wrap');
 
 
+
+
+        //-----------------------------
+        // AOS plugin
+        //-----------------------------
+
+        AOS.init({
+            duration: "500",
+            once: true
+        });
+
+
+
+
+
+        //-----------------------------
+        // header color
+        //-----------------------------
+
         let filename = location.pathname;
 
         headerColor(logo);
         headerColor(triggerSpan);
 
-        //header 색상 변경
+
+
         //index.html은 스크롤 이벤트
         //나머지는 article 컬러에 따라서 변경
-        function headerColor(name){
-            console.log(filename);
-            if(filename == '/portfolio/'){
-                window.addEventListener('scroll',function(){
-                    if(window.scrollY > 1000){
+
+        function headerColor(name) {
+
+            if (filename == '/portfolio/') {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 1000) {
                         changeColor('#fff');
-                    }else{
+                    } else {
                         changeColor('#151515');
                     }
-                });    
-            }else{
-                if(article.classList.contains('bg-black')){
+                });
+            } else {
+                if (article.classList.contains('bg-black')) {
                     changeColor('#fff');
-                }else{
+                } else {
                     changeColor('#151515');
                 }
             }
 
             //색상 변경 함수
-            function changeColor(color){
-                name.forEach(function(l){
-                    if(l.tagName == 'text'){
+            function changeColor(color) {
+                name.forEach(function (l) {
+                    if (l.tagName == 'text') {
                         l.style = `fill:${color}`;
-                    }else{
+                    } else {
                         l.style = `background:${color}`;
                     }
                 });
             }
         }
 
-        document.addEventListener('mousemove',cursorPos);
+
+
+
+        //-----------------------------
+        // 페이지 전환 효과
+        //-----------------------------
+
+        const locateBtn = document.querySelectorAll('.locate');
+
+        //화면 나타날 때 opacity 서서히 올리기
+        $('body').fadeTo(500, 1);
+
+        locateBtn.forEach(function (l) {
+            l.addEventListener('click', pageTransition);
+        });
+
+        function pageTransition(e) {
+            let pageUrl;
+
+            e.preventDefault();
+
+            if (e.target.href == undefined) {
+                pageUrl = e.target.closest('a').href;
+            } else {
+                pageUrl = e.target.href;
+            }
+
+            setTimeout(function () {
+                $('body').fadeOut(500);
+            }, 300);
+
+            setTimeout(function () {
+                location.href = pageUrl;
+            }, 1000);
+        }
+
+
+        document.addEventListener('mousemove', cursorPos);
 
         //커서 따라다니는 원
-        function cursorPos(e){
+        function cursorPos(e) {
             let cursorX = e.pageX;
             let cursorY = e.pageY;
-            let pointerW = cursorPointer.offsetWidth/2;
-            let pointerH = cursorPointer.offsetHeight/2;
-            
-            window.addEventListener('scroll',function(){
+            let pointerW = cursorPointer.offsetWidth / 2;
+            let pointerH = cursorPointer.offsetHeight / 2;
+
+            window.addEventListener('scroll', function () {
                 let scrollY = window.scrollY;
             });
 
-            cursorPointer.style = "left:"+ (cursorX - pointerW) + "px; top:"+ (cursorY - pointerH - scrollY) + "px;";
+            cursorPointer.style = "left:" + (cursorX - pointerW) + "px; top:" + (cursorY - pointerH - scrollY) + "px;";
         }
 
 
         //버튼 hover시 원 커지게 하기
-        aTag.forEach(function(a){
-            a.addEventListener('mouseover',function(){
+        aTag.forEach(function (a) {
+            a.addEventListener('mouseover', function () {
                 cursorPointer.classList.add('active');
             });
-            a.addEventListener('mouseleave',function(){
+            a.addEventListener('mouseleave', function () {
                 cursorPointer.classList.remove('active');
             });
         });
 
 
         //menuTrigger 클릭 이벤트
-        menuTrigger.addEventListener('click',triggerChange);
-        menuTrigger.addEventListener('click',navToggle);
+        menuTrigger.addEventListener('click', triggerChange);
+        menuTrigger.addEventListener('click', navToggle);
 
 
         //menu-trigger 모양 변형
-        function triggerChange(){
+        function triggerChange() {
             menuTrigger.classList.toggle('active');
         }
 
 
 
         //스크롤 막기/허용
-        function stopScroll(){
+        function stopScroll() {
             body.classList.add("stopScroll");
         }
-        function allowScroll(){
+        function allowScroll() {
             body.classList.remove("stopScroll");
         }
 
         //header 막기
-        function blockHeader(){
+        function blockHeader() {
             header.style.display = 'none';
         }
-        function allowHeader(){
+        function allowHeader() {
             header.style.display = 'block';
         }
 
@@ -124,51 +190,66 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
         //nav 열기/닫기
-        function navToggle(){
-            
+        function navToggle() {
 
-            if(menuTrigger.classList.contains('active')){
+
+            if (menuTrigger.classList.contains('active')) {
 
                 navWrap.style.transition = "0.7s";
                 navWrap.style.transform = "scale(1)";
 
-                stopScroll();
-                
-                setTimeout(function(){
-                    nav.classList.add('active');
-                },800);
+                // menuBtn.forEach(function(m){
+                //     m.setAttribute('data-aos','fade-up');
+                // });
 
-            }else{
+                stopScroll();
+
+                setTimeout(function () {
+
+                    nav.classList.add('active');
+                }, 500);
+
+            } else {
 
                 nav.classList.remove('active');
 
                 allowScroll();
 
-                setTimeout(function(){
+                setTimeout(function () {
                     navWrap.style.transform = "scale(0)";
-                },300);
+                }, 300);
             }
         }
 
         //nav 메뉴 클릭 후 화면 전환
-        menuBtn.forEach(function(a){
-            a.addEventListener('click', PageTransition);
+        menuBtn.forEach(function (a) {
+            a.addEventListener('click', navTransition);
         });
 
-        //페이지 이동 이벤트
-        function PageTransition(e){
+        //nav 페이지 이동 이벤트
+        function navTransition(e) {
             e.preventDefault();
 
             nav.classList.remove('active');
 
-                allowScroll();
+            allowScroll();
 
-                setTimeout(function(){
-                    navWrap.style.transform = "scale(0)";
-                },300);
-                setTimeout(function(){
-                    location.href = e.target.getAttribute('href');
-                },1200);
+            setTimeout(function () {
+                navWrap.style.transform = "scale(0)";
+            }, 300);
+
+            setTimeout(function () {
+                $('body').fadeOut(500);
+            }, 700);
+
+            setTimeout(function () {
+                location.href = e.target.getAttribute('href');
+            }, 1200);
+
+
+            // setTimeout(function(){
+            //     location.href = pageUrl;
+            // },1000);
         }
 
 
@@ -176,25 +257,25 @@ window.addEventListener('DOMContentLoaded',function(){
         conLabel.addEventListener('click', contactToggle);
 
         //contact-box 열기/닫기
-        function contactToggle(e){
+        function contactToggle(e) {
             e.preventDefault();
 
             const contact = document.querySelector('.contact');
 
-            if(!contact.classList.contains('active')){
+            if (!contact.classList.contains('active')) {
 
                 contact.classList.add('active');
 
                 blockHeader();
                 stopScroll();
-                
+
                 //label 위치 변경
-                setTimeout(function(){
+                setTimeout(function () {
                     conLabel.textContent = 'Close';
                     conLabel.style = 'left:98.5vw';
-                },1000);
-                
-            }else{
+                }, 1000);
+
+            } else {
                 contact.classList.remove('active');
                 conLabel.style = 'left:98%';
 
@@ -202,22 +283,22 @@ window.addEventListener('DOMContentLoaded',function(){
                 allowScroll();
 
                 //label 위치 변경
-                setTimeout(function(){
+                setTimeout(function () {
                     conLabel.style = 'left:100%';
                     conLabel.textContent = 'Contact';
 
-                },1000);
+                }, 1000);
             }
 
         }
 
-        
+
 
     }
 
 
-    
-    
+
+
     // setTimeout(function(){
     //     
 
@@ -249,7 +330,7 @@ window.addEventListener('DOMContentLoaded',function(){
     //             },300);
     //         }
 
-            
+
     //     });
 
     // },800);
