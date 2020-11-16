@@ -20,7 +20,7 @@
     <!-- contact -->
     <aside>
         <div class="contact">
-            <a href="#" class="atvBtn">
+            <a href="#" class="atvBtn label-wrap">
                 <div class="contact-label black">
                     <h3>Contact</h3>
                 </div>
@@ -58,21 +58,20 @@
 
             <div class="txt-wrap">
                 <h2 class="index-txt">
-                    <div data-aos="fade-up">Hello.</div>
-                    <div data-aos="fade-up" data-aos-delay="500">I’m a</div>
-                    <div class="front">
-                        <div data-aos="fade-up" data-aos-delay="600">Frontend</div>
-                        <div data-aos="fade-up" data-aos-delay="700">Developer</div>
+                    <div data-aos="fade-up" data-aos-delay="500">Hello.</div>
+                    <div data-aos="fade-up" data-aos-delay="800">I’m a</div>
+                    <div class="front" data-aos="fade-up" data-aos-delay="900">Frontend
+                        <div class="txt-back" data-aos="fade-up" data-aos-delay="900">Frontend</div>
                     </div>
-                    <div class="txt-back" style="display:none;">
-                        <div data-aos="fade-up" data-aos-delay="600">Frontend</div>
-                        <div data-aos="fade-up" data-aos-delay="700">Developer</div>
+                    <div class="front" data-aos="fade-up" data-aos-delay="1000">
+                        Developer
+                        <div class="txt-back" data-aos="fade-up" data-aos-delay="1000">Developer</div>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="1200">Jeong Young Shin.</div>
+                    <div data-aos="fade-up" data-aos-delay="1600">Jeong Young Shin.</div>
                 </h2>
                 <div class="btn-wrap atvBtn">
-                    <a href="/portfolio/pages/about.html" class="detail-btn">about +</a>
-                    <a href="/portfolio/pages/about.html" class="circle"></a>
+                    <a href="/portfolio/pages/about.html" class="detail-btn locate">about +</a>
+                    <a href="/portfolio/pages/about.html" class="circle locate"></a>
                 </div>
             </div>
             <div class="scroll">
@@ -95,20 +94,17 @@
                 </h2>
 
                 <div class="btn-wrap atvBtn">
-                    <a href="/portfolio/pages/project.html" class="detail-btn">view more projets +</a>
-                    <a href="/portfolio/pages/project.html" class="circle"></a>
+                    <a href="/portfolio/pages/project.html" class="detail-btn locate">view more projets +</a>
+                    <a href="/portfolio/pages/project.html" class="circle locate"></a>
                 </div>
             </div>
 
             <!-- slider -->
             <div class="slider">
-                <div class="slider-con">
-                    <div class="img-box">
-                        <img src="img/project-coffee-thumb.jpg" alt>
+                <div class="slider-con locate">
+                    <div class="img-box atvBtn">
+                        <img src="img/project-coffee-thumb.jpg" class="atvBtn" alt>
                     </div>
-                    <!-- <div class="title">
-                        Coffee for you.
-                    </div> -->
                     <div class="svg-box">
                         <svg width="100%" height="120" viewBox="0 0 100% 120">
                             <text x="50%" y="50%" text-anchor="middle" class="title">Coffee for you.</text>
@@ -117,7 +113,7 @@
                 </div>
                 <div class="slider-con">
                     <div class="img-box">
-                        <img src="img/project-raon-thumb.jpg" alt>
+                        <img src="img/project-raon-thumb.jpg" class="atvBtn" alt>
                     </div>
                     <div class="svg-box">
                         <svg width="100%" height="120" viewBox="0 0 100% 120">
@@ -127,7 +123,7 @@
                 </div>
                 <div class="slider-con">
                     <div class="img-box">
-                        <img src="img/project-coffee-thumb.jpg" alt>
+                        <img src="img/project-coffee-thumb.jpg" class="atvBtn" alt>
                     </div>
                     <div class="svg-box">
                         <svg width="100%" height="120" viewBox="0 0 100% 120">
@@ -152,11 +148,6 @@
             centerMode: true,
             arrows: false,
             slidesPerRow: 1
-        });
-
-        AOS.init({
-            duration: "500",
-            once: true
         });
     </script>
 </body>
