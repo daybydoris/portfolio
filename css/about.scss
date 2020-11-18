@@ -1,8 +1,17 @@
 @import url('common.css');
 
+canvas{
+    position: absolute;
+    right:0; top:0;
+    background:transparent;
+    opacity: 0.5;
+    // z-index:5;
+}
 article.about{
     height:1080px;
     position: relative;
+    background:transparent;
+
     .txt-wrap{
         position: absolute;
         left: 45%; top:23%;
@@ -145,6 +154,8 @@ article.skills{
                     }
                 }
             }
+            .tried{}
+            .etc{}
         }
     }
 }
