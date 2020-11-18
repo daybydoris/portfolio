@@ -55,6 +55,7 @@ $red: #e8001b;
 html{
   margin:0;
   padding:0;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -63,6 +64,9 @@ body {
 
   position: relative;
 }
+// article{
+//   opacity: 0;
+// }
 h1,
 h2,
 h3,
@@ -186,6 +190,11 @@ body.stopScroll{
     transition:0.5s;
   }
 }
+
+// .rotate{
+//   transform: rotate(10deg);
+// }
+
 .index-txt{
   font-size:60px;
   text-transform: uppercase;
@@ -359,7 +368,7 @@ nav {
   opacity:0;
   display: none;
 
-  transition:1s;
+  transition:0.5s;
 
   .menu {
     width: 500px;
@@ -455,7 +464,7 @@ nav {
 aside {
   .contact {
     position: fixed;
-    left:-100%; top:0;
+    left:-101%; top:0;
 
     z-index: 10;
 
@@ -474,7 +483,7 @@ aside {
       padding: 8px;
       margin: 0;
 
-      transform: rotate(90deg) translateY(90%);
+      transform: rotate(90deg) translateY(60%);
 
       position: absolute;
       left:100%;
@@ -482,7 +491,7 @@ aside {
 
       z-index:4;
 
-      transition:0.5s;
+      transition:1s;
     }
     .contact-label.black{
       color: #fff;
@@ -498,13 +507,13 @@ aside {
 
       @keyframes label {
         0%{
-           transform:rotate(90deg) translateY(90%);
+           transform:rotate(90deg) translateY(60%);
         }
         50%{
-          transform:rotate(90deg) translateY(87%);
+          transform:rotate(90deg) translateY(57%);
         }
         100%{
-          transform:rotate(90deg) translateY(90%);
+          transform:rotate(90deg) translateY(60%);
         }
       }
     }
@@ -513,7 +522,7 @@ aside {
       left:0;
       top:0;
 
-      width: 100%;
+      width: 100vw;
       height: 100vh;
 
       background: $black;
@@ -582,4 +591,8 @@ aside {
     left:0;
     transition:1s;
   }
+  // .contact-label.active{
+  //   left:calc(100% - 62);
+  //   transition:0.5s;
+  // }
 }

@@ -47,6 +47,7 @@
 html {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -376,8 +377,8 @@ nav {
   z-index: 10;
   opacity: 0;
   display: none;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 nav .menu {
@@ -486,7 +487,7 @@ nav .contact-email .contact-inner .email {
 
 aside .contact {
   position: fixed;
-  left: -100%;
+  left: -101%;
   top: 0;
   z-index: 10;
   width: 100%;
@@ -502,14 +503,14 @@ aside .contact .contact-label {
   font-weight: bold;
   padding: 8px;
   margin: 0;
-  -webkit-transform: rotate(90deg) translateY(90%);
-          transform: rotate(90deg) translateY(90%);
+  -webkit-transform: rotate(90deg) translateY(60%);
+          transform: rotate(90deg) translateY(60%);
   position: absolute;
   left: 100%;
   top: 70%;
   z-index: 4;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 aside .contact .contact-label.black {
@@ -531,31 +532,31 @@ aside .contact .contact-label:hover {
 
 @-webkit-keyframes label {
   0% {
-    -webkit-transform: rotate(90deg) translateY(90%);
-            transform: rotate(90deg) translateY(90%);
+    -webkit-transform: rotate(90deg) translateY(60%);
+            transform: rotate(90deg) translateY(60%);
   }
   50% {
-    -webkit-transform: rotate(90deg) translateY(87%);
-            transform: rotate(90deg) translateY(87%);
+    -webkit-transform: rotate(90deg) translateY(57%);
+            transform: rotate(90deg) translateY(57%);
   }
   100% {
-    -webkit-transform: rotate(90deg) translateY(90%);
-            transform: rotate(90deg) translateY(90%);
+    -webkit-transform: rotate(90deg) translateY(60%);
+            transform: rotate(90deg) translateY(60%);
   }
 }
 
 @keyframes label {
   0% {
-    -webkit-transform: rotate(90deg) translateY(90%);
-            transform: rotate(90deg) translateY(90%);
+    -webkit-transform: rotate(90deg) translateY(60%);
+            transform: rotate(90deg) translateY(60%);
   }
   50% {
-    -webkit-transform: rotate(90deg) translateY(87%);
-            transform: rotate(90deg) translateY(87%);
+    -webkit-transform: rotate(90deg) translateY(57%);
+            transform: rotate(90deg) translateY(57%);
   }
   100% {
-    -webkit-transform: rotate(90deg) translateY(90%);
-            transform: rotate(90deg) translateY(90%);
+    -webkit-transform: rotate(90deg) translateY(60%);
+            transform: rotate(90deg) translateY(60%);
   }
 }
 
@@ -563,7 +564,7 @@ aside .contact .contact-box {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: #151515;
 }
