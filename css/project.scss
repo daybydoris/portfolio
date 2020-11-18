@@ -5,23 +5,25 @@
 
 @mixin list-order($val){
     @if $val == odd {
-      flex-direction: row;
+            flex-direction: row;
     //   .project-prev{
 
     //   }
     }
     @else if $val == even {
-      flex-direction: row-reverse;
-      .project-prev{
-          text-align: right;
-          p{
-              display: inline-block;
-          }
-      }
-
+            flex-direction: row-reverse;
+            .project-prev{
+                text-align: right;
+                p{
+                    display: inline-block;
+                }
+        }
     }
   }
 
+body{
+    background:#151515;
+}
 
 .rotate{
     transform: rotate(5deg);
@@ -44,56 +46,57 @@ article.project{
         width:68%;
         margin:0 auto;
         .project-item{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
 
-            margin-bottom:250px;
-
-            .thumb{
-                width:55%;
-                perspective: 1500px;
-                img{
-                    width:100%;
+                margin-bottom:250px;
+                .thumb{
+                    width:55%;
+                    perspective: 1500px;
                     transition:0.3s;
+                    img{
+                        width:100%;
+                        transition:0.3s;
+                    }
+                    // &:hover img{
+                    //     transform:rotateX(10deg) rotateY(18deg) rotateZ(-3deg);
+                    // }
                 }
-                &:hover img{
-                    transform:rotateX(10deg) rotateY(18deg) rotateZ(-3deg);
-                }
-            }
-            .project-prev{
-                width:40%;
-                .title-svg{
-                    margin-bottom:30px;
-                }
-                .title{
-                    font-size:70px;
-                    font-weight: bold;
-
-                    fill:transparent;
-                    stroke-width: 0.5;
-                    stroke: rgba(255,255,255,0.7);
+                .project-prev{
+                    width:40%;
+                    .title-svg{
+                        margin-bottom:30px;
+                    }
+                    .title{
+                        font-size:70px;
+                        font-weight: bold;
+    
+                        fill:transparent;
+                        stroke-width: 0.5;
+                        stroke: rgba(255,255,255,0.7);
+                    }
+                    .responsive{
+                        margin-bottom:20px;
+                        font-weight: bold;
+    
+                        #pc,#tablet,#mobile{
+                            color:#99785f;
+                        }
+                        span{
+                            color:#545454;
+                        }
+                    }
+                    .prev-txt{
+                        width:60%;
+                        font-weight: 100;
+                        color:#f5f5f5;
+                    }
                 }
                 .responsive{
-                    margin-bottom:20px;
-                    font-weight: bold;
+                    p{display:inline-block;}
+                }
 
-                    #pc,#tablet,#mobile{
-                        color:#99785f;
-                    }
-                    span{
-                        color:#545454;
-                    }
-                }
-                .prev-txt{
-                    width:60%;
-                    font-weight: 100;
-                    color:#f5f5f5;
-                }
-            }
-            .responsive{
-                p{display:inline-block;}
-            }
         }
         .odd{
             @include list-order(odd);

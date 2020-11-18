@@ -1,5 +1,9 @@
 @import url("common.css");
 /* mixin */
+body {
+  background: #151515;
+}
+
 .rotate {
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
@@ -43,17 +47,14 @@ article.project .project-inner .project-item .thumb {
   width: 55%;
   -webkit-perspective: 1500px;
           perspective: 1500px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 article.project .project-inner .project-item .thumb img {
   width: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-article.project .project-inner .project-item .thumb:hover img {
-  -webkit-transform: rotateX(10deg) rotateY(18deg) rotateZ(-3deg);
-          transform: rotateX(10deg) rotateY(18deg) rotateZ(-3deg);
 }
 
 article.project .project-inner .project-item .project-prev {
