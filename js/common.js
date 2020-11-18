@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', function () {
         headerColor(logo);
         headerColor(triggerSpan);
 
-
+        
 
         //index.html은 스크롤 이벤트
         //나머지는 article 컬러에 따라서 변경
@@ -74,6 +74,7 @@ window.addEventListener('DOMContentLoaded', function () {
             } else {
                 if (article.classList.contains('bg-black')) {
                     changeColor('#fff');
+                    // body.style.backgroundColor = "#151515";
                 } else {
                     changeColor('#151515');
                 }
@@ -97,34 +98,36 @@ window.addEventListener('DOMContentLoaded', function () {
         //-----------------------------
         // 페이지 전환 효과
         //-----------------------------
+        
+        let locateBtn = document.querySelectorAll('.locate');
 
-        const locateBtn = document.querySelectorAll('.locate');
+        console.log(locateBtn);
 
         //화면 나타날 때 opacity 서서히 올리기
         $('body').fadeTo(500, 1);
 
-        locateBtn.forEach(function (l) {
+        locateBtn.forEach(function(l){
             l.addEventListener('click', pageTransition);
         });
 
-        function pageTransition(e) {
+        function pageTransition(e){
             let pageUrl;
-
+            
             e.preventDefault();
-
-            if (e.target.href == undefined) {
+            
+            if(e.target.href == undefined){
                 pageUrl = e.target.closest('a').href;
-            } else {
+            }else{
                 pageUrl = e.target.href;
             }
 
-            setTimeout(function () {
+            setTimeout(function(){
                 $('body').fadeOut(500);
-            }, 300);
+            },300);
 
-            setTimeout(function () {
+            setTimeout(function(){
                 location.href = pageUrl;
-            }, 1000);
+            },1000);
         }
 
 
@@ -205,7 +208,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 stopScroll();
 
                 setTimeout(function () {
-
+                    
                     nav.classList.add('active');
                 }, 500);
 
@@ -238,15 +241,15 @@ window.addEventListener('DOMContentLoaded', function () {
                 navWrap.style.transform = "scale(0)";
             }, 300);
 
-            setTimeout(function () {
+            setTimeout(function(){
                 $('body').fadeOut(500);
-            }, 700);
+            },700);
 
             setTimeout(function () {
                 location.href = e.target.getAttribute('href');
             }, 1200);
 
-
+            
             // setTimeout(function(){
             //     location.href = pageUrl;
             // },1000);
@@ -272,22 +275,25 @@ window.addEventListener('DOMContentLoaded', function () {
                 //label 위치 변경
                 setTimeout(function () {
                     conLabel.textContent = 'Close';
-                    conLabel.style = 'left:98.5vw';
-                }, 1000);
-
+                    conLabel.style = 'left:98%';
+                }, 300);
+                    
+                
             } else {
                 contact.classList.remove('active');
-                conLabel.style = 'left:98%';
 
                 allowHeader();
                 allowScroll();
 
                 //label 위치 변경
-                setTimeout(function () {
+                setTimeout(function(){
                     conLabel.style = 'left:100%';
+                },1000);
+                setTimeout(function(){
                     conLabel.textContent = 'Contact';
-
-                }, 1000);
+                   
+                },1000);
+                
             }
 
         }
