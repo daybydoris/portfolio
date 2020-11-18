@@ -30,6 +30,9 @@ article.project-detail{
         isolation: isolate;
 
     }
+    .btn-wrap{
+        position: relative;
+    }
     .circle{
         opacity: 0.5;
         z-index:0;
@@ -70,7 +73,10 @@ article.project-detail{
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-
+        }
+        .top-wrap{
+            width:100%;
+            align-items: center;
         }
         .top-title{
             text-transform: uppercase;

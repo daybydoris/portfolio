@@ -30,6 +30,10 @@ article.project-detail .detail-btn {
   isolation: isolate;
 }
 
+article.project-detail .btn-wrap {
+  position: relative;
+}
+
 article.project-detail .circle {
   opacity: 0.5;
   z-index: 0;
@@ -81,6 +85,13 @@ article.project-detail .sec-top div {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+article.project-detail .sec-top .top-wrap {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 article.project-detail .sec-top .top-title {
