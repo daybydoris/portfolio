@@ -3,19 +3,22 @@ article {
   width: 100%;
 }
 
+.slick-slide {
+  width: 1300px;
+}
+
+canvas {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: transparent;
+  opacity: 0.5;
+}
+
 article.index-about {
   height: 1080px;
   position: relative;
-}
-
-article.index-about canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: #fff;
-  z-index: -1;
+  background: transparent;
 }
 
 article.index-about .txt-wrap {
@@ -87,8 +90,6 @@ article.index-about .scroll .line-wrap .line {
   position: absolute;
   left: 50%;
   top: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }

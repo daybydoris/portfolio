@@ -8,20 +8,22 @@ article{
     width:100%;
 }
 
+.slick-slide{
+    width:1300px;
+}
+
+canvas{
+    position: absolute;
+    right:0; top:0;
+    background:transparent;
+    opacity: 0.5;
+    // z-index:5;
+}
 
 article.index-about{
     height:1080px;
     position: relative;
-
-    canvas{
-        position: absolute;
-        left:0; top:0;
-        width:100%;
-        height:100vh;
-        background:#fff;
-    
-        z-index:-1;
-    }
+    background:transparent;
 
     .txt-wrap{
         width:60%;
@@ -31,6 +33,8 @@ article.index-about{
 
         .index-txt{
             text-align:left;
+            .front{
+            }
             .txt-back{
                 top:5%;
             }
@@ -80,8 +84,6 @@ article.index-about{
 
                 position: absolute;
                 left:50%; top:0;
-
-                transform:translateX(-50%);
 
                 transition:0.4s;
             }
