@@ -2,6 +2,20 @@
 
 window.addEventListener('DOMContentLoaded',function(){
 
+    //----------------------------
+    // canvas
+    //----------------------------
+    const canvas = document.querySelector('canvas');
+
+    let ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(1500, 250, 650, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(1700, 500, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+
     setInterval(lineActive,2000);
 
     //-----------------------------
@@ -23,4 +37,70 @@ window.addEventListener('DOMContentLoaded',function(){
         },1800);
     }
 
+    //-----------------------------
+    // slick
+    //-----------------------------
+
+    $.ajax({
+        url: "project.json",
+        type: "GET",
+        success: function (data) {
+            
+            const slider = document.querySelector('.slider');
+
+            data.project.forEach(function(p){
+
+                //slick content 넣기
+
+                createSliderCon();
+
+                function createSliderCon(){
+                    //slider-con
+                    let sliderCon = document.createElement('div');
+
+                    //img-box
+                    let imgBox = document.createElement('div');
+                    let img = document.createElement('img');
+                    let thumb = p.thumb;
+
+                    //svg-box
+                    let svgBox = document.createElement('div');
+                    let svg = document.createElement('svg');
+                    let text = document.createElement('text');
+
+
+                    
+                    imgBox.className = "img-box atvBtn";
+                    img.setAttribute('src',thumb);
+                    img.className = "atvBtn";
+
+                    imgBox.appendChild(img);
+
+                    text.setAttribute('x','50%');
+                    text.setAttribute('y','50%');
+                    text.setAttribute('text-anchor','middle');
+                    text.className = "title";
+
+                    svg.setAttribute('width','100%');
+                    svg.setAttribute('height','120');
+                    svg.setAttribute('viewbox','0 0 100% 120');
+
+                    svgBox.className = "svg-box";
+
+                    svg.appendChild(text);
+                    svgBox.appendChild(svg);
+
+                    sliderCon.className = "slider-con";
+                    sliderCon.appendChild(imgBox);
+                    sliderCon.appendChild(svgBox);
+
+                    slider.appendChild(sliderCon);
+
+                }
+
+
+            });
+
+        }
+    });
 });
