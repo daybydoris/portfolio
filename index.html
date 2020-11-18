@@ -11,11 +11,12 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link href="css/aos.css" rel="stylesheet">
 
-    <script defer src="js/common.js"></script>
-
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
 </head>
 
-<body class="bg-white">
+<body class="">
     <header></header>
     <!-- contact -->
     <aside>
@@ -50,26 +51,24 @@
     </aside>
     <!-- main -->
     <main>
+        <!-- canvas -->
+        <canvas width="1900" height="950">
+        </canvas>
         <article class="index-about bg-white">
-            <!-- canvas -->
-            <canvas>
-
-            </canvas>
-
             <div class="txt-wrap">
-                <h2 class="index-txt">
+                <h2 class="index-txt" data-aos="fade-up" >
                     <div data-aos="fade-up" data-aos-delay="500">Hello.</div>
                     <div data-aos="fade-up" data-aos-delay="800">I’m a</div>
                     <div class="front" data-aos="fade-up" data-aos-delay="900">Frontend
-                        <div class="txt-back" data-aos="fade-up" data-aos-delay="900">Frontend</div>
+                            <div class="txt-back" data-aos="fade-up" data-aos-delay="1400">Frontend</div>
                     </div>
                     <div class="front" data-aos="fade-up" data-aos-delay="1000">
                         Developer
-                        <div class="txt-back" data-aos="fade-up" data-aos-delay="1000">Developer</div>
+                        <div class="txt-back" data-aos="fade-up" data-aos-delay="1500">Developer</div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="1600">Jeong Young Shin.</div>
                 </h2>
-                <div class="btn-wrap atvBtn">
+                <div class="btn-wrap atvBtn rotate">
                     <a href="/portfolio/pages/about.html" class="detail-btn locate">about +</a>
                     <a href="/portfolio/pages/about.html" class="circle locate"></a>
                 </div>
@@ -101,7 +100,7 @@
 
             <!-- slider -->
             <div class="slider">
-                <div class="slider-con locate">
+            <!-- <div class="slider-con loacte">
                     <div class="img-box atvBtn">
                         <img src="img/project-coffee-thumb.jpg" class="atvBtn" alt>
                     </div>
@@ -130,24 +129,25 @@
                             <text x="50%" y="50%" text-anchor="middle" class="title">Coffee for you.</text>
                         </svg>
                     </div>
-                </div>
+                </div> -->
             </div>
         </article>
     </main>
 
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    
     <script src="js/slick.js"></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/index.js"></script>
 
     <script>
         $(".slider").slick({
             slidesToShow: 1,
-            autoplay: false,
-            autoplaySpeed: 4000,
+            autoplay: true,
+            autoplaySpeed: 2000,
             centerMode: true,
             arrows: false,
-            slidesPerRow: 1
+            rtl: false,
+            variableWidth: true
         });
     </script>
 </body>
