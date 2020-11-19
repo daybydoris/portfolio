@@ -122,3 +122,28 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+.slick-prev,
+.slick-next{
+    position: absolute;
+    background:transparent;
+    border:none;
+    font-size:0;
+
+    transform:translateY(-50%);
+}
+.slick-prev{
+    left:0; top:50%;
+    
+}
+.slick-next{
+    right:0; top:50%;
+}
+.slick-prev:after{
+    content:"\f054";
+    font: 20px/1 'FontAwesome';
+    transform:rotate(180deg);
+}
+.slick-next:after{
+    content:"\f054";
+    font: 20px/1 'FontAwesome';
+}
