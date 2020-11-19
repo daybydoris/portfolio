@@ -153,7 +153,7 @@ $(function () {
                     }
 
                     function createRes() {
-                        if(p.isReponsive == true){
+                        if(p.isResponsive == true){
                             const resDetail = document.querySelector('.res-detail .inner');
                             const lastPx = resDetail.querySelector('span');
     
@@ -169,6 +169,12 @@ $(function () {
                                 resDetail.insertBefore(resolution, lastPx);
                                 resDetail.insertBefore(type, lastPx);
                             }
+                        }else{
+                            const res = document.querySelector('.res-detail');
+                            const skillList = document.querySelector('.skill-list');
+
+                            res.remove();
+                            skillList.style = "width:100%; flex-wrap:nowrap;";
                         }
                     }
 
@@ -190,13 +196,22 @@ $(function () {
                 }
             });
 
+            $("li .figure-box").slick({
+                slidesToShow: 1,
+                autoplay: false,
+                centerMode: true,
+                arrows: true,
+                variableWidth: true,
+                dots:true
+            });
+
         }
 
         
 
     });
 
-
+    
     
 
     //end
