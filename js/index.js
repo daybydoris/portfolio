@@ -51,10 +51,6 @@ window.addEventListener('DOMContentLoaded',function(){
             data.project.forEach(function(p){
 
                 //slick content 넣기
-
-                createSliderCon();
-
-                function createSliderCon(){
                     //slider-con
                     let sliderCon = document.createElement('div');
 
@@ -69,8 +65,8 @@ window.addEventListener('DOMContentLoaded',function(){
                     let text = document.createElement('text');
 
 
-                    
-                    imgBox.className = "img-box atvBtn";
+
+                    imgBox.className = "img-box";
                     img.setAttribute('src',thumb);
                     img.className = "atvBtn";
 
@@ -79,7 +75,8 @@ window.addEventListener('DOMContentLoaded',function(){
                     text.setAttribute('x','50%');
                     text.setAttribute('y','50%');
                     text.setAttribute('text-anchor','middle');
-                    text.className = "title";
+                    text.textContent = `${p.title}.`;
+                    text.classList = "title";
 
                     svg.setAttribute('width','100%');
                     svg.setAttribute('height','120');
@@ -90,17 +87,25 @@ window.addEventListener('DOMContentLoaded',function(){
                     svg.appendChild(text);
                     svgBox.appendChild(svg);
 
-                    sliderCon.className = "slider-con";
+                    sliderCon.className = "slider-con locate";
                     sliderCon.appendChild(imgBox);
                     sliderCon.appendChild(svgBox);
 
                     slider.appendChild(sliderCon);
 
-                }
+            });
 
-
+            $(".slider").slick({
+                slidesToShow: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                centerMode: true,
+                arrows: false,
+                rtl: false,
+                variableWidth: true
             });
 
         }
     });
+
 });
