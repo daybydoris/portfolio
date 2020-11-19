@@ -248,6 +248,11 @@ article.project-detail .feature .tab {
   margin-bottom: 150px;
 }
 
+article.project-detail .feature .tab a {
+  height: 100%;
+  padding: 20px 0;
+}
+
 article.project-detail .feature .tab a:before {
   content: '|';
   color: #dbdbdb;
@@ -264,32 +269,54 @@ article.project-detail .feature .tab a.active {
   font-weight: bolder;
 }
 
-article.project-detail .feature-detail ul li {
-  margin-bottom: 150px;
+article.project-detail .feature-detail .feature-list li {
+  margin-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-article.project-detail .feature-detail ul li .left {
+article.project-detail .feature-detail .feature-list li .left {
   width: 40%;
 }
 
-article.project-detail .feature-detail ul li .left .detail-box div {
+article.project-detail .feature-detail .feature-list li .figure-box {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+
+article.project-detail .feature-detail .feature-list div {
   margin-bottom: 40px;
 }
 
-article.project-detail .feature-detail ul li .left .detail-box p {
+article.project-detail .feature-detail .feature-list p {
   width: 90%;
   margin-top: 30px;
 }
 
-article.project-detail .feature-detail ul li .figure-box {
-  width: 50%;
-  background: #eaeaea;
+article.project-detail .feature-detail .feature-list img {
+  width: 100%;
+}
+
+article.project-detail .feature-detail .feature-list .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 footer {
