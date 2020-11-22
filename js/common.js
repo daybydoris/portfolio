@@ -2,16 +2,16 @@
 
 window.addEventListener('DOMContentLoaded', function () {
 
+    //헤더 불러오기
     $("header").load("/portfolio/inc_head_foot.html header .h_container", init);
 
     function init() {
 
-
-
         //-----------------------------
-        // 변수 선언
+        // 1. 변수 선언
         //-----------------------------
 
+        const html = document.querySelector('html');
         const body = document.querySelector('body');
         const bodyWrap = document.querySelector('.body-wrap');
         const header = document.querySelector('header');
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
         //-----------------------------
-        // AOS plugin
+        // 2. AOS plugin
         //-----------------------------
 
         AOS.init({
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
         //-----------------------------
-        // header color
+        // 3. header color
         //-----------------------------
 
         let filename = location.pathname;
@@ -56,7 +56,6 @@ window.addEventListener('DOMContentLoaded', function () {
         headerColor(logo);
         headerColor(triggerSpan);
 
-        
 
         //index.html은 스크롤 이벤트
         //나머지는 article 컬러에 따라서 변경
@@ -74,7 +73,6 @@ window.addEventListener('DOMContentLoaded', function () {
             } else {
                 if (article.classList.contains('bg-black')) {
                     changeColor('#fff');
-                    // body.style.backgroundColor = "#151515";
                 } else {
                     changeColor('#151515');
                 }
@@ -96,44 +94,69 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
         //-----------------------------
-        // 페이지 전환 효과
+        // 4. 페이지 전환 효과
         //-----------------------------
-        
+
         let locateBtn = document.querySelectorAll('.locate');
 
-        console.log(locateBtn);
 
         //화면 나타날 때 opacity 서서히 올리기
-        $('body').fadeTo(500, 1);
+        $('header').fadeTo(200, 1);
+        $('main').fadeTo(500, 1);
+        $('.contact-label').fadeTo(100, 1);
 
-        locateBtn.forEach(function(l){
+        locateBtn.forEach(function (l) {
             l.addEventListener('click', pageTransition);
         });
 
-        function pageTransition(e){
+
+        //페이지 이동
+        function pageTransition(e) {
             let pageUrl;
-            
+
             e.preventDefault();
-            
-            if(e.target.href == undefined){
-                pageUrl = e.target.closest('a').href;
-            }else{
-                pageUrl = e.target.href;
+            console.log(e.target);
+            if (e.target.href == undefined || e.target.href == "") {
+                pageUrl = e.target.closest('a').getAttribute('href');
+            } else {
+                pageUrl = e.target.getAttribute('href');
             }
 
-            setTimeout(function(){
-                $('body').fadeOut(500);
-            },300);
+            //배경색 바꾸기
+            console.log(pageUrl);
 
-            setTimeout(function(){
+            if (pageUrl.includes('project.html') || pageUrl.includes('project-detail.html')) {
+                body.style.backgroundColor = '#151515';
+
+            } else {
+                html.style.backgroundColor = '#fff';
+                body.style.backgroundColor = '#fff';
+            }
+
+
+            //콘텐츠 서서히 사라지기
+            setTimeout(function () {
+                $('header').fadeOut(200);
+                $('main').fadeOut(500);
+                $('.contact-label').fadeOut(200);
+
+            }, 300);
+
+
+            setTimeout(function () {
                 location.href = pageUrl;
-            },1000);
+            }, 1000);
         }
 
 
+
+
+        //--------------------
+        // 5. 마우스 커서 효과
+        //--------------------
+
         document.addEventListener('mousemove', cursorPos);
 
-        //커서 따라다니는 원
         function cursorPos(e) {
             let cursorX = e.pageX;
             let cursorY = e.pageY;
@@ -159,16 +182,15 @@ window.addEventListener('DOMContentLoaded', function () {
         });
 
 
-        //menuTrigger 클릭 이벤트
-        menuTrigger.addEventListener('click', triggerChange);
-        menuTrigger.addEventListener('click', navToggle);
 
 
-        //menu-trigger 모양 변형
-        function triggerChange() {
-            menuTrigger.classList.toggle('active');
-        }
 
+        //-----------------------------
+        // 6. 트리거 메뉴 및 내비게이션
+        //-----------------------------
+
+        const nav = document.querySelector('nav');
+        const navWrap = document.querySelector('.nav-wrap');
 
 
         //스크롤 막기/허용
@@ -187,14 +209,24 @@ window.addEventListener('DOMContentLoaded', function () {
             header.style.display = 'block';
         }
 
-        const nav = document.querySelector('nav');
-        const navWrap = document.querySelector('.nav-wrap');
+
+        //menuTrigger 클릭 이벤트
+        menuTrigger.addEventListener('click', triggerChange);
+        menuTrigger.addEventListener('click', navToggle);
+
+
+        //menu-trigger 모양 변형
+        function triggerChange() {
+            menuTrigger.classList.toggle('active');
+        }
+
+
+
 
 
 
         //nav 열기/닫기
         function navToggle() {
-
 
             if (menuTrigger.classList.contains('active')) {
 
@@ -208,7 +240,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 stopScroll();
 
                 setTimeout(function () {
-                    
+
                     nav.classList.add('active');
                 }, 500);
 
@@ -233,27 +265,50 @@ window.addEventListener('DOMContentLoaded', function () {
         function navTransition(e) {
             e.preventDefault();
 
+            let pageUrl;
+
+            if (e.target.href == undefined || e.target.href == "") {
+                pageUrl = e.target.closest('a').getAttribute('href');
+            } else {
+                pageUrl = e.target.getAttribute('href');
+            }
+
+
+
             nav.classList.remove('active');
 
             allowScroll();
 
             setTimeout(function () {
                 navWrap.style.transform = "scale(0)";
-            }, 300);
+            }, 150);
 
-            setTimeout(function(){
-                $('body').fadeOut(500);
-            },700);
+            setTimeout(function () {
+                //콘텐츠 서서히 사라지기
+                $('header').fadeOut(200);
+                $('main').fadeOut(500);
+                $('.contact-label').fadeOut(200);
+
+                //배경색 바꾸기
+                if (pageUrl.includes('project.html') || pageUrl.includes('project-detail.html')) {
+                    body.style.backgroundColor = '#151515';
+
+                } else {
+                    html.style.backgroundColor = '#fff';
+                    body.style.backgroundColor = '#fff';
+                }
+            }, 700);
 
             setTimeout(function () {
                 location.href = e.target.getAttribute('href');
             }, 1200);
-
-            
-            // setTimeout(function(){
-            //     location.href = pageUrl;
-            // },1000);
         }
+
+
+
+        //-----------------------------
+        // 7. CONTACT
+        //-----------------------------
 
 
         //contact
@@ -265,6 +320,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
             const contact = document.querySelector('.contact');
 
+            //OPEN
             if (!contact.classList.contains('active')) {
 
                 contact.classList.add('active');
@@ -275,84 +331,29 @@ window.addEventListener('DOMContentLoaded', function () {
                 //label 위치 변경
                 setTimeout(function () {
                     conLabel.textContent = 'Close';
-                    conLabel.style = 'left:98%';
+                    conLabel.style = 'left:98%; opacity:1;';
                 }, 300);
-                    
-                
+
+
             } else {
+                //CLOSE
                 contact.classList.remove('active');
 
                 allowHeader();
                 allowScroll();
 
                 //label 위치 변경
-                setTimeout(function(){
-                    conLabel.style = 'left:100%';
-                },1000);
-                setTimeout(function(){
+                setTimeout(function () {
+                    conLabel.style = 'left:100%; opacity:1;';
+                }, 1000);
+                setTimeout(function () {
                     conLabel.textContent = 'Contact';
-                   
-                },1000);
-                
+
+                }, 1000);
+
             }
 
         }
-
-
-
     }
-
-
-
-
-    // setTimeout(function(){
-    //     
-
-    //     //버튼 hover시 원 커지게 하기
-    //     aTag.forEach(function(a){
-    //         a.addEventListener('mouseover',function(){
-    //             cursorPointer.classList.add('active');
-    //         });
-    //         a.addEventListener('mouseleave',function(){
-    //             cursorPointer.classList.remove('active');
-    //         });
-    //     });
-
-    //     menuTrigger.addEventListener('click',function(){
-    //         //menuTrigger 클릭하면 모양 변형
-    //         menuTrigger.classList.toggle('active');
-
-    //         //menu-trigger 클릭하면 nav 나오게 하기
-    //         if(menuTrigger.classList.contains('active')){
-    //             navWrap.style.transition = "1s";
-    //             navWrap.style.transform = "scale(1)";
-    //             setTimeout(function(){
-    //                 nav.classList.add('active');
-    //             },800);
-    //         }else{
-    //             nav.classList.remove('active');
-    //             setTimeout(function(){
-    //                 navWrap.style.transform = "scale(0)";
-    //             },300);
-    //         }
-
-
-    //     });
-
-    // },800);
-
-
-    // menuTrigger.addEventListener('click',function(){
-    //     menuTrigger.classList.toggle('active');
-
-    //     if(!navCircle.classList.contains('active')){
-    //         navCircle.classList.add('active');
-    //     }else{
-    //         navCircle.classList.remove('active');
-    //     }
-    //     // setTimeout(function(){
-    //     //     nav.classList.toggle('active');
-    //     // },500);
-    // });
 
 });
