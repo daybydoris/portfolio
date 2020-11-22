@@ -30,13 +30,13 @@ article.index-about{
         margin:0 auto;
 
         padding:290px 0;
+        // background:#fff;
 
         .index-txt{
             text-align:left;
-            .front{
-            }
             .txt-back{
-                top:5%;
+                top:6%;
+                // z-index:-1;
             }
         }
         
@@ -151,7 +151,6 @@ article.index-project{
                         fill:transparent;
                         stroke-width: 1;
                         stroke:#fff;
-
                     }
                 }
             }
