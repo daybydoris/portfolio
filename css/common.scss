@@ -55,18 +55,25 @@ $red: #e8001b;
 html{
   margin:0;
   padding:0;
+  width:100%;
+  height:100%;
   scroll-behavior: smooth;
+
 }
 body {
   margin: 0;
   padding: 0;
-  opacity: 0;
 
+  width:100%;
+  height:100%;
+
+  transition:0.5s;
+  
   position: relative;
 }
-// article{
-//   opacity: 0;
-// }
+main{
+  opacity:0;
+}
 h1,
 h2,
 h3,
@@ -81,6 +88,7 @@ p{
   font-family: Montserrat, "NEXON Lv2 Gothic Light";
   margin:0;
   padding:0;
+  line-height: 1.8;
 }
 ul,
 li {
@@ -201,7 +209,7 @@ body.stopScroll{
   // overflow: hidden;
   .front{
       position: relative;
-      
+      isolation: isolate;
 
       .txt-back{
         position: absolute;
@@ -216,8 +224,10 @@ body.stopScroll{
         text-transform: lowercase;
         
         color:$red;
-        mix-blend-mode: difference;
-        // isolation: isolate;
+        mix-blend-mode: luminosity;
+        isolation: isolate;
+
+        opacity:0.8;
       }
   }
 }
@@ -230,6 +240,9 @@ header {
 
   position: fixed;
   z-index: 20;
+  pointer-events: none;
+
+  opacity:0;
 
   .h_container.white{
     .menu-trigger{
@@ -248,6 +261,8 @@ header {
     .logo{
       z-index:20;
       transition:0.5s;
+      pointer-events: all;
+
       text{
         font-size:25px;
         font-weight: bold;
@@ -267,7 +282,7 @@ header {
       height: 25px;
 
       position: relative;
-
+      pointer-events: all;
       cursor: pointer;
       
       z-index:20;
@@ -369,6 +384,7 @@ nav {
   display: none;
 
   transition:0.5s;
+  pointer-events: all;
 
   .menu {
     width: 500px;
@@ -440,7 +456,14 @@ nav {
 }
 
 .contact-email {
-  width: 250px;
+
+  width: 70%;
+  margin: 60px auto;
+
+  nav &{
+    width: 250px;
+  }
+  
 
   h3 {
     font-size: 30px;
@@ -449,16 +472,50 @@ nav {
   .contact-inner {
     display: flex;
     align-items: center;
+    width: 100%;
+    margin:0;
+
+    li{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      margin:15px;
+    }
     span {
       width: 32px;
       height: 21px;
       display: inline-block;
     }
-    .email {
-      padding-bottom: 5px;
+    .icon-email {
+      nav &{
+       background: url("../img/contact-icon-email-black.png") no-repeat;
+      }
+
+      background: url("../img/contact-icon-email-red.png") no-repeat;
+    }
+    .icon-name{
+      height:30px;
+
+      nav &{
+        background: url("../img/contact-icon-name-black.png") no-repeat;
+      }
+      background: url("../img/contact-icon-name-red.png") no-repeat;
+    }
+    .name, .email {
+      color: #ececec;
+      margin-left: 10px;
+    }
+    .name{
+      display: inline-block;
+    }
+    .email{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom:6px;
     }
   }
 }
+
 
 //aside
 aside {
@@ -492,6 +549,7 @@ aside {
       z-index:4;
 
       transition:1s;
+      opacity:0;
     }
     .contact-label.black{
       color: #fff;
@@ -544,42 +602,7 @@ aside {
           font-size: 15px;
         }
       }
-      .contact-email {
-        width: 70%;
-        margin: 60px auto;
-        // opacity: 0;
-
-        .contact-inner {
-          width: 100%;
-          margin:0;
-
-          li{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-
-            margin:15px;
-          }
-          .icon-email {
-            background: url("../img/contact-icon-email-red.png") no-repeat;
-          }
-          .icon-name{
-            height:30px;
-            background: url("../img/contact-icon-name-red.png") no-repeat;
-          }
-          .name, .email {
-            color: #ececec;
-            margin-left: 10px;
-          }
-          .name{
-            display: inline-block;
-          }
-          .email{
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            padding-bottom:6px;
-          }
-        }
-      }
+      
     }
   }
   .contact-box.active .contact-txt,
