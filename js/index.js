@@ -33,9 +33,7 @@ window.addEventListener('DOMContentLoaded',function(){
         },1800);
     }
 
-    //-----------------------------
-    // slick
-    //-----------------------------
+    
 
     $.ajax({
         url: "project.json",
@@ -52,6 +50,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
                     //img-box
                     let imgBox = document.createElement('div');
+                    let aTag = document.createElement('a');
                     let img = document.createElement('img');
                     let thumb = p.thumb;
 
@@ -60,13 +59,16 @@ window.addEventListener('DOMContentLoaded',function(){
                     let svg = document.createElement('svg');
                     let text = document.createElement('text');
 
-
-
                     imgBox.className = "img-box";
                     img.setAttribute('src',thumb);
-                    img.className = "atvBtn";
 
-                    imgBox.appendChild(img);
+                    aTag.id = p.num;
+                    aTag.setAttribute('href','/portfolio/pages/project-detail.html');
+                    aTag.classList.add('locate');
+                    aTag.classList.add('atvBtn');
+                    aTag.appendChild(img);
+
+                    imgBox.appendChild(aTag);
 
                     text.setAttribute('x','50%');
                     text.setAttribute('y','50%');
@@ -83,7 +85,7 @@ window.addEventListener('DOMContentLoaded',function(){
                     svg.appendChild(text);
                     svgBox.appendChild(svg);
 
-                    sliderCon.className = "slider-con locate";
+                    sliderCon.className = "slider-con";
                     sliderCon.appendChild(imgBox);
                     sliderCon.appendChild(svgBox);
 
@@ -91,6 +93,23 @@ window.addEventListener('DOMContentLoaded',function(){
 
             });
 
+            $('.img-box img').on('click', saveProjectId);
+
+            //-----------------------
+            //게시글 넘버값 저장
+            //-----------------------
+
+            function saveProjectId(e) {
+                e.preventDefault();
+
+                let projectId = e.target.closest('a').id;
+                localStorage.setItem('num', projectId);
+            }
+
+            //-----------------------------
+            // slick
+            //-----------------------------
+            
             $(".slider").slick({
                 slidesToShow: 1,
                 autoplay: true,
