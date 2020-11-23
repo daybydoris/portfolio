@@ -96,9 +96,10 @@ window.addEventListener('DOMContentLoaded', function () {
         //-----------------------------
         // 4. 페이지 전환 효과
         //-----------------------------
-
-        let locateBtn = document.querySelectorAll('.locate');
-
+        
+        setTimeout(function(){
+            let locateBtn = document.querySelectorAll('.locate');
+        
 
         //화면 나타날 때 opacity 서서히 올리기
         $('header').fadeTo(200, 1);
@@ -112,10 +113,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
         //페이지 이동
         function pageTransition(e) {
+            console.log('clicked');
             let pageUrl;
 
             e.preventDefault();
-            console.log(e.target);
+
             if (e.target.href == undefined || e.target.href == "") {
                 pageUrl = e.target.closest('a').getAttribute('href');
             } else {
@@ -147,7 +149,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 location.href = pageUrl;
             }, 1000);
         }
-
+    },500);
 
 
 
