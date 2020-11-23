@@ -3,24 +3,20 @@
 window.addEventListener('DOMContentLoaded',function(){
 
     //----------------------------
-    // canvas
+    // particle.js
     //----------------------------
-    const canvas = document.querySelector('canvas');
 
-    let ctx = canvas.getContext('2d');
-    ctx.beginPath();
-    ctx.arc(1500, 250, 650, 0, 2 * Math.PI);
-    ctx.stroke();
+    particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
 
-    ctx.beginPath();
-    ctx.arc(1700, 500, 50, 0, 2 * Math.PI);
-    ctx.stroke();
-
-    setInterval(lineActive,2000);
 
     //-----------------------------
     // scrolldown 아이콘 애니메이션
     //-----------------------------
+
+    setInterval(lineActive,2000);
+
     function lineActive(){
         const lineWrap = document.querySelector('.line-wrap');
         const srcollLine = document.querySelector('.line');
