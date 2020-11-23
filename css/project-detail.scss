@@ -99,15 +99,20 @@ article.project-detail{
 
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+
+            .top-title{
+                text-transform: uppercase;
+                
+            }
+            .top-title,.top-time{
+                width:22%;
+            }
+            .demo{
+                margin:0;
+            }
         }
-        .top-title{
-            text-transform: uppercase;
-            
-        }
-        .top-title,.top-time{
-            width:22%;
-        }
+        
         .top-overall{
             margin-top:50px;
             p{

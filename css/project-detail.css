@@ -112,15 +112,21 @@ article.project-detail .sec-top .top-wrap {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-article.project-detail .sec-top .top-title {
+article.project-detail .sec-top .top-wrap .top-title {
   text-transform: uppercase;
 }
 
-article.project-detail .sec-top .top-title, article.project-detail .sec-top .top-time {
+article.project-detail .sec-top .top-wrap .top-title, article.project-detail .sec-top .top-wrap .top-time {
   width: 22%;
+}
+
+article.project-detail .sec-top .top-wrap .demo {
+  margin: 0;
 }
 
 article.project-detail .sec-top .top-overall {
