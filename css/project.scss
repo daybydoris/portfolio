@@ -6,9 +6,6 @@
 @mixin list-order($val){
     @if $val == odd {
             flex-direction: row;
-    //   .project-prev{
-
-    //   }
     }
     @else if $val == even {
             flex-direction: row-reverse;

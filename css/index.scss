@@ -6,6 +6,7 @@ $red: #e8001b;
 
 article{
     width:100%;
+    overflow: hidden;
 }
 
 .slick-slide{
@@ -23,20 +24,17 @@ canvas{
 article.index-about{
     height:1080px;
     position: relative;
-    background:transparent;
-
+    
     .txt-wrap{
         width:60%;
         margin:0 auto;
 
         padding:290px 0;
-        // background:#fff;
 
         .index-txt{
             text-align:left;
             .txt-back{
                 top:6%;
-                // z-index:-1;
             }
         }
         
@@ -144,12 +142,13 @@ article.index-project{
             .svg-box{
                 svg{
                     position: absolute;
-                    left:0; bottom:-15%;
+                    left:50%; bottom:-7%;
+                    transform:translateX(-50%);
                     .title{
                         font-size:70px;
                         font-weight: bold;
-                        fill:transparent;
-                        stroke-width: 1;
+                        color:#fff;
+                        stroke-width: 1px;
                         stroke:#fff;
                     }
                 }

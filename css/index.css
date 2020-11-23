@@ -1,6 +1,7 @@
 @import url("common.css");
 article {
   width: 100%;
+  overflow: hidden;
 }
 
 .slick-slide {
@@ -18,7 +19,6 @@ canvas {
 article.index-about {
   height: 1080px;
   position: relative;
-  background: transparent;
 }
 
 article.index-about .txt-wrap {
@@ -148,15 +148,17 @@ article.index-project .slider .slider-con .img-box img {
 
 article.index-project .slider .slider-con .svg-box svg {
   position: absolute;
-  left: 0;
-  bottom: -15%;
+  left: 50%;
+  bottom: -7%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 article.index-project .slider .slider-con .svg-box svg .title {
   font-size: 70px;
   font-weight: bold;
-  fill: transparent;
-  stroke-width: 1;
+  color: #fff;
+  stroke-width: 1px;
   stroke: #fff;
 }
 /*# sourceMappingURL=index.css.map */
