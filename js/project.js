@@ -58,10 +58,6 @@ window.addEventListener('DOMContentLoaded', function () {
             this.style = 'transform:rotate(0)';
         }
 
-        //-----------------------------
-        // 섬네일 클릭 / 페이지 이동 효과
-        //-----------------------------
-
 
 
     });
