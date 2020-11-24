@@ -1,11 +1,9 @@
 @import url('common.css');
 
-canvas{
-    position: absolute;
-    right:0; top:0;
-    background:transparent;
-    opacity: 0.5;
-    // z-index:5;
+
+article{
+    width:100%;
+    overflow: hidden;
 }
 article.about{
     height:1080px;
@@ -129,7 +127,7 @@ article.skills{
                 margin-bottom:40px;
             }
             p{
-                width:60%;
+                width:70%;
             }
         }
         .skills-wrap{
@@ -190,4 +188,75 @@ article.skills{
             .etc{}
         }
     }
+}
+
+
+//-----------------------------
+// 반응형
+//-----------------------------
+
+/* 모바일 가로, 모바일 세로 (해상도 360px ~ 767px)*/
+@media (max-width:767px) {
+
+article.about{
+    height:100vh;
+    .txt-wrap{
+        width:80%;
+        left:50%;
+        top:15%;
+        transform:translateX(-50%);
+        p{
+            width:95%;
+        }
+    }
+
+    .scroll{
+        
+        left:90%;
+        bottom:5%;
+    }
+}
+
+article.skills{
+    .skills-inner{
+        margin-top:150px;
+        flex-direction: column;
+
+        .skills-title{
+            width:100%;
+
+            p{
+                width:100%;
+                text-align: left;
+            }
+        }
+
+        .skills-wrap{
+            width:100%;
+            margin:100px auto;
+            .btn-wrap{
+                position: static;
+                margin:20px 0;
+            }
+
+            .familiar, .tried, .etc{
+
+                .skill-list{
+                    width:100%;
+                    .skill-item{
+                        width:50%;
+                    }
+                }
+
+            }
+        }
+    }
+    .line-wrap{
+        .line{
+            display: none;
+        }
+    }
+}
+
+
 }
