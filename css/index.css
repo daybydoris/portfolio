@@ -163,12 +163,6 @@ article.index-project .slider .slider-con .svg-box svg .title {
 }
 
 @media (max-width: 767px) {
-  .btn-wrap {
-    margin: 10px 15px;
-  }
-  .btn-wrap .detail-btn {
-    font-size: 12px;
-  }
   article.index-about .txt-wrap {
     width: 80%;
     left: 50%;
@@ -188,9 +182,6 @@ article.index-project .slider .slider-con .svg-box svg .title {
   article.index-project .slider .slider-con .svg-box svg .title {
     width: 100%;
     font-size: 30px;
-  }
-  article.index-project .slider .slick-list {
-    height: 300px;
   }
 }
 /*# sourceMappingURL=index.css.map */
