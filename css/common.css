@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
 @import url("https://db.onlinewebfonts.com/c/449b1c567da51480d590112112addcd6?family=CommercialScript+BT");
@@ -42,24 +43,26 @@
           box-sizing: border-box;
   font-family: Montserrat, "NEXON Lv2 Gothic";
   letter-spacing: 0;
+  outline: none;
 }
 
 html {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
+  overflow-x: hidden;
 }
 
 main {
@@ -277,7 +280,13 @@ header .h_container .logo {
   pointer-events: all;
 }
 
-header .h_container .logo text {
+header .h_container .logo svg .mobile-logo {
+  display: none;
+}
+
+header .h_container .logo svg text {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   font-size: 25px;
   font-weight: bold;
 }
@@ -365,13 +374,13 @@ header .h_container .menu-trigger.active span:nth-of-type(3) {
 }
 
 .nav-wrap {
-  width: 224vw;
-  height: 224vw;
+  width: 300vw;
+  height: 300vw;
   background: #e8001b;
   border-radius: 50%;
   position: absolute;
-  right: calc(100px - 112vw);
-  top: calc(90px - 112vw);
+  right: calc(100px - 150vw);
+  top: calc(90px - 150vw);
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transform-origin: center;
@@ -385,7 +394,7 @@ nav.active {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -477,7 +486,6 @@ nav .contact-email .contact-inner .email {
 
 .contact-email {
   width: 70%;
-  margin: 60px auto;
 }
 
 nav .contact-email {
@@ -552,7 +560,7 @@ nav .contact-email .contact-inner .icon-name {
 
 aside .contact {
   position: fixed;
-  left: -101%;
+  left: -100%;
   top: 0;
   z-index: 10;
   width: 100%;
@@ -568,8 +576,8 @@ aside .contact .contact-label {
   font-weight: bold;
   padding: 8px;
   margin: 0;
-  -webkit-transform: rotate(90deg) translateY(60%);
-          transform: rotate(90deg) translateY(60%);
+  -webkit-transform: rotate(90deg) translateY(90%);
+          transform: rotate(90deg) translateY(90%);
   position: absolute;
   left: 100%;
   top: 70%;
@@ -598,31 +606,31 @@ aside .contact .contact-label:hover {
 
 @-webkit-keyframes label {
   0% {
-    -webkit-transform: rotate(90deg) translateY(60%);
-            transform: rotate(90deg) translateY(60%);
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
   }
   50% {
-    -webkit-transform: rotate(90deg) translateY(57%);
-            transform: rotate(90deg) translateY(57%);
+    -webkit-transform: rotate(90deg) translateY(87%);
+            transform: rotate(90deg) translateY(87%);
   }
   100% {
-    -webkit-transform: rotate(90deg) translateY(60%);
-            transform: rotate(90deg) translateY(60%);
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
   }
 }
 
 @keyframes label {
   0% {
-    -webkit-transform: rotate(90deg) translateY(60%);
-            transform: rotate(90deg) translateY(60%);
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
   }
   50% {
-    -webkit-transform: rotate(90deg) translateY(57%);
-            transform: rotate(90deg) translateY(57%);
+    -webkit-transform: rotate(90deg) translateY(87%);
+            transform: rotate(90deg) translateY(87%);
   }
   100% {
-    -webkit-transform: rotate(90deg) translateY(60%);
-            transform: rotate(90deg) translateY(60%);
+    -webkit-transform: rotate(90deg) translateY(90%);
+            transform: rotate(90deg) translateY(90%);
   }
 }
 
@@ -630,14 +638,18 @@ aside .contact .contact-box {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: #151515;
 }
 
 aside .contact .contact-box .contact-txt {
   width: 70%;
-  margin: 300px auto 0 auto;
+  position: absolute;
+  left: 20%;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 aside .contact .contact-box .contact-txt h2 {
@@ -654,6 +666,14 @@ aside .contact .contact-box .contact-txt p {
   font-size: 15px;
 }
 
+aside .contact .contact-box .contact-email {
+  position: absolute;
+  left: 20%;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 aside .contact-box.active .contact-txt,
 aside .contact-box.active .contact-email {
   opacity: 1;
@@ -663,5 +683,94 @@ aside .contact.active {
   left: 0;
   -webkit-transition: 1s;
   transition: 1s;
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media (max-width: 767px) {
+  .cursor {
+    display: none;
+  }
+  header .h_container {
+    padding: 20px 30px;
+  }
+  header .h_container .logo svg .mobile-logo {
+    display: block;
+    font-size: 35px;
+  }
+  header .h_container .logo svg .pc-logo {
+    display: none;
+  }
+  header .h_container .logo svg text {
+    font-size: 20px;
+  }
+  nav .menu {
+    width: 80%;
+    top: 40%;
+    left: 50%;
+  }
+  nav .menu a {
+    font-size: 65px;
+  }
+  nav .contact-email {
+    width: 80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  nav .contact-email h3 {
+    font-size: 20px;
+  }
+  nav .contact-email .contact-inner ul {
+    margin: 0;
+  }
+  nav .contact-email .contact-inner .name {
+    font-size: 15px;
+  }
+  nav .contact-email .contact-inner .icon-name, nav .contact-email .contact-inner .icon-email {
+    width: 25px;
+    background-size: contain;
+  }
+  article.index-about .scroll {
+    right: 0;
+    margin: 0;
+  }
+  .txt-wrap {
+    top: 30%;
+  }
+  .txt-wrap .index-txt {
+    font-size: 45px;
+  }
+  .txt-wrap .index-txt .txt-back {
+    font-size: 45px;
+  }
+  aside .contact .contact-box .contact-txt {
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  aside .contact .contact-box .contact-txt h2 {
+    font-size: 50px;
+  }
+  aside .contact .contact-box .contact-txt p {
+    font-size: 14px;
+  }
+  aside .contact .contact-box .contact-email {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  aside .contact .contact-box .contact-email h3 {
+    font-size: 25px;
+  }
+  aside .contact .contact-label {
+    font-size: 25px;
+    top: 85%;
+  }
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  /*스타일입력*/
 }
 /*# sourceMappingURL=common.css.map */
