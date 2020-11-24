@@ -4,10 +4,6 @@ article {
   overflow: hidden;
 }
 
-.slick-slide {
-  width: 1300px;
-}
-
 canvas {
   position: absolute;
   right: 0;
@@ -17,14 +13,18 @@ canvas {
 }
 
 article.index-about {
-  height: 1080px;
+  height: 100vh;
   position: relative;
 }
 
 article.index-about .txt-wrap {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 60%;
   margin: 0 auto;
-  padding: 290px 0;
 }
 
 article.index-about .txt-wrap .index-txt {
@@ -52,7 +52,7 @@ article.index-about .btn-wrap:hover .circle {
 article.index-about .scroll {
   position: absolute;
   left: 50%;
-  bottom: 15%;
+  bottom: 10%;
   width: 15px;
   margin: 0 auto;
   display: -webkit-box;
@@ -157,8 +157,40 @@ article.index-project .slider .slider-con .svg-box svg {
 article.index-project .slider .slider-con .svg-box svg .title {
   font-size: 70px;
   font-weight: bold;
-  color: #fff;
+  fill: transparent;
   stroke-width: 1px;
   stroke: #fff;
+}
+
+@media (max-width: 767px) {
+  .btn-wrap {
+    margin: 10px 15px;
+  }
+  .btn-wrap .detail-btn {
+    font-size: 12px;
+  }
+  article.index-about .txt-wrap {
+    width: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  article.index-project {
+    padding: 200px 0;
+  }
+  article.index-project .txt-wrap {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  article.index-project .slider .slider-con .img-box img {
+    width: 100%;
+  }
+  article.index-project .slider .slider-con .svg-box svg .title {
+    width: 100%;
+    font-size: 30px;
+  }
+  article.index-project .slider .slick-list {
+    height: 300px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
