@@ -96,60 +96,63 @@ window.addEventListener('DOMContentLoaded', function () {
         //-----------------------------
         // 4. 페이지 전환 효과
         //-----------------------------
-        
-        setTimeout(function(){
+
+        setTimeout(function () {
             let locateBtn = document.querySelectorAll('.locate');
-        
-
-        //화면 나타날 때 opacity 서서히 올리기
-        $('header').fadeTo(200, 1);
-        $('main').fadeTo(500, 1);
-        $('.contact-label').fadeTo(100, 1);
-
-        locateBtn.forEach(function (l) {
-            l.addEventListener('click', pageTransition);
-        });
 
 
-        //페이지 이동
-        function pageTransition(e) {
-            console.log('clicked');
-            let pageUrl;
+            //화면 나타날 때 opacity 서서히 올리기
+            $('header').fadeTo(200, 1);
+            $('main').fadeTo(500, 1);
+            $('.contact-label').fadeTo(100, 1);
 
-            e.preventDefault();
+            locateBtn.forEach(function (l) {
+                l.addEventListener('click', pageTransition);
+            });
 
-            if (e.target.href == undefined || e.target.href == "") {
-                pageUrl = e.target.closest('a').getAttribute('href');
-            } else {
-                pageUrl = e.target.getAttribute('href');
+            $('.img-box img').mousedown(function (event) {
+                event.stopPropagation();
+            });
+
+            //페이지 이동
+            function pageTransition(e) {
+                console.log('clicked');
+                let pageUrl;
+
+                e.preventDefault();
+
+                if (e.target.href == undefined || e.target.href == "") {
+                    pageUrl = e.target.closest('a').getAttribute('href');
+                } else {
+                    pageUrl = e.target.getAttribute('href');
+                }
+
+                //배경색 바꾸기
+                console.log(pageUrl);
+
+                if (pageUrl.includes('project.html') || pageUrl.includes('project-detail.html')) {
+                    body.style.backgroundColor = '#151515';
+
+                } else {
+                    html.style.backgroundColor = '#fff';
+                    body.style.backgroundColor = '#fff';
+                }
+
+
+                //콘텐츠 서서히 사라지기
+                setTimeout(function () {
+                    $('header').fadeOut(200);
+                    $('main').fadeOut(500);
+                    $('.contact-label').fadeOut(200);
+
+                }, 300);
+
+
+                setTimeout(function () {
+                    location.href = pageUrl;
+                }, 1000);
             }
-
-            //배경색 바꾸기
-            console.log(pageUrl);
-
-            if (pageUrl.includes('project.html') || pageUrl.includes('project-detail.html')) {
-                body.style.backgroundColor = '#151515';
-
-            } else {
-                html.style.backgroundColor = '#fff';
-                body.style.backgroundColor = '#fff';
-            }
-
-
-            //콘텐츠 서서히 사라지기
-            setTimeout(function () {
-                $('header').fadeOut(200);
-                $('main').fadeOut(500);
-                $('.contact-label').fadeOut(200);
-
-            }, 300);
-
-
-            setTimeout(function () {
-                location.href = pageUrl;
-            }, 1000);
-        }
-    },500);
+        }, 500);
 
 
 
@@ -233,7 +236,7 @@ window.addEventListener('DOMContentLoaded', function () {
             if (menuTrigger.classList.contains('active')) {
 
                 navWrap.style.transition = "0.7s";
-                navWrap.style.transform = "scale(1)";
+                navWrap.style.transform = "scale(1.5)";
 
                 // menuBtn.forEach(function(m){
                 //     m.setAttribute('data-aos','fade-up');
@@ -330,11 +333,27 @@ window.addEventListener('DOMContentLoaded', function () {
                 blockHeader();
                 stopScroll();
 
-                //label 위치 변경
-                setTimeout(function () {
-                    conLabel.textContent = 'Close';
-                    conLabel.style = 'left:98%; opacity:1;';
-                }, 300);
+                const winSize = window.matchMedia('(max-width:767px)')
+
+                //반응형 처리
+                if (winSize.matches == true) {
+                    //mobile
+
+                    //label 위치 변경
+                    setTimeout(function () {
+                        conLabel.textContent = 'Close';
+                        conLabel.style = 'left:95%; opacity:1;';
+                    }, 300);
+                } else {
+                    //pc
+
+                    //label 위치 변경
+                    setTimeout(function () {
+                        conLabel.textContent = 'Close';
+                        conLabel.style = 'left:98%; opacity:1;';
+                    }, 300);
+                }
+
 
 
             } else {
