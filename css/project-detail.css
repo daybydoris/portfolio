@@ -413,13 +413,8 @@ article.project-detail .feature-detail .feature-list li .left {
 }
 
 article.project-detail .feature-detail .feature-list li .figure-box {
-  width: 500px;
-  height: 300px;
-  overflow: hidden;
-}
-
-article.project-detail .feature-detail .feature-list li .figure-box video {
-  overflow: hidden;
+  width: 650px;
+  height: 366px;
 }
 
 article.project-detail .feature-detail .feature-list div {
