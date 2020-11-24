@@ -730,6 +730,15 @@ aside .contact.active {
     width: 25px;
     background-size: contain;
   }
+  .btn-wrap {
+    margin: 10px 0;
+  }
+  .btn-wrap .detail-btn {
+    font-size: 12px;
+  }
+  .btn-wrap .circle {
+    display: none;
+  }
   article.index-about .scroll {
     right: 0;
     margin: 0;
@@ -764,7 +773,7 @@ aside .contact.active {
     font-size: 25px;
   }
   aside .contact .contact-label {
-    font-size: 25px;
+    font-size: 20px;
     top: 85%;
   }
 }

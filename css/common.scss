@@ -697,6 +697,18 @@ aside {
     }
   }
 
+
+  .btn-wrap{
+    margin:10px 0;
+
+    .detail-btn{
+      font-size:12px;
+    }
+    .circle{
+      display:none;
+    }
+  }
+
   article.index-about .scroll{
     right:0;
     margin:0;
@@ -736,7 +748,7 @@ aside {
         }
       }
       .contact-label{
-        font-size:25px;
+        font-size:20px;
         top:85%;
       }
     }
