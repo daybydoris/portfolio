@@ -213,7 +213,7 @@ article.about{
     .scroll{
         
         left:90%;
-        bottom:5%;
+        bottom:10%;
     }
 }
 
@@ -237,6 +237,10 @@ article.skills{
             .btn-wrap{
                 position: static;
                 margin:20px 0;
+                .detail-btn{
+                    font-size:14px;
+                    text-decoration: underline;
+                }
             }
 
             .familiar, .tried, .etc{

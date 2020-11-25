@@ -240,7 +240,7 @@ article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item span
   }
   article.about .scroll {
     left: 90%;
-    bottom: 5%;
+    bottom: 10%;
   }
   article.skills .skills-inner {
     margin-top: 150px;
@@ -263,6 +263,10 @@ article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item span
   article.skills .skills-inner .skills-wrap .btn-wrap {
     position: static;
     margin: 20px 0;
+  }
+  article.skills .skills-inner .skills-wrap .btn-wrap .detail-btn {
+    font-size: 14px;
+    text-decoration: underline;
   }
   article.skills .skills-inner .skills-wrap .familiar .skill-list, article.skills .skills-inner .skills-wrap .tried .skill-list, article.skills .skills-inner .skills-wrap .etc .skill-list {
     width: 100%;
