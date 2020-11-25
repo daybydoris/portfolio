@@ -1,27 +1,17 @@
 @import url('common.css');
 
 
-article{
-    width:100%;
-    overflow: hidden;
-}
 article.about{
-    height:1080px;
+    height:100vh;
     position: relative;
-    background:transparent;
 
     .txt-wrap{
         position: absolute;
         left: 45%; top:23%;
         width:50%;
 
-        
-
-
         .index-txt{
             margin-bottom:40px;
-            // background:#fff;
-            // isolation: isolate;
             .txt-back{
                 bottom:-2px;
                 mix-blend-mode: difference;
@@ -85,6 +75,7 @@ article.about{
 
 article.skills{
     position:relative;
+    overflow: visible;
     .line-wrap{
         overflow: hidden;
         position: absolute;
@@ -199,7 +190,6 @@ article.skills{
 @media (max-width:767px) {
 
 article.about{
-    height:100vh;
     .txt-wrap{
         width:80%;
         left:50%;
@@ -211,7 +201,6 @@ article.about{
     }
 
     .scroll{
-        
         left:90%;
         bottom:10%;
     }
@@ -219,7 +208,6 @@ article.about{
 
 article.skills{
     .skills-inner{
-        margin-top:150px;
         flex-direction: column;
 
         .skills-title{
@@ -230,6 +218,14 @@ article.skills{
                 text-align: left;
             }
         }
+
+        .btn-wrap{
+            .detail-btn{
+              letter-spacing: 2px;
+              margin-bottom:15px;
+            }
+          }
+
 
         .skills-wrap{
             width:100%;
@@ -263,4 +259,76 @@ article.skills{
 }
 
 
+}
+
+
+@media (min-width:768px) and (max-width:1023px) {
+    article.about{
+        .txt-wrap{
+            width:80%;
+            left:50%;
+            top:15%;
+            transform:translateX(-50%);
+            p{
+                width:95%;
+            }
+        }
+    
+        .scroll{
+            left:90%;
+            bottom:10%;
+        }
+    }
+
+    article.skills{
+        .skills-inner{
+            flex-direction: column;
+    
+            .skills-title{
+                width:100%;
+    
+                p{
+                    width:100%;
+                    text-align: left;
+                }
+            }
+    
+            .btn-wrap{
+                .detail-btn{
+                  letter-spacing: 2px;
+                  margin-bottom:15px;
+                }
+              }
+    
+    
+            .skills-wrap{
+                width:100%;
+                margin:100px auto;
+                .btn-wrap{
+                    position: static;
+                    margin:20px 0;
+                    .detail-btn{
+                        font-size:14px;
+                        text-decoration: underline;
+                    }
+                }
+    
+                .familiar, .tried, .etc{
+    
+                    .skill-list{
+                        width:100%;
+                        .skill-item{
+                            width:50%;
+                        }
+                    }
+    
+                }
+            }
+        }
+        .line-wrap{
+            .line{
+                display: none;
+            }
+        }
+    }
 }

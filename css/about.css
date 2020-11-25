@@ -1,14 +1,8 @@
 @charset "UTF-8";
 @import url("common.css");
-article {
-  width: 100%;
-  overflow: hidden;
-}
-
 article.about {
-  height: 1080px;
+  height: 100vh;
   position: relative;
-  background: transparent;
 }
 
 article.about .txt-wrap {
@@ -87,6 +81,7 @@ article.about .scroll .line-wrap .line.active {
 
 article.skills {
   position: relative;
+  overflow: visible;
 }
 
 article.skills .line-wrap {
@@ -225,9 +220,6 @@ article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item span
 
 /* 모바일 가로, 모바일 세로 (해상도 360px ~ 767px)*/
 @media (max-width: 767px) {
-  article.about {
-    height: 100vh;
-  }
   article.about .txt-wrap {
     width: 80%;
     left: 50%;
@@ -243,7 +235,6 @@ article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item span
     bottom: 10%;
   }
   article.skills .skills-inner {
-    margin-top: 150px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -255,6 +246,65 @@ article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item span
   article.skills .skills-inner .skills-title p {
     width: 100%;
     text-align: left;
+  }
+  article.skills .skills-inner .btn-wrap .detail-btn {
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  article.skills .skills-inner .skills-wrap {
+    width: 100%;
+    margin: 100px auto;
+  }
+  article.skills .skills-inner .skills-wrap .btn-wrap {
+    position: static;
+    margin: 20px 0;
+  }
+  article.skills .skills-inner .skills-wrap .btn-wrap .detail-btn {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+  article.skills .skills-inner .skills-wrap .familiar .skill-list, article.skills .skills-inner .skills-wrap .tried .skill-list, article.skills .skills-inner .skills-wrap .etc .skill-list {
+    width: 100%;
+  }
+  article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item, article.skills .skills-inner .skills-wrap .tried .skill-list .skill-item, article.skills .skills-inner .skills-wrap .etc .skill-list .skill-item {
+    width: 50%;
+  }
+  article.skills .line-wrap .line {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  article.about .txt-wrap {
+    width: 80%;
+    left: 50%;
+    top: 15%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  article.about .txt-wrap p {
+    width: 95%;
+  }
+  article.about .scroll {
+    left: 90%;
+    bottom: 10%;
+  }
+  article.skills .skills-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  article.skills .skills-inner .skills-title {
+    width: 100%;
+  }
+  article.skills .skills-inner .skills-title p {
+    width: 100%;
+    text-align: left;
+  }
+  article.skills .skills-inner .btn-wrap .detail-btn {
+    letter-spacing: 2px;
+    margin-bottom: 15px;
   }
   article.skills .skills-inner .skills-wrap {
     width: 100%;
