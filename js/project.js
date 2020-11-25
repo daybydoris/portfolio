@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 //thumb
                 thumbImg.setAttribute('src', `../${p.thumb}`);
 
-                aTag.href = p.siteUrl;
+                aTag.href = 'project-detail.html';
                 aTag.id = key;
                 aTag.classList = "atvBtn locate";
 
