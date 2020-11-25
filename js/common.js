@@ -63,13 +63,21 @@ window.addEventListener('DOMContentLoaded', function () {
         function headerColor(name) {
 
             if (filename == '/portfolio/') {
+
+                let indexProject = document.querySelector('article.index-project');
+                let projectOffsetTop = indexProject.offsetTop;
+
                 window.addEventListener('scroll', function () {
-                    if (window.scrollY > 1000) {
+                    let scrollY = window.scrollY;
+                    let changeTiming = projectOffsetTop - scrollY;
+
+                    if (changeTiming <= 0) {
                         changeColor('#fff');
                     } else {
                         changeColor('#151515');
                     }
                 });
+
             } else {
                 if (article.classList.contains('bg-black')) {
                     changeColor('#fff');
