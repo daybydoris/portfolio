@@ -138,28 +138,6 @@ $(function () {
                         });
                     }
 
-                    // function createPagePrevOrig() {
-
-                    //     const origList = document.createElement('ul');
-
-                    //     p.origImg.forEach(function (orig, key) {
-                    //         const origItem = document.createElement('li');
-                    //         const origCon = document.createElement('img');
-
-                    //         origCon.setAttribute('src', orig);
-                    //         origCon.style.width = `${window.innerWidth * 0.7}px`;
-                    //         origItem.appendChild(origCon);
-                    //         origItem.setAttribute('data-num', key);
-                    //         origItem.classList.add('hidden');
-
-                    //         origList.appendChild(origItem);
-                    //     });
-
-                    //     pagePrevOrig.appendChild(origList);
-                    //     pagePrevOrig.classList.add('hidden');
-
-                    // }
-
                     function createUsedSkill() {
                         const skillList = document.querySelector('.skill-list');
 
@@ -224,60 +202,9 @@ $(function () {
                 }
             });
 
-            //---------------------
-            // original img
-            //---------------------
-            // const pagePrevItem = document.querySelectorAll('.page-prev-item');
 
-            // pagePrevItem.forEach(function (item) {
-            //     item.addEventListener('click', origPopup);
-
-            //     function origPopup() {
-            //         const origItem = document.querySelectorAll('.page-prev-orig li');
-
-            //         const prevNum = this.getAttribute('data-num');
-
-            //         origItem.forEach(function (orig) {
-            //             const origNum = orig.getAttribute('data-num');
-            //             const origBack = document.querySelector('.page-prev-back');
-            //             const winH = window.innerHeight / 2;
-            //             let scrollY = window.scrollY;
-
-            //             origBack.style = "display: block";
-            //             pagePrevOrig.classList.remove('hidden');
-
-
-            //             if (origNum == prevNum) {
-            //                 orig.classList.remove('hidden');
-            //                 const origH = orig.offsetHeight / 2;
-
-            //                 pagePrevOrig.style = `top:${winH + scrollY - origH}px;`;
-
-            //                 const popupExit = document.querySelector('.orig-exit');
-
-            //                 popupExit.addEventListener('click', function () {
-            //                     orig.classList.add('hidden');
-            //                     pagePrevOrig.classList.add('hidden');
-
-            //                 });
-
-            //             } else {
-            //                 orig.classList.add('hidden');
-
-            //             }
-
-
-            //         });
-
-            //     }
-            // });
 
             setTimeout(function () {
-
-
-
-
-
 
                 //---------------------
                 // tab
