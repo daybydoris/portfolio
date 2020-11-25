@@ -170,6 +170,10 @@ article.index-project{
             left:50%;
             transform:translate(-50%,-50%);
         }
+        .scroll{
+            left:90%;
+            bottom:10%;
+        }
     }
 
     article.index-project{
@@ -194,10 +198,48 @@ article.index-project{
                         }
                     }
                 }
-            
-            }
-            .slick-list{
             }
         }
     }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+
+article.index-about{
+        .txt-wrap{
+            width:80%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+    }
+
+    article.index-project{
+        padding:200px 0;
+        .txt-wrap{
+            width:80%;
+            margin-bottom:50px;
+        }
+        .slider{    
+            .slider-con{
+                .img-box{
+                    img{
+                        width:100%;
+                        opacity:1;
+                    }
+                }
+                .svg-box{
+                    svg{
+                        bottom:-20%;
+                        .title{
+                            width:100%;
+                            font-size:40px;
+                            stroke-width:0.3px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
