@@ -22,11 +22,7 @@ html, body{
     position: relative;
 }
 
-.rotate{
-    transform: rotate(5deg);
-}
 article.project{
-    width:100%;
     padding:200px 0;
     margin:0 auto;
 
@@ -62,26 +58,32 @@ article.project{
                 }
                 .project-prev{
                     width:40%;
-                    .title-svg{
-                        margin-bottom:30px;
+                    .svg-box{
+                        width:100%;
+                        .title-svg{
+                            width:100%;
+                            margin-bottom:15px;
+                        }
+                        .mobile-title{
+                            display: none;
+                        }
+                        .title{
+                            font-size:70px;
+                            font-weight: bold;
+        
+                            fill:transparent;
+                            stroke-width: 0.5;
+                            stroke: rgba(255,255,255,0.7);
+                        }
                     }
-                    .title{
-                        font-size:70px;
-                        font-weight: bold;
-    
-                        fill:transparent;
-                        stroke-width: 0.5;
-                        stroke: rgba(255,255,255,0.7);
-                    }
+                    
                     .responsive{
                         margin-bottom:20px;
                         font-weight: bold;
     
-                        #pc,#tablet,#mobile{
-                            color:#99785f;
-                        }
                         span{
                             color:#545454;
+                            margin:0 5px;
                         }
                     }
                     .prev-txt{
@@ -102,4 +104,147 @@ article.project{
             @include list-order(even);
         }
     }
+}
+
+//-----------------------------
+// 반응형
+//-----------------------------
+
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+
+@media (max-width:767px){
+    article.project{
+        padding:200px 0 100px 0;
+        .index-txt{
+            width:80%;
+            margin:0 auto 100px auto;
+            font-size:45px;
+            .txt-back{
+                font-size:45px;
+            }
+        }
+
+        .project-inner{
+            width:80%;
+            .even{
+                .project-prev{
+                    text-align:left;
+                }
+            }
+            .project-item{
+                flex-direction: column;
+                margin-bottom:100px;
+                .thumb{
+                    width:100%;
+                }
+                .project-prev{
+                    width:100%;
+                    height:auto;
+                    .svg-box{
+                        .title-svg{
+                            margin-bottom:10px;
+                            // width:100%;
+                            height:50px;
+                            text{
+                                width:100%;
+                                height:100%;
+                            }
+                            .mobile-title{
+                                width:100%;
+                                display: inline-block;
+                            }
+                            .pc-title{
+                                display: none;
+                            }
+                            .title{
+                                font-size:38px;
+                                width:100%;
+                            }
+                        }
+                    }
+                    
+                    .prev-txt{
+                        width:100%;
+                        font-size:14px;
+                    }
+
+                    .responsive{
+                        margin-bottom:10px;
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media (min-width:768px) and (max-width:1023px) {
+    article.project{
+        padding:200px 0 100px 0;
+        .index-txt{
+            width:80%;
+            margin:0 auto 100px auto;
+            font-size:45px;
+            .txt-back{
+                font-size:45px;
+            }
+        }
+
+        .project-inner{
+            width:80%;
+            .even{
+                .project-prev{
+                    text-align:left;
+                }
+            }
+            .project-item{
+                flex-direction: column;
+                margin-bottom:100px;
+                .thumb{
+                    width:100%;
+                }
+                .project-prev{
+                    width:100%;
+                    height:auto;
+                    .svg-box{
+                        .title-svg{
+                            margin:10px 0;
+                            width:100%;
+                            height:50px;
+                            text{
+                                width:100%;
+                                height:100%;
+                            }
+                            .mobile-title{
+                                width:100%;
+                                display: inline-block;
+                            }
+                            .pc-title{
+                                display: none;
+                            }
+                            .title{
+
+                                
+                                font-size:50px;
+                                width:100%;
+                            }
+                        }
+                    }
+                    
+                    .prev-txt{
+                        width:100%;
+                        font-size:14px;
+                    }
+
+                    .responsive{
+                        margin-bottom:10px;
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+
 }

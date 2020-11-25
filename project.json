@@ -3,9 +3,12 @@
         {
             "num": 0,
             "title": "coffee for you",
+            "mobileTitle": "<text x='0' y='40' class='title mobile-title'>Coffee for you.</text>",
+            "pcTitle": "<text x='0' y='60' class='title pc-title'>Coffee</text><text x='0' y='120' class='title pc-title'>for you.</text>",
             "elapsed": "2020.06 - 2020.08",
             "thumb": "img/project-coffee-thumb.jpg",
             "siteUrl": "https://graphicnovel.github.io/coffeeforyou/",
+            "prevTxt": "각 나라별 원두의 특징, 원두 정보, 커피에 대한 뉴스 등을 제공하는 웹사이트",
             "intro": "커피를 직접 내려마시고 싶은데 어떤 원두가 맞을지 감이 잡히지 않는 이용자에게 취향에 맞는 원두를 추천하는 COFFEE FOR YOU 기능을 제공하는 웹사이트입니다. 커피에 대한 기본적인 지식이나 정보, 뉴스도 전달하고 있습니다. 전체적으로 깔끔하고 차분한 느낌을 주고 싶었고 페이지 간 이동이 부드럽게 이어지도록 하였습니다.",
             "prevImg": [
                 "../img/project-coffee-thumb01.jpg",
@@ -14,14 +17,6 @@
                 "../img/project-coffee-thumb04.jpg",
                 "../img/project-coffee-thumb05.jpg",
                 "../img/project-coffee-thumb06.jpg"
-            ],
-            "origImg":[
-                "../img/project-coffee-orig01.jpg",
-                "../img/project-coffee-orig02.jpg",
-                "../img/project-coffee-orig03.jpg",
-                "../img/project-coffee-orig04.jpg",
-                "../img/project-coffee-orig05.jpg",
-                "../img/project-coffee-orig06.jpg"
             ],
             "usedSkill": [
                 "html5",
@@ -40,9 +35,12 @@
         {
             "num": 1,
             "title": "Raon corp",
+            "mobileTitle": "<text x='0' y='40' class='title mobile-title'>Raon corp.</text>",
+            "pcTitle": "<text x='100%' y='60' text-anchor='end' class='title pc-title'>Raon</text><text x='100%' y='120'  text-anchor='end' class='title pc-title'>corp.</text>",
             "elapsed": "2020.08 - 2020.10",
             "thumb": "img/project-raon-thumb.jpg",
             "siteUrl": "https://graphicnovel.github.io/raoncorp/",
+            "prevTxt": "ICT 보안 전문 기업 라온시큐어 웹사이트 리뉴얼",
             "intro": "IT 보안기업 라온시큐어의 홈페이지 리뉴얼 프로젝트입니다. IT 기업에 맞는 깔끔하고 정돈된 느낌을 위해 <a href='https://clova.ai/ko' target=_blank>네이버 클로바</a> 웹사이트를 벤치마킹하였습니다. 기존 라온시큐어 웹사이트는 배경에 이미지를 많이 사용하여 가독성이 떨어집니다. 이미지는 메인 배너에만 사용했고 컨텐츠에는 심플한 아이콘과 도형을 배치, 단색 배경에 여백을 넓게 주어 가독성을 높였습니다. 또한 기업 대표 컬러를 포인트 컬러로 사용하여 라온만의 느낌도 잃지 않게 작업했습니다.",
             "prevImg": [
                 "../img/project-raon-thumb01.jpg",
@@ -51,14 +49,6 @@
                 "../img/project-raon-thumb04.jpg",
                 "../img/project-raon-thumb05.jpg",
                 "../img/project-raon-thumb06.jpg"
-            ],
-            "origImg":[
-                "../img/project-raon-orig01.jpg",
-                "../img/project-raon-orig02.jpg",
-                "../img/project-raon-orig03.jpg",
-                "../img/project-raon-orig04.jpg",
-                "../img/project-raon-orig05.jpg",
-                "../img/project-raon-orig06.jpg"
             ],
             "usedSkill": [
                 "html5",

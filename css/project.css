@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("common.css");
 /* mixin */
 html, body {
@@ -5,13 +6,7 @@ html, body {
   position: relative;
 }
 
-.rotate {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-}
-
 article.project {
-  width: 100%;
   padding: 200px 0;
   margin: 0 auto;
 }
@@ -62,11 +57,20 @@ article.project .project-inner .project-item .project-prev {
   width: 40%;
 }
 
-article.project .project-inner .project-item .project-prev .title-svg {
-  margin-bottom: 30px;
+article.project .project-inner .project-item .project-prev .svg-box {
+  width: 100%;
 }
 
-article.project .project-inner .project-item .project-prev .title {
+article.project .project-inner .project-item .project-prev .svg-box .title-svg {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+article.project .project-inner .project-item .project-prev .svg-box .mobile-title {
+  display: none;
+}
+
+article.project .project-inner .project-item .project-prev .svg-box .title {
   font-size: 70px;
   font-weight: bold;
   fill: transparent;
@@ -79,12 +83,9 @@ article.project .project-inner .project-item .project-prev .responsive {
   font-weight: bold;
 }
 
-article.project .project-inner .project-item .project-prev .responsive #pc, article.project .project-inner .project-item .project-prev .responsive #tablet, article.project .project-inner .project-item .project-prev .responsive #mobile {
-  color: #99785f;
-}
-
 article.project .project-inner .project-item .project-prev .responsive span {
   color: #545454;
+  margin: 0 5px;
 }
 
 article.project .project-inner .project-item .project-prev .prev-txt {
@@ -117,5 +118,130 @@ article.project .project-inner .even .project-prev {
 
 article.project .project-inner .even .project-prev p {
   display: inline-block;
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media (max-width: 767px) {
+  article.project {
+    padding: 200px 0 100px 0;
+  }
+  article.project .index-txt {
+    width: 80%;
+    margin: 0 auto 100px auto;
+    font-size: 45px;
+  }
+  article.project .index-txt .txt-back {
+    font-size: 45px;
+  }
+  article.project .project-inner {
+    width: 80%;
+  }
+  article.project .project-inner .even .project-prev {
+    text-align: left;
+  }
+  article.project .project-inner .project-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 100px;
+  }
+  article.project .project-inner .project-item .thumb {
+    width: 100%;
+  }
+  article.project .project-inner .project-item .project-prev {
+    width: 100%;
+    height: auto;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg {
+    margin-bottom: 10px;
+    height: 50px;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg text {
+    width: 100%;
+    height: 100%;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg .mobile-title {
+    width: 100%;
+    display: inline-block;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg .pc-title {
+    display: none;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg .title {
+    font-size: 38px;
+    width: 100%;
+  }
+  article.project .project-inner .project-item .project-prev .prev-txt {
+    width: 100%;
+    font-size: 14px;
+  }
+  article.project .project-inner .project-item .project-prev .responsive {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  article.project {
+    padding: 200px 0 100px 0;
+  }
+  article.project .index-txt {
+    width: 80%;
+    margin: 0 auto 100px auto;
+    font-size: 45px;
+  }
+  article.project .index-txt .txt-back {
+    font-size: 45px;
+  }
+  article.project .project-inner {
+    width: 80%;
+  }
+  article.project .project-inner .even .project-prev {
+    text-align: left;
+  }
+  article.project .project-inner .project-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 100px;
+  }
+  article.project .project-inner .project-item .thumb {
+    width: 100%;
+  }
+  article.project .project-inner .project-item .project-prev {
+    width: 100%;
+    height: auto;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg {
+    margin: 10px 0;
+    width: 100%;
+    height: 50px;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg text {
+    width: 100%;
+    height: 100%;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg .mobile-title {
+    width: 100%;
+    display: inline-block;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg .pc-title {
+    display: none;
+  }
+  article.project .project-inner .project-item .project-prev .svg-box .title-svg .title {
+    font-size: 50px;
+    width: 100%;
+  }
+  article.project .project-inner .project-item .project-prev .prev-txt {
+    width: 100%;
+    font-size: 14px;
+  }
+  article.project .project-inner .project-item .project-prev .responsive {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=project.css.map */
