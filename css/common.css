@@ -271,6 +271,7 @@ header .h_container.white .menu-trigger span {
 }
 
 header .h_container {
+  width: 100%;
   padding: 20px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -790,6 +791,82 @@ aside .contact.active {
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
 @media (min-width: 768px) and (max-width: 1023px) {
-  /*스타일입력*/
+  .cursor {
+    display: none;
+  }
+  header .h_container {
+    padding: 20px 30px;
+  }
+  header .h_container .logo svg .mobile-logo {
+    display: block;
+    font-size: 35px;
+  }
+  header .h_container .logo svg .pc-logo {
+    display: none;
+  }
+  header .h_container .logo svg text {
+    font-size: 20px;
+  }
+  nav .menu {
+    width: 80%;
+    top: 40%;
+    left: 50%;
+  }
+  nav .menu a {
+    font-size: 65px;
+    display: block;
+  }
+  nav .contact-email {
+    width: 80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  nav .contact-email h3 {
+    font-size: 20px;
+  }
+  nav .contact-email .contact-inner ul {
+    margin: 0;
+  }
+  nav .contact-email .contact-inner .name {
+    font-size: 15px;
+  }
+  nav .contact-email .contact-inner .icon-name, nav .contact-email .contact-inner .icon-email {
+    width: 25px;
+    background-size: contain;
+  }
+  aside .contact .contact-box .contact-txt {
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  aside .contact .contact-box .contact-txt h2 {
+    font-size: 50px;
+  }
+  aside .contact .contact-box .contact-txt p {
+    font-size: 14px;
+  }
+  aside .contact .contact-box .contact-email {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  aside .contact .contact-box .contact-email h3 {
+    font-size: 25px;
+  }
+  aside .contact .contact-label {
+    font-size: 20px;
+    top: 80%;
+  }
+  .btn-wrap {
+    margin: 10px 0;
+  }
+  .btn-wrap .detail-btn {
+    font-size: 12px;
+  }
+  .btn-wrap .circle {
+    display: none;
+  }
 }
 /*# sourceMappingURL=common.css.map */

@@ -265,7 +265,9 @@ header {
       }
     }
   }
+
   .h_container {
+    width:100%;
     padding: 20px 50px;
 
     display: flex;
@@ -649,7 +651,6 @@ aside {
 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
 @media (max-width:767px) {
-  
 
   .cursor{
     display: none;
@@ -767,5 +768,103 @@ aside {
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
-@media (min-width:768px) and (max-width:1023px) { /*스타일입력*/}
+@media (min-width:768px) and (max-width:1023px) {
+  .cursor{
+    display: none;
+  }
+
+  header .h_container {
+    padding:20px 30px;
+    .logo {
+      svg{
+        .mobile-logo{
+          display: block;
+          font-size:35px;
+        }
+        .pc-logo{
+          display:none;
+        }
+        text{
+        font-size:20px;
+      }
+      }
+      
+    }
+  }
+
+  nav{
+    .menu{
+      width:80%;
+      top:40%;
+      left:50%;
+      a{
+        font-size:65px;
+        display:block;
+      }
+    }
+    .contact-email{
+      width:80%;
+      left:50%;
+
+      transform:translateX(-50%);
+
+      h3{
+        font-size:20px;
+      }
+      .contact-inner{
+        ul{
+          margin:0;
+        }
+        .name{
+          font-size:15px;
+        }
+        .icon-name, .icon-email{
+          width:25px;
+          background-size:contain;
+        }
+      }
+      
+    }
+  }
+
+  aside {
+    .contact {
+      .contact-box{
+        .contact-txt{
+            top:40%;
+            left:50%;
+            transform:translate(-50%,-50%);
+          h2{
+            font-size:50px;
+          }
+          p{
+            font-size:14px;
+          }
+        }
+        .contact-email{
+          h3{
+            font-size:25px;
+          }
+          left:50%;
+          transform:translate(-50%,-50%);
+        }
+      }
+      .contact-label{
+        font-size:20px;
+        top:80%;
+      }
+    }
+  }
+
+  .btn-wrap{
+    margin:10px 0;
+
+    .detail-btn{
+      font-size:12px;
+    }
+    .circle{
+      display:none;
+    }
+  }
+}
 
