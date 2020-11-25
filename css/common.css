@@ -1,7 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-@import url("https://db.onlinewebfonts.com/c/449b1c567da51480d590112112addcd6?family=CommercialScript+BT");
+@font-face {
+  font-family: "CommercialScript BT";
+  src: url("/portfolio/img/font/Commercial Script BT.eot");
+  src: url("/portfolio/img/font/CommercialScriptBT Regular.woff");
+}
+
 @font-face {
   font-family: "NEXON Lv1 Gothic";
   src: url("/portfolio/img/font/NEXON Lv1 Gothic OTF.eot");
@@ -67,6 +72,11 @@ body {
 
 main {
   opacity: 0;
+}
+
+article {
+  width: 100%;
+  overflow: hidden;
 }
 
 h1,
@@ -774,7 +784,7 @@ aside .contact.active {
   }
   aside .contact .contact-label {
     font-size: 20px;
-    top: 85%;
+    top: 80%;
   }
 }
 
