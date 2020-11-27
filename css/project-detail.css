@@ -541,18 +541,21 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
   article.project-detail .middle .used-skill .skill-list {
     width: 100%;
     margin: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  article.project-detail .middle .used-skill .skill-list .skill-item {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    width: 35%;
   }
   article.project-detail .middle .used-skill .skill-list .skill-item img {
     width: 40px;
+    margin-left: 0;
   }
   article.project-detail .middle .res-detail {
     width: 100%;
@@ -709,10 +712,6 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
   article.project-detail .middle .used-skill .skill-list {
     width: 100%;
     margin: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;

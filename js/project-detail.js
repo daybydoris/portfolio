@@ -202,7 +202,6 @@ $(function () {
                             const skillList = document.querySelector('.skill-list');
 
                             res.remove();
-                            skillList.style = "width:100%; flex-wrap:nowrap;";
                         }
                     }
 
