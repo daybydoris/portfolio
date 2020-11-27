@@ -13,7 +13,8 @@ $(function () {
             const indexTxt = document.querySelector('.index-txt');
             const topTitle = document.querySelector('.top-title');
             const topTime = document.querySelector('.top-time');
-            const demo = document.querySelector('.demo');
+            const mDemo = document.querySelector('.mDemo');
+            const pcDemo = document.querySelector('.pcDemo');
             const overall = document.querySelector('.top-overall');
             const feature = document.querySelector('.feature');
 
@@ -57,6 +58,7 @@ $(function () {
                 if (p.num == localStorage.getItem('num')) {
 
                     createIndexTxt();
+                    createMobileDemo();
                     projectName();
                     projectTime();
                     createDemo();
@@ -65,7 +67,6 @@ $(function () {
                     createUsedSkill();
                     createRes();
                     createFeature();
-                    // createPagePrevOrig();
 
                     function createIndexTxt() {
                         const front = document.createElement('div');
@@ -98,20 +99,39 @@ $(function () {
                         topTime.appendChild(time);
                     }
 
+                    function createMobileDemo() {
+                        //mobile용
+                        const mDemoBtn = document.createElement('a');
+                        const mCircle = document.createElement('a');
+
+                        mDemoBtn.textContent = "웹사이트 방문하기";
+                        mDemoBtn.setAttribute("href", p.siteUrl);
+                        mDemoBtn.setAttribute("target", "_blank");
+                        mDemoBtn.classList = "detail-btn atvBtn"
+
+                        mCircle.setAttribute("href", p.siteUrl);
+                        mCircle.classList = "circle atvBtn";
+
+
+                        mDemo.appendChild(mDemoBtn);
+                        mDemo.appendChild(mCircle);
+                    }
+
                     function createDemo() {
+                        //pc용
                         const demoBtn = document.createElement('a');
                         const circle = document.createElement('a');
 
                         demoBtn.textContent = "웹사이트 방문하기";
                         demoBtn.setAttribute("href", p.siteUrl);
                         demoBtn.setAttribute("target", "_blank");
-                        demoBtn.classList = "detail-btn atvBtn"
+                        demoBtn.classList = "detail-btn atvBtn";
 
                         circle.setAttribute("href", p.siteUrl);
                         circle.classList = "circle atvBtn";
 
-                        demo.appendChild(demoBtn);
-                        demo.appendChild(circle);
+                        pcDemo.appendChild(demoBtn);
+                        pcDemo.appendChild(circle);
                     }
 
                     function createIntro() {
@@ -123,6 +143,7 @@ $(function () {
                     }
 
                     function createPagePrev() {
+
                         const pagePrevList = document.querySelector('.page-prev-list');
 
                         p.prevImg.forEach(function (img, key) {
@@ -136,6 +157,7 @@ $(function () {
 
                             pagePrevList.appendChild(pagePrevItem);
                         });
+
                     }
 
                     function createUsedSkill() {
@@ -269,7 +291,6 @@ $(function () {
                 variableWidth: true,
                 dots: true
             });
-
         }
 
 
