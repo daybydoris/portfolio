@@ -123,6 +123,9 @@ article.index-project{
     }
 
     .slider{
+        .slick-list{
+            height:700px;
+        }  
         .atvBtn{display:block;}
         .slider-con{
             margin:0 auto;
@@ -147,7 +150,7 @@ article.index-project{
                 width:100%; height:100%;
                 svg{
                     position: absolute;
-                    left:50%; bottom:-7%;
+                    left:50%; bottom:-17%;
                     transform:translateX(-50%);
                     .title{
                         font-size:70px;
@@ -185,7 +188,10 @@ article.index-project{
             width:80%;
             margin-bottom:50px;
         }
-        .slider{    
+        .slider{  
+            .slick-list{
+                height:300px;
+            }  
             .slider-con{
                 .img-box{
                     img{
@@ -194,10 +200,12 @@ article.index-project{
                 }
                 .svg-box{
                     svg{
+                        bottom:-40%;
                         .title{
                             width:100%;
                             font-size:30px;
                             stroke-width:0.3px;
+
                         }
                     }
                 }
@@ -222,7 +230,10 @@ article.index-about{
             width:80%;
             margin-bottom:50px;
         }
-        .slider{    
+        .slider{
+            .slick-list{
+                height:500px;
+            }      
             .slider-con{
                 .img-box{
                     img{

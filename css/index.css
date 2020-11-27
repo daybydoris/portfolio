@@ -129,6 +129,10 @@ article.index-project .btn-wrap:hover .circle {
   width: 110%;
 }
 
+article.index-project .slider .slick-list {
+  height: 700px;
+}
+
 article.index-project .slider .atvBtn {
   display: block;
 }
@@ -161,7 +165,7 @@ article.index-project .slider .slider-con .svg-box {
 article.index-project .slider .slider-con .svg-box svg {
   position: absolute;
   left: 50%;
-  bottom: -7%;
+  bottom: -17%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -192,8 +196,14 @@ article.index-project .slider .slider-con .svg-box svg .title {
     width: 80%;
     margin-bottom: 50px;
   }
+  article.index-project .slider .slick-list {
+    height: 300px;
+  }
   article.index-project .slider .slider-con .img-box img {
     width: 100%;
+  }
+  article.index-project .slider .slider-con .svg-box svg {
+    bottom: -40%;
   }
   article.index-project .slider .slider-con .svg-box svg .title {
     width: 100%;
@@ -215,6 +225,9 @@ article.index-project .slider .slider-con .svg-box svg .title {
   article.index-project .txt-wrap {
     width: 80%;
     margin-bottom: 50px;
+  }
+  article.index-project .slider .slick-list {
+    height: 500px;
   }
   article.index-project .slider .slider-con .img-box img {
     width: 100%;
