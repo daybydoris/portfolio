@@ -255,7 +255,6 @@ $(function () {
                 tabBtn.forEach(function (btn) {
                     btn.addEventListener('click', scrollToTab);
 
-
                     function scrollToTab(e) {
                         e.preventDefault();
 
@@ -264,36 +263,17 @@ $(function () {
                         const offsetTop = whereToScroll.offsetTop - 120;
 
                         window.scrollTo(0, offsetTop);
+
+                        //모든 버튼의 active 제거
+                        btn.parentNode.childNodes.forEach(function (b) {
+                            b.classList.remove('active');
+                        });
+                        //클릭한 버튼만 active 추가
+                        btn.classList.add('active');
                     }
                 });
-
-
-                // tab active
-
-
-
-
             }, 500);
-
-
-
-
-
-            //---------------------
-            // slick
-            //---------------------
-            // $("li .figure-box").slick({
-            //     slidesToShow: 1,
-            //     autoplay: false,
-            //     centerMode: true,
-            //     arrows: false,
-            //     variableWidth: true,
-            //     dots: true
-            // });
         }
-
-
-
     });
 
 
