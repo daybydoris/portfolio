@@ -115,19 +115,25 @@ window.addEventListener('DOMContentLoaded', function () {
             $('.contact-label').fadeTo(100, 1);
 
             locateBtn.forEach(function (l) {
-                l.addEventListener('click', pageTransition);
+                l.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (!$(".slider").hasClass('active')) {
+                        pageTransition(e);
+                    }
+                });
             });
 
             $('.img-box img').mousedown(function (event) {
-                event.stopPropagation();
+                // event.stopPropagation();
             });
 
             //페이지 이동
             function pageTransition(e) {
-                console.log('clicked');
+
                 let pageUrl;
 
-                e.preventDefault();
+
+
 
                 if (e.target.href == undefined || e.target.href == "") {
                     pageUrl = e.target.closest('a').getAttribute('href');
@@ -341,7 +347,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 blockHeader();
                 stopScroll();
 
-                const winSize = window.matchMedia('(max-width:767px)')
+                const winSize = window.matchMedia('(max-width:767px)');
 
                 //반응형 처리
                 if (winSize.matches == true) {

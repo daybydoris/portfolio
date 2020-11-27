@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', function () {
         console.log('callback - particles.js config loaded');
     });
 
-
     //-----------------------------
     // scrolldown 아이콘 애니메이션
     //-----------------------------
@@ -65,10 +64,8 @@ window.addEventListener('DOMContentLoaded', function () {
                 aTag.id = p.num;
                 aTag.setAttribute('href', '/portfolio/pages/project-detail.html');
                 aTag.classList.add('atvBtn');
-                aTag.appendChild(img);
 
-                imgBox.classList.add('locate');
-                imgBox.appendChild(aTag);
+                imgBox.appendChild(img);
 
                 text.setAttribute('x', '50%');
                 text.setAttribute('y', '80%');
@@ -85,15 +82,17 @@ window.addEventListener('DOMContentLoaded', function () {
                 svg.appendChild(text);
                 svgBox.appendChild(svg);
 
-                sliderCon.className = "slider-con";
-                sliderCon.appendChild(imgBox);
-                sliderCon.appendChild(svgBox);
+                aTag.appendChild(imgBox);
+                aTag.appendChild(svgBox);
+
+                sliderCon.className = "slider-con locate";
+                sliderCon.appendChild(aTag);
 
                 slider.appendChild(sliderCon);
 
             });
 
-            $('.img-box img').on('click', saveProjectId);
+            $('.svg-box').on('click', saveProjectId);
 
             //-----------------------
             //게시글 넘버값 저장
@@ -101,6 +100,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
             function saveProjectId(e) {
                 e.preventDefault();
+
+                console.log(e.target);
 
                 let projectId = e.target.closest('a').id;
                 localStorage.setItem('num', projectId);
@@ -120,6 +121,12 @@ window.addEventListener('DOMContentLoaded', function () {
                 draggable: true
                 // variableWidth: true
             });
+            $(".slider").on('beforeChange', function () {
+                $(".slider").addClass('active');
+            })
+            $(".slider").on('afterChange', function () {
+                setTimeout(function () { $(".slider").removeClass('active'); }, 100);
+            })
 
         }
     });
