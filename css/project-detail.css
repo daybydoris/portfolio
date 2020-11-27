@@ -322,25 +322,39 @@ article.project-detail .feature-detail .feature-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-article.project-detail .feature-detail .feature-list li .left {
+article.project-detail .feature-detail .feature-list li .feat-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 10px;
+  margin-bottom: 70px;
+}
+
+article.project-detail .feature-detail .feature-list li .feat-item .feature-detail {
   width: 40%;
 }
 
-article.project-detail .feature-detail .feature-list li .figure-box {
-  width: 650px;
-  height: 366px;
+article.project-detail .feature-detail .feature-list li .feat-item .figure-box {
+  width: 50%;
+}
+
+article.project-detail .feature-detail .feature-list li .feat-item .figure-box img {
+  width: 100%;
 }
 
 article.project-detail .feature-detail .feature-list div {
@@ -527,6 +541,15 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
   article.project-detail .middle .used-skill .skill-list {
     width: 100%;
     margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   article.project-detail .middle .used-skill .skill-list .skill-item img {
     width: 40px;
@@ -557,6 +580,8 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
   }
   article.project-detail .feature .feature-detail .feature-list li {
     margin-top: 40px;
+  }
+  article.project-detail .feature .feature-detail .feature-list li .feat-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -564,15 +589,14 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
     -ms-flex-flow: column-reverse;
         flex-flow: column-reverse;
   }
-  article.project-detail .feature .feature-detail .feature-list li .left {
+  article.project-detail .feature .feature-detail .feature-list li .feat-item .feature-detail {
     width: 100%;
   }
-  article.project-detail .feature .feature-detail .feature-list li .figure-box {
-    position: relative;
+  article.project-detail .feature .feature-detail .feature-list li .feat-item .figure-box {
     width: 100%;
   }
-  article.project-detail .feature .feature-detail .feature-list li .figure-box video {
-    margin: 0 auto;
+  article.project-detail .feature .feature-detail .feature-list li .feat-item .figure-box img {
+    width: 100%;
   }
   article.project-detail .feature .feature-detail .feature-list .flex-column {
     -webkit-box-orient: vertical;
@@ -583,4 +607,170 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
 }
 
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  article.project-detail {
+    padding: 150px 0;
+  }
+  article.project-detail .art_inner {
+    width: 80%;
+  }
+  article.project-detail .index-txt {
+    width: 100%;
+    margin: 0 0 20px 0;
+    font-size: 45px;
+  }
+  article.project-detail .index-txt .front .txt-back {
+    font-size: 45px;
+    bottom: -1%;
+    left: 1.5%;
+    letter-spacing: 13px;
+  }
+  article.project-detail .sec-top {
+    margin: 0;
+  }
+  article.project-detail .sec-top .top-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  article.project-detail .sec-top .top-wrap h3 {
+    width: 48%;
+    margin: 0 0 20px 0;
+  }
+  article.project-detail .sec-top .top-wrap .top-title, article.project-detail .sec-top .top-wrap .top-time, article.project-detail .sec-top .top-wrap .demo {
+    width: 100%;
+  }
+  article.project-detail .sec-top .top-wrap .top-title, article.project-detail .sec-top .top-wrap .top-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 25px;
+  }
+  article.project-detail .sec-top .top-wrap .mDemo {
+    display: block;
+    margin: 0 0 70px 0;
+    text-align: right;
+  }
+  article.project-detail .sec-top .top-wrap .pcDemo {
+    display: none;
+  }
+  article.project-detail .sec-top .top-overall {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  article.project-detail .sec-top .top-overall h3 {
+    margin-bottom: 20px;
+  }
+  article.project-detail .sec-top .top-overall p {
+    width: 100%;
+  }
+  article.project-detail .page-prev {
+    width: 100%;
+  }
+  article.project-detail .page-prev .inner {
+    width: 100%;
+  }
+  article.project-detail .page-prev .inner .page-prev-list {
+    width: 100%;
+    margin-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  article.project-detail .page-prev .inner .page-prev-list .page-prev-item {
+    width: 100%;
+  }
+  article.project-detail .page-prev .inner .page-prev-list .page-prev-item img {
+    opacity: 1;
+    margin-bottom: 5px;
+  }
+  article.project-detail .page-prev .inner .hidden {
+    display: none;
+  }
+  article.project-detail .middle {
+    margin: 70px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  article.project-detail .middle .used-skill {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  article.project-detail .middle .used-skill .skill-list {
+    width: 100%;
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  article.project-detail .middle .used-skill .skill-list .skill-item img {
+    width: 40px;
+  }
+  article.project-detail .middle .res-detail {
+    width: 100%;
+  }
+  article.project-detail .middle .res-detail .inner {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  article.project-detail .middle .res-detail .inner span {
+    margin: 10px 0;
+  }
+  article.project-detail .middle .res-detail .inner #pc:before,
+  article.project-detail .middle .res-detail .inner #tablet:before,
+  article.project-detail .middle .res-detail .inner #mobile:before {
+    margin: 0 15px 0 0;
+  }
+  article.project-detail .feature .tab {
+    display: none;
+  }
+  article.project-detail .feature .feature-detail .feature-list li {
+    margin-top: 40px;
+  }
+  article.project-detail .feature .feature-detail .feature-list li .feat-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-flow: column-reverse;
+        flex-flow: column-reverse;
+  }
+  article.project-detail .feature .feature-detail .feature-list li .feat-item .feature-detail {
+    width: 100%;
+  }
+  article.project-detail .feature .feature-detail .feature-list li .feat-item .figure-box {
+    width: 100%;
+  }
+  article.project-detail .feature .feature-detail .feature-list li .feat-item .figure-box img {
+    width: 100%;
+  }
+  article.project-detail .feature .feature-detail .feature-list .flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
 /*# sourceMappingURL=project-detail.css.map */

@@ -256,22 +256,26 @@ article.project-detail{
             li{
                 margin-top:150px;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-start;
                 
-                .left{
-                    width:40%;
-                }
-                .figure-box{
-                    width:650px;
-                    height:366px;
-                    // overflow: hidden;
-
-                    video{
-                        // overflow:hidden;
+                .feat-item{
+                    display:flex;
+                    justify-content: space-between;
+                    padding-left:10px;
+                    margin-bottom:70px;
+                    .feature-detail{
+                        width:40%;
+                    }
+                    .figure-box{
+                        width:50%;
+                        img{
+                            width:100%;
+                        }
                     }
                 }
+                
             }
             div{
                 margin-bottom:40px;
@@ -415,11 +419,176 @@ article.project-detail{
                 }
             }
         }
-        
-        .page-prev-list{
-            .page-prev-item{
-                img{
-                    // width:100%;
+
+        // 페이지 갤러리
+        .page-prev{
+            width:100%;
+            .inner{
+                width:100%;
+                .page-prev-list{
+                    width:100%;
+                    margin-top:30px;
+                    flex-direction: column;
+
+                    .page-prev-item{
+                        width:100%;
+
+                        img{
+                            opacity:1;
+                            margin-bottom:5px;
+                        }
+                    }
+                }
+                
+                .hidden{
+                    display: none;
+                }
+            }
+        }
+
+        .middle{
+            margin:70px 0;
+
+            flex-direction: column;
+
+            .used-skill{
+                width:100%;
+                margin-bottom:25px;
+                .skill-list{
+                    width:100%;
+                    margin:0;
+                    flex-direction:column;
+                    align-items: flex-start;
+                    flex-wrap: nowrap;
+                    .skill-item{
+                        img{
+                            width:40px;
+                        }
+                    }
+                }
+            }
+
+            .res-detail{
+                width:100%;
+
+                .inner{
+                    width:100%;
+                    display:flex;
+                    flex-direction: column;
+
+                    span{
+                        margin:10px 0;
+
+                        
+                    }
+                    #pc:before,
+                    #tablet:before,
+                    #mobile:before{
+                        margin: 0 15px 0 0;
+                    }
+                }
+            }
+        }
+
+
+        .feature{
+            .tab{
+                display: none;
+            }
+
+            .feature-detail{
+                .feature-list{
+                    li{
+                        margin-top:40px;
+                        .feat-item{
+                            flex-direction: column;
+                            flex-flow:column-reverse;
+                            .feature-detail{
+                                width:100%;
+                            }
+                            .figure-box{
+                                width:100%;
+                                img{width:100%;}
+                            }
+                        }
+                        
+                    }
+                    .flex-column{
+                        flex-flow: column;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media (min-width:768px) and (max-width:1023px) {
+    article.project-detail{
+        padding:150px 0;
+
+        .art_inner{
+            width:80%;
+        }
+        .index-txt{
+            width:100%;
+            margin:0 0 20px 0;
+            font-size:45px;
+            .front{
+                .txt-back{
+                    font-size:45px;
+                    bottom: -1%;
+                    left:1.5%;
+                    letter-spacing: 13px;
+                }
+            }
+            
+        }
+
+        .sec-top{
+            margin:0;
+
+            .top-wrap{
+                flex-direction: column;
+                align-items: flex-start;
+
+                h3{
+                    width:48%;
+                    margin:0 0 20px 0;
+                }
+                p{
+                }
+                .top-title, .top-time, .demo{
+                    width:100%;
+                }
+
+                .top-title, .top-time{
+                    flex-direction: column;
+                    margin-bottom:25px;
+                }
+
+                .mDemo{
+                    display: block;
+                    margin:0 0 70px 0;
+                    text-align: right;
+
+                }
+                .pcDemo{
+                    display: none;
+                }
+            }
+
+
+            .top-overall{
+                flex-direction: column;
+                h3{
+                    margin-bottom:20px;
+                }
+                p{
+                    width:100%;
                 }
             }
         }
@@ -461,6 +630,9 @@ article.project-detail{
                 .skill-list{
                     width:100%;
                     margin:0;
+                    flex-direction:column;
+                    align-items: flex-start;
+                    flex-wrap: nowrap;
                     .skill-item{
                         img{
                             width:40px;
@@ -501,21 +673,18 @@ article.project-detail{
                 .feature-list{
                     li{
                         margin-top:40px;
-                        flex-direction: column;
-                        flex-flow: column-reverse;
-                        .left{
-                            width:100%;
-                        }
-                        .figure-box{
-                            position: relative;
-                            width:100%;
-                            // height:0;
-                            // padding-bottom:56.25%;
-                            // overflow:hidden;
-                            video{
-                                margin:0 auto;
+                        .feat-item{
+                            flex-direction: column;
+                            flex-flow:column-reverse;
+                            .feature-detail{
+                                width:100%;
+                            }
+                            .figure-box{
+                                width:100%;
+                                img{width:100%;}
                             }
                         }
+                        
                     }
                     .flex-column{
                         flex-flow: column;
@@ -524,10 +693,4 @@ article.project-detail{
             }
         }
     }
-
-    
-
 }
-
-/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
-@media (min-width:768px) and (max-width:1023px) {}

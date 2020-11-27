@@ -283,14 +283,14 @@ $(function () {
             //---------------------
             // slick
             //---------------------
-            $("li .figure-box").slick({
-                slidesToShow: 1,
-                autoplay: false,
-                centerMode: true,
-                arrows: false,
-                variableWidth: true,
-                dots: true
-            });
+            // $("li .figure-box").slick({
+            //     slidesToShow: 1,
+            //     autoplay: false,
+            //     centerMode: true,
+            //     arrows: false,
+            //     variableWidth: true,
+            //     dots: true
+            // });
         }
 
 
