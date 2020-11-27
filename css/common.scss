@@ -58,6 +58,9 @@ $red: #e8001b;
   font-family: Montserrat, "NEXON Lv2 Gothic";
   letter-spacing: 0;
   outline: none;
+
+  //모바일에서 클릭시 파란박스 안보이게
+  -webkit-tap-highlight-color : rgba(0,0,0,0);
 }
 
 html{
@@ -714,7 +717,7 @@ aside {
     margin:10px 0;
 
     .detail-btn{
-      font-size:12px;
+      font-size:14px;
     }
     .circle{
       display:none;

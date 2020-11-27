@@ -49,6 +49,7 @@
   font-family: Montserrat, "NEXON Lv2 Gothic";
   letter-spacing: 0;
   outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -745,7 +746,7 @@ aside .contact.active {
     margin: 10px 0;
   }
   .btn-wrap .detail-btn {
-    font-size: 12px;
+    font-size: 14px;
   }
   .btn-wrap .circle {
     display: none;
