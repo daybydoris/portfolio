@@ -58,26 +58,25 @@ window.addEventListener('DOMContentLoaded', function () {
                 let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
                 let text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 
-                imgBox.className = "img-box";
+                imgBox.classList = "img-box";
                 img.setAttribute('src', thumb);
 
                 aTag.id = p.num;
                 aTag.setAttribute('href', '/portfolio/pages/project-detail.html');
-                aTag.classList.add('atvBtn');
 
                 imgBox.appendChild(img);
 
                 text.setAttribute('x', '50%');
                 text.setAttribute('y', '80%');
                 text.setAttribute('text-anchor', 'middle');
-                text.textContent = `${p.title}.`;
+                text.textContent = p.title + ".";
                 text.classList = "title";
 
                 svg.setAttribute('width', '100%');
                 svg.setAttribute('height', '120');
                 svg.setAttribute('viewbox', '0 0 100% 120');
 
-                svgBox.className = "svg-box";
+                svgBox.classList = "svg-box atvBtn locate";
 
                 svg.appendChild(text);
                 svgBox.appendChild(svg);
@@ -85,7 +84,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 aTag.appendChild(imgBox);
                 aTag.appendChild(svgBox);
 
-                sliderCon.className = "slider-con locate";
+                sliderCon.classList = "slider-con";
                 sliderCon.appendChild(aTag);
 
                 slider.appendChild(sliderCon);
