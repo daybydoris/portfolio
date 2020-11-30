@@ -90,9 +90,9 @@ window.addEventListener('DOMContentLoaded', function () {
             function changeColor(color) {
                 name.forEach(function (l) {
                     if (l.tagName == 'text') {
-                        l.style = `fill:${color}`;
+                        l.style = "fill:" + color + ";";
                     } else {
-                        l.style = `background:${color}`;
+                        l.style = "background:" + color + ";";
                     }
                 });
             }
@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', function () {
             });
 
             $('.img-box img').mousedown(function (event) {
-                // event.stopPropagation();
+                event.stopPropagation();
             });
 
             //페이지 이동
