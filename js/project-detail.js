@@ -81,6 +81,8 @@ $(function () {
                         front.appendChild(txtBack);
 
                         indexTxt.appendChild(front);
+                        indexTxt.setAttribute('data-aos', 'fade-up');
+                        indexTxt.setAttribute('data-aos-delay', '600');
                     }
 
                     function projectName() {
@@ -89,6 +91,8 @@ $(function () {
                         name.textContent = p.title;
 
                         topTitle.appendChild(name);
+                        topTitle.setAttribute('data-aos', 'fade-up');
+                        topTitle.setAttribute('data-aos-delay', '800');
                     }
 
                     function projectTime() {
@@ -97,6 +101,8 @@ $(function () {
                         time.textContent = p.elapsed;
 
                         topTime.appendChild(time);
+                        topTime.setAttribute('data-aos', 'fade-up');
+                        topTime.setAttribute('data-aos-delay', '900');
                     }
 
                     function createMobileDemo() {
@@ -115,6 +121,8 @@ $(function () {
 
                         mDemo.appendChild(mDemoBtn);
                         mDemo.appendChild(mCircle);
+                        mDemo.setAttribute('data-aos', 'fade-up');
+                        mDemo.setAttribute('data-aos-delay', '700');
                     }
 
                     function createDemo() {
@@ -132,6 +140,8 @@ $(function () {
 
                         pcDemo.appendChild(demoBtn);
                         pcDemo.appendChild(circle);
+                        pcDemo.setAttribute('data-aos', 'fade-up');
+                        pcDemo.setAttribute('data-aos-delay', '700');
                     }
 
                     function createIntro() {
@@ -140,11 +150,14 @@ $(function () {
                         overallDetail.innerHTML = p.intro;
 
                         overall.appendChild(overallDetail);
+                        overall.setAttribute('data-aos', 'fade-up');
+                        overall.setAttribute('data-aos-delay', '1000');
                     }
 
                     function createPagePrev() {
 
                         const pagePrevList = document.querySelector('.page-prev-list');
+                        let idx = 1;
 
                         p.prevImg.forEach(function (img, key) {
                             const pagePrevItem = document.createElement('li');
@@ -156,6 +169,8 @@ $(function () {
                             pagePrevItem.setAttribute('data-num', key);
 
                             pagePrevList.appendChild(pagePrevItem);
+                            pagePrevItem.setAttribute('data-aos', 'fade-up');
+                            pagePrevItem.setAttribute('data-aos-delay', (idx * (key + 1)) * 100);
                         });
 
                     }
@@ -168,7 +183,7 @@ $(function () {
                             const skillImg = document.createElement('img');
                             const skillName = document.createElement('span');
 
-                            skillImg.setAttribute('src', `../img/about-icon-${skill}.png`);
+                            skillImg.setAttribute('src', "../img/about-icon-" + skill + ".png");
 
                             skillName.textContent = skill;
 
@@ -177,6 +192,7 @@ $(function () {
                             skillItem.appendChild(skillName);
 
                             skillList.appendChild(skillItem);
+                            skillList.setAttribute('data-aos', 'fade-up');
                         });
                     }
 
@@ -192,7 +208,7 @@ $(function () {
                                 type.id = key;
                                 type.textContent = key;
 
-                                resolution.textContent = `${p.responsiveType[key]}px`;
+                                resolution.textContent = p.responsiveType[key] + "px";
 
                                 resDetail.insertBefore(resolution, lastPx);
                                 resDetail.insertBefore(type, lastPx);
@@ -259,7 +275,7 @@ $(function () {
                         e.preventDefault();
 
                         const where = e.target.getAttribute('href');
-                        const whereToScroll = document.querySelector(`#${where}`);
+                        const whereToScroll = document.querySelector('#' + where);
                         const offsetTop = whereToScroll.offsetTop - 120;
 
                         window.scrollTo(0, offsetTop);
