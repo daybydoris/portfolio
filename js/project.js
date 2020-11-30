@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 // classList 및 setAttribute
 
                 //thumb
-                thumbImg.setAttribute('src', `../${p.thumb}`);
+                thumbImg.setAttribute('src', '../' + p.thumb);
 
                 aTag.href = 'project-detail.html';
                 aTag.id = key;
@@ -172,7 +172,7 @@ window.addEventListener('DOMContentLoaded', function () {
                         let degX = ((coorY / halfH) * 15) + 'deg';
                         let degY = ((coorX / halfW) * -15) + 'deg';
 
-                        this.style = `transform: perspective(1500px) translate3d(0, 0px, 0) rotateX(${degX}) rotateY(${degY})`;
+                        this.style = "transform: perspective(1500px) translate3d(0, 0px, 0) rotateX(" + degX + ") rotateY(" + degY + ");";
                     }
 
                     function thumbStop() {
