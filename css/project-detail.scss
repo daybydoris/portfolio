@@ -182,7 +182,7 @@ article.project-detail{
                     justify-content: space-between;
                     margin-right:40px;
                     margin-bottom:30px;
-                    text-transform: capitalize;
+                    // text-transform: capitalize;
                     
                     img{
                         width:50px;
@@ -559,8 +559,7 @@ article.project-detail{
                 align-items: flex-start;
 
                 h3{
-                    width:48%;
-                    margin:0 0 20px 0;
+                    margin:0 15px 20px 0;
                 }
                 p{
                 }
@@ -569,7 +568,6 @@ article.project-detail{
                 }
 
                 .top-title, .top-time{
-                    flex-direction: column;
                     margin-bottom:25px;
                 }
 
