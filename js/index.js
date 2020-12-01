@@ -1,7 +1,7 @@
 'use strict';
 
-window.addEventListener('DOMContentLoaded', function () {
 
+function index() {
     //----------------------------
     // particle.js
     //----------------------------
@@ -130,4 +130,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-});
+    console.log('index');
+}
+
+export default index;

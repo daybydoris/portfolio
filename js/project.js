@@ -1,7 +1,6 @@
 "use strict";
 
-window.addEventListener('DOMContentLoaded', function () {
-
+function project() {
 
     $.ajax({
         url: "../project.json",
@@ -189,5 +188,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    console.log('project');
 
-});
+}
+
+export default project;

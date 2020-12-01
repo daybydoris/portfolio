@@ -1,6 +1,6 @@
 'use strict';
 
-window.addEventListener('DOMContentLoaded', function () {
+function common() {
 
     //헤더 불러오기
     $("header").load("/portfolio/inc_head_foot.html header .h_container", init);
@@ -391,4 +391,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-});
+    console.log('export');
+}
+
+export default common;

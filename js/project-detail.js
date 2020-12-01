@@ -1,6 +1,6 @@
 "use strict";
 
-$(function () {
+function projectDetail() {
     //start
 
     $.ajax({
@@ -292,8 +292,10 @@ $(function () {
         }
     });
 
-
+    console.log('projectDetail');
 
 
     //end
-});
+}
+
+export default projectDetail;
