@@ -12,7 +12,6 @@ function init() {
     switch (pageName) {
         case '/portfolio/': index(); break;
         case '/portfolio/index.html': index(); break;
-        case '/portfolio/pages/about.html': about(); break;
         case '/portfolio/pages/project.html': project(); break;
         case '/portfolio/pages/project-detail.html': projectDetail(); break;
     }
