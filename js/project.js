@@ -111,9 +111,9 @@ function project() {
                 projectItem.setAttribute('data-aos', 'fade-up');
 
                 if (key == 0) {
-                    projectItem.setAttribute('data-aos-delay', '500');
+                    projectItem.setAttribute('data-aos-delay', '800');
                 } else {
-                    projectItem.setAttribute('data-aos-offset', '500');
+                    projectItem.setAttribute('data-aos-offset', '400');
                 }
 
                 projectList.appendChild(projectItem);

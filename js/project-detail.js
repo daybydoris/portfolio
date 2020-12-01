@@ -81,8 +81,6 @@ function projectDetail() {
                         front.appendChild(txtBack);
 
                         indexTxt.appendChild(front);
-                        indexTxt.setAttribute('data-aos', 'fade-up');
-                        indexTxt.setAttribute('data-aos-delay', '600');
                     }
 
                     function projectName() {
@@ -91,8 +89,6 @@ function projectDetail() {
                         name.textContent = p.title;
 
                         topTitle.appendChild(name);
-                        topTitle.setAttribute('data-aos', 'fade-up');
-                        topTitle.setAttribute('data-aos-delay', '800');
                     }
 
                     function projectTime() {
@@ -101,8 +97,6 @@ function projectDetail() {
                         time.textContent = p.elapsed;
 
                         topTime.appendChild(time);
-                        topTime.setAttribute('data-aos', 'fade-up');
-                        topTime.setAttribute('data-aos-delay', '900');
                     }
 
                     function createMobileDemo() {
@@ -121,8 +115,6 @@ function projectDetail() {
 
                         mDemo.appendChild(mDemoBtn);
                         mDemo.appendChild(mCircle);
-                        mDemo.setAttribute('data-aos', 'fade-up');
-                        mDemo.setAttribute('data-aos-delay', '700');
                     }
 
                     function createDemo() {
@@ -140,8 +132,6 @@ function projectDetail() {
 
                         pcDemo.appendChild(demoBtn);
                         pcDemo.appendChild(circle);
-                        pcDemo.setAttribute('data-aos', 'fade-up');
-                        pcDemo.setAttribute('data-aos-delay', '700');
                     }
 
                     function createIntro() {
@@ -150,14 +140,11 @@ function projectDetail() {
                         overallDetail.innerHTML = p.intro;
 
                         overall.appendChild(overallDetail);
-                        overall.setAttribute('data-aos', 'fade-up');
-                        overall.setAttribute('data-aos-delay', '1000');
                     }
 
                     function createPagePrev() {
 
                         const pagePrevList = document.querySelector('.page-prev-list');
-                        let idx = 1;
 
                         p.prevImg.forEach(function (img, key) {
                             const pagePrevItem = document.createElement('li');
@@ -169,8 +156,6 @@ function projectDetail() {
                             pagePrevItem.setAttribute('data-num', key);
 
                             pagePrevList.appendChild(pagePrevItem);
-                            pagePrevItem.setAttribute('data-aos', 'fade-up');
-                            pagePrevItem.setAttribute('data-aos-delay', (idx * (key + 1)) * 100);
                         });
 
                     }
@@ -178,22 +163,8 @@ function projectDetail() {
                     function createUsedSkill() {
                         const skillList = document.querySelector('.skill-list');
 
-                        p.usedSkill.forEach(function (skill) {
-                            const skillItem = document.createElement('li');
-                            const skillImg = document.createElement('img');
-                            const skillName = document.createElement('span');
 
-                            skillImg.setAttribute('src', "../img/about-icon-" + skill + ".png");
-
-                            skillName.textContent = skill;
-
-                            skillItem.className = "skill-item";
-                            skillItem.appendChild(skillImg);
-                            skillItem.appendChild(skillName);
-
-                            skillList.appendChild(skillItem);
-                            skillList.setAttribute('data-aos', 'fade-up');
-                        });
+                        skillList.innerHTML = p.usedSkill;
                     }
 
                     function createRes() {
