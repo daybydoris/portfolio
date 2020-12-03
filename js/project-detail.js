@@ -21,33 +21,39 @@ function projectDetail() {
             const pagePrevOrig = document.querySelector('.page-prev-orig');
 
             //prev/next
-            const prev = document.querySelector('.prev');
-            const next = document.querySelector('.next');
+            const prev = document.querySelector('.prev a');
+            const next = document.querySelector('.next a');
 
             prev.addEventListener('click', funPrevNext);
             next.addEventListener('click', funPrevNext);
 
+            //--------------------
+            // 이전 다음 버튼
+            //--------------------
 
-            //이전 다음 버튼
+
             function funPrevNext(e) {
                 e.preventDefault();
 
                 let numNow = localStorage.getItem('num');
 
+                //prev
                 if (e.target.closest('div').classList.contains('prev')) {
                     if (numNow > 0) {
                         numNow--;
                         localStorage.setItem('num', numNow);
-                        // location.href = 'project-detail.html';
+                        location.href = 'project-detail.html';
                     } else {
                         alert('첫 게시글입니다.');
                         return false;
                     }
                 } else {
+
+                    //next
                     if (numNow < data.project.length - 1) {
                         numNow++;
                         localStorage.setItem('num', numNow);
-                        // location.href = 'project-detail.html';
+                        location.href = 'project-detail.html';
                     } else {
                         alert('마지막 게시글입니다.');
                         return false;
