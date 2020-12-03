@@ -329,6 +329,30 @@ function common() {
         //contact
         conLabel.addEventListener('click', contactToggle);
 
+        //contact-label 색상 변경
+        if (filename == '/portfolio/') {
+
+
+            const winH = window.innerHeight;
+
+            window.addEventListener('scroll', function () {
+                let indexProject = document.querySelector('article.index-project');
+                let projectOffsetTop = indexProject.offsetTop;
+                let scrollY = window.scrollY;
+                let changeTiming = projectOffsetTop - scrollY;
+
+                if (changeTiming <= (winH * 0.8)) {
+                    conLabel.style.color = "#151515";
+                    conLabel.style.backgroundColor = "#fff";
+                } else {
+                    conLabel.style.color = "#fff";
+                    conLabel.style.backgroundColor = "#151515";
+                }
+            });
+
+        }
+
+
         //contact-box 열기/닫기
         function contactToggle(e) {
             e.preventDefault();
