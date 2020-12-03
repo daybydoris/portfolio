@@ -25,7 +25,7 @@ function common() {
         const images = document.querySelectorAll('.disappear');
 
         const cursorPointer = document.querySelector('.cursor');
-        let aTag = document.querySelectorAll('.atvBtn');
+
 
         const conLabel = document.querySelector('.contact-label');
         const conBox = document.querySelector('.contact-box');
@@ -132,9 +132,6 @@ function common() {
 
                 let pageUrl;
 
-
-
-
                 if (e.target.href == undefined || e.target.href == "") {
                     pageUrl = e.target.closest('a').getAttribute('href');
                 } else {
@@ -142,7 +139,6 @@ function common() {
                 }
 
                 //배경색 바꾸기
-                console.log(pageUrl);
 
                 if (pageUrl.includes('project.html') || pageUrl.includes('project-detail.html')) {
                     body.style.backgroundColor = '#151515';
@@ -173,6 +169,19 @@ function common() {
         //--------------------
         // 5. 마우스 커서 효과
         //--------------------
+        setTimeout(function () {
+            let aTag = document.querySelectorAll('.atvBtn');
+
+            //버튼 hover시 원 커지게 하기
+            aTag.forEach(function (a) {
+                a.addEventListener('mouseover', function () {
+                    cursorPointer.classList.add('active');
+                });
+                a.addEventListener('mouseleave', function () {
+                    cursorPointer.classList.remove('active');
+                });
+            });
+        }, 100);
 
         document.addEventListener('mousemove', cursorPos);
 
@@ -190,15 +199,7 @@ function common() {
         }
 
 
-        //버튼 hover시 원 커지게 하기
-        aTag.forEach(function (a) {
-            a.addEventListener('mouseover', function () {
-                cursorPointer.classList.add('active');
-            });
-            a.addEventListener('mouseleave', function () {
-                cursorPointer.classList.remove('active');
-            });
-        });
+
 
 
 
@@ -248,24 +249,19 @@ function common() {
         function navToggle() {
 
             if (menuTrigger.classList.contains('active')) {
-
-                navWrap.style.transition = "0.7s";
-                navWrap.style.transform = "scale(1.5)";
-
-                // menuBtn.forEach(function(m){
-                //     m.setAttribute('data-aos','fade-up');
-                // });
-
                 stopScroll();
 
-                setTimeout(function () {
+                navWrap.style.transition = "0.8s";
+                navWrap.style.transform = "scale(1.5)";
 
-                    nav.classList.add('active');
+
+                setTimeout(function () {
+                    $('nav').fadeTo(100, 1);
                 }, 500);
 
             } else {
 
-                nav.classList.remove('active');
+                $('nav').fadeTo(100, 0);
 
                 allowScroll();
 
@@ -294,7 +290,7 @@ function common() {
 
 
 
-            nav.classList.remove('active');
+            $('nav').fadeTo(100, 0);
 
             allowScroll();
 
@@ -391,7 +387,6 @@ function common() {
         }
     }
 
-    console.log('export');
 }
 
 export default common;
