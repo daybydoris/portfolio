@@ -27,26 +27,30 @@ function projectDetail() {
             prev.addEventListener('click', funPrevNext);
             next.addEventListener('click', funPrevNext);
 
+
+            //이전 다음 버튼
             function funPrevNext(e) {
                 e.preventDefault();
+
                 let numNow = localStorage.getItem('num');
 
                 if (e.target.closest('div').classList.contains('prev')) {
                     if (numNow > 0) {
                         numNow--;
                         localStorage.setItem('num', numNow);
-                        location.href = 'project-detail.html';
+                        // location.href = 'project-detail.html';
                     } else {
                         alert('첫 게시글입니다.');
+                        return false;
                     }
                 } else {
-                    console.log(numNow);
                     if (numNow < data.project.length - 1) {
                         numNow++;
                         localStorage.setItem('num', numNow);
-                        location.href = 'project-detail.html';
+                        // location.href = 'project-detail.html';
                     } else {
                         alert('마지막 게시글입니다.');
+                        return false;
                     }
                 }
             }
@@ -107,10 +111,10 @@ function projectDetail() {
                         mDemoBtn.textContent = "웹사이트 방문하기";
                         mDemoBtn.setAttribute("href", p.siteUrl);
                         mDemoBtn.setAttribute("target", "_blank");
-                        mDemoBtn.classList = "detail-btn atvBtn"
+                        mDemoBtn.classList = "detail-btn"
 
                         mCircle.setAttribute("href", p.siteUrl);
-                        mCircle.classList = "circle atvBtn";
+                        mCircle.classList = "circle";
 
 
                         mDemo.appendChild(mDemoBtn);
@@ -262,9 +266,6 @@ function projectDetail() {
             }, 500);
         }
     });
-
-    console.log('projectDetail');
-
 
     //end
 }
