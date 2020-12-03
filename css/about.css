@@ -286,8 +286,8 @@ article.skills .skills-inner .skills-wrap .familiar .skill-list .skill-item span
     width: 95%;
   }
   article.about .scroll {
-    left: 90%;
-    bottom: 10%;
+    left: 88%;
+    bottom: 5%;
   }
   article.skills .skills-inner {
     -webkit-box-orient: vertical;

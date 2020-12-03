@@ -186,7 +186,7 @@ article.index-project .slider .slider-con .svg-box svg .title {
             transform: translate(-50%, -50%);
   }
   article.index-about .scroll {
-    left: 90%;
+    left: 80%;
     bottom: 10%;
   }
   article.index-project {
@@ -218,6 +218,9 @@ article.index-project .slider .slider-con .svg-box svg .title {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+  article.index-about .scroll {
+    bottom: 5%;
   }
   article.index-project {
     padding: 200px 0;
