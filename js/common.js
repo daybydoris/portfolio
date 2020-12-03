@@ -62,7 +62,7 @@ function common() {
 
         function headerColor(name) {
 
-            if (filename == '/portfolio/') {
+            if (filename == '/portfolio/' || filename == '/portfolio/index.html') {
 
                 let indexProject = document.querySelector('article.index-project');
                 let projectOffsetTop = indexProject.offsetTop;
@@ -330,7 +330,7 @@ function common() {
         conLabel.addEventListener('click', contactToggle);
 
         //contact-label 색상 변경
-        if (filename == '/portfolio/') {
+        if (filename == '/portfolio/' || filename == '/portfolio/index.html') {
 
 
             const winH = window.innerHeight;
