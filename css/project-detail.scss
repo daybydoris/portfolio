@@ -320,6 +320,11 @@ article.project-detail{
 
         overflow: hidden;
 
+        .prevBtn, .nextBtn{
+            width:100%;
+            height:100%;
+        }
+
         a{
             width:100%;
             height:100%;
@@ -329,6 +334,7 @@ article.project-detail{
     text{
         fill:transparent;
         stroke-width:1.5;
+        transform: translate(50%, 65%);
     }
     .prev{
         background:#fff;
@@ -522,9 +528,21 @@ article.project-detail{
                 }
             }
         }
+
+        
+
     }
 
-    
+    .footer{
+        height:60px;
+
+        .prevBtn, .nextBtn{
+            text{
+                font-size:40px;
+                transform: translate(50%, 65%);
+            }
+        }
+    }
 
 }
 
@@ -694,4 +712,5 @@ article.project-detail{
             }
         }
     }
+
 }

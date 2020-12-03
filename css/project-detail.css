@@ -410,6 +410,11 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
   overflow: hidden;
 }
 
+.footer .prev .prevBtn, .footer .prev .nextBtn, .footer .next .prevBtn, .footer .next .nextBtn {
+  width: 100%;
+  height: 100%;
+}
+
 .footer .prev a, .footer .next a {
   width: 100%;
   height: 100%;
@@ -419,6 +424,8 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
 .footer text {
   fill: transparent;
   stroke-width: 1.5;
+  -webkit-transform: translate(50%, 65%);
+          transform: translate(50%, 65%);
 }
 
 .footer .prev {
@@ -605,6 +612,14 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+  }
+  .footer {
+    height: 60px;
+  }
+  .footer .prevBtn text, .footer .nextBtn text {
+    font-size: 40px;
+    -webkit-transform: translate(50%, 65%);
+            transform: translate(50%, 65%);
   }
 }
 
