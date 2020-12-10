@@ -2,13 +2,25 @@
 
 function common() {
 
+    //-----------------------
+    //  브라우저 체크 
+    //-----------------------
+
+    var agent = navigator.userAgent.toLowerCase();
+
+    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) { // IE 일 경우
+        alert('본 포트폴리오 사이트는 IE를 지원하지 않습니다. 크롬, 파이어폭스 등 다른 브라우저를 이용해주세요.');
+        location.href = "https://www.google.com/intl/ko/chrome/";
+        return;
+    }
+
     //헤더 불러오기
     $("header").load("/portfolio/inc_head_foot.html header .h_container", init);
 
     function init() {
 
         //-----------------------------
-        // 1. 변수 선언
+        // 1. DOM 선택
         //-----------------------------
 
         const html = document.querySelector('html');
@@ -53,9 +65,6 @@ function common() {
 
         let filename = location.pathname;
 
-        headerColor(logo);
-        headerColor(triggerSpan);
-
 
         //index.html은 스크롤 이벤트
         //나머지는 article 컬러에 따라서 변경
@@ -98,7 +107,8 @@ function common() {
             }
         }
 
-
+        headerColor(logo);
+        headerColor(triggerSpan);
 
 
         //-----------------------------
@@ -241,9 +251,9 @@ function common() {
         }
 
 
-
-
-
+        //-----------------------------
+        // 내비게이션
+        //-----------------------------
 
         //nav 열기/닫기
         function navToggle() {
@@ -288,12 +298,12 @@ function common() {
                 pageUrl = e.target.getAttribute('href');
             }
 
-
-
-            $('nav').fadeTo(100, 0);
-
             allowScroll();
 
+            //nav 서서히 사라짐
+            $('nav').fadeTo(100, 0);
+
+            //navWrap 크기 줄어듦
             setTimeout(function () {
                 navWrap.style.transform = "scale(0)";
             }, 150);
@@ -331,8 +341,6 @@ function common() {
 
         //contact-label 색상 변경
         if (filename == '/portfolio/' || filename == '/portfolio/index.html') {
-
-
             const winH = window.innerHeight;
 
             window.addEventListener('scroll', function () {
@@ -369,46 +377,67 @@ function common() {
 
                 const winSize = window.matchMedia('(max-width:767px)');
 
-                //반응형 처리
-                if (winSize.matches == true) {
-                    //mobile
+                //label 위치 변경
 
-                    //label 위치 변경
+                conLabel.textContent = 'Close';
+                if (conLabel.style.backgroundColor == "rgb(255, 255, 255)") {
                     setTimeout(function () {
-                        conLabel.textContent = 'Close';
-                        conLabel.style = 'left:95%; opacity:1;';
+                        //반응형 처리
+                        if (winSize.matches == true) {
+                            //mobile
+                            conLabel.style = 'color:#151515; background-color:#fff; left:95%; opacity:1;';
+                        } else {
+                            //pc
+                            conLabel.style = 'color:#151515; background-color:#fff; left:98%; opacity:1;';
+                        }
                     }, 300);
                 } else {
-                    //pc
-
-                    //label 위치 변경
                     setTimeout(function () {
-                        conLabel.textContent = 'Close';
-                        conLabel.style = 'left:98%; opacity:1;';
+                        //반응형 처리
+                        if (winSize.matches == true) {
+                            //mobile
+                            conLabel.style = 'left:95%; opacity:1;';
+                        } else {
+                            //pc
+                            conLabel.style = 'left:98%; opacity:1;';
+                        }
                     }, 300);
                 }
-
-
-
             } else {
                 //CLOSE
+
                 contact.classList.remove('active');
 
                 allowHeader();
                 allowScroll();
 
-                //label 위치 변경
-                setTimeout(function () {
-                    conLabel.style = 'left:100%; opacity:1;';
-                }, 1000);
+
                 setTimeout(function () {
                     conLabel.textContent = 'Contact';
-
                 }, 1000);
+
+                //label 위치 변경
+                if (conLabel.style.backgroundColor == "rgb(255, 255, 255)") {
+
+                    setTimeout(function () {
+                        conLabel.style = 'color:#151515; background-color:#fff; left:100%; opacity:1;';
+                    }, 1000);
+
+                } else {
+
+                    setTimeout(function () {
+                        conLabel.style = 'left:100%; opacity:1;';
+                    }, 1000);
+
+                }
+
+
 
             }
 
         }
+
+
     }
 
 }
