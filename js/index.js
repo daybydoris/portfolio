@@ -3,7 +3,7 @@
 
 function index() {
     //----------------------------
-    // particle.js
+    // 1. particle.js
     //----------------------------
 
     particlesJS.load('particles-js', 'particlesjs-config.json', function () {
@@ -11,7 +11,7 @@ function index() {
     });
 
     //-----------------------------
-    // scrolldown 아이콘 애니메이션
+    // 2. scrolldown 아이콘 애니메이션
     //-----------------------------
 
     setInterval(lineActive, 2000);
@@ -33,6 +33,9 @@ function index() {
     }
 
 
+    //-------------------------------
+    // 3. article PROJECT (AJAX 통신)
+    //-------------------------------
 
     $.ajax({
         url: "project.json",
@@ -43,7 +46,10 @@ function index() {
 
             data.project.forEach(function (p) {
 
-                //slick content 넣기
+                //-------------------------------
+                // 3-1. SLIDER 콘텐츠  넣기
+                //-------------------------------
+
                 //slider-con
                 let sliderCon = document.createElement('div');
 
@@ -93,9 +99,9 @@ function index() {
 
             $('.svg-box').on('click', saveProjectId);
 
-            //-----------------------
-            //게시글 넘버값 저장
-            //-----------------------
+            //-------------------------
+            // 3-2. 게시글 넘버값 저장
+            //-------------------------
 
             function saveProjectId(e) {
                 e.preventDefault();
@@ -107,7 +113,7 @@ function index() {
             }
 
             //-----------------------------
-            // slick
+            // 3-3. slick
             //-----------------------------
 
             $(".slider").slick({

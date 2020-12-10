@@ -3,10 +3,18 @@
 function projectDetail() {
     //start
 
+    //-----------------------------------------------
+    // 1. PROJECT DETAIL 데이터 블러오기 (AJAX 통신)
+    //-----------------------------------------------
+
     $.ajax({
         url: "../project.json",
         type: "GET",
         success: function (data) {
+
+            //-------------------
+            // 1-1. DOM 선택
+            //-------------------
 
             const article = document.querySelector('article.project-detail');
             const listBack = document.querySelector('.listBack');
@@ -17,20 +25,17 @@ function projectDetail() {
             const pcDemo = document.querySelector('.pcDemo');
             const overall = document.querySelector('.top-overall');
             const feature = document.querySelector('.feature');
-
-            const pagePrevOrig = document.querySelector('.page-prev-orig');
-
-            //prev/next
             const prev = document.querySelector('.prev a');
             const next = document.querySelector('.next a');
 
+
+
+            //--------------------------
+            // 1-2. PREV / NEXT BUTTON
+            //--------------------------
+
             prev.addEventListener('click', funPrevNext);
             next.addEventListener('click', funPrevNext);
-
-            //--------------------
-            // 이전 다음 버튼
-            //--------------------
-
 
             function funPrevNext(e) {
                 e.preventDefault();
@@ -61,8 +66,9 @@ function projectDetail() {
                 }
             }
 
-
-
+            //----------------------------
+            // 1-3. HTML TAG 추가
+            //----------------------------
             //키 설정 해야함 (localStorage로 받아서)
             data.project.forEach(function (p) {
                 if (p.num == localStorage.getItem('num')) {
@@ -78,6 +84,7 @@ function projectDetail() {
                     createRes();
                     createFeature();
 
+                    //타이틀
                     function createIndexTxt() {
                         const front = document.createElement('div');
                         const txtBack = document.createElement('span');
@@ -93,6 +100,7 @@ function projectDetail() {
                         indexTxt.appendChild(front);
                     }
 
+                    //프로젝트 이름
                     function projectName() {
                         const name = document.createElement('p');
 
@@ -101,6 +109,7 @@ function projectDetail() {
                         topTitle.appendChild(name);
                     }
 
+                    //프로젝트 기간
                     function projectTime() {
                         const time = document.querySelector('p');
 
@@ -109,8 +118,8 @@ function projectDetail() {
                         topTime.appendChild(time);
                     }
 
+                    //웹사이트 바로가기(모바일)
                     function createMobileDemo() {
-                        //mobile용
                         const mDemoBtn = document.createElement('a');
                         const mCircle = document.createElement('a');
 
@@ -127,8 +136,8 @@ function projectDetail() {
                         mDemo.appendChild(mCircle);
                     }
 
+                    //웹사이트 바로가기(PC)
                     function createDemo() {
-                        //pc용
                         const demoBtn = document.createElement('a');
                         const circle = document.createElement('a');
 
@@ -144,6 +153,7 @@ function projectDetail() {
                         pcDemo.appendChild(circle);
                     }
 
+                    //프로젝트 개요
                     function createIntro() {
                         const overallDetail = document.createElement('p');
 
@@ -152,6 +162,8 @@ function projectDetail() {
                         overall.appendChild(overallDetail);
                     }
 
+
+                    //프로젝트 미리보기
                     function createPagePrev() {
 
                         const pagePrevList = document.querySelector('.page-prev-list');
@@ -170,6 +182,8 @@ function projectDetail() {
 
                     }
 
+
+                    //기술 스택
                     function createUsedSkill() {
                         const skillList = document.querySelector('.skill-list');
 
@@ -177,6 +191,7 @@ function projectDetail() {
                         skillList.innerHTML = p.usedSkill;
                     }
 
+                    //반응형 분기점
                     function createRes() {
                         if (p.isResponsive == true) {
                             const resDetail = document.querySelector('.res-detail .inner');
@@ -202,21 +217,13 @@ function projectDetail() {
                         }
                     }
 
+
+                    //중점 구현 기능
                     function createFeature() {
                         const featCon = p.features;
 
                         feature.innerHTML = p.features;
                     }
-
-
-
-                    //중점 구현 기능 Tab 이동
-                    $(".tab a").on("click", function (e) {
-                        e.preventDefault();//이벤트의 기본동작을 막는다.
-                        var thisTarget = $(this).attr("href");
-                        $(window).scrollTop($('#' + thisTarget).offset().top);
-                    });
-
                 }
             });
 
@@ -225,9 +232,8 @@ function projectDetail() {
             setTimeout(function () {
 
                 //---------------------
-                // tab
+                // 1-4. tab
                 //---------------------
-
 
                 //tab 위치 잡기
                 const tab = document.querySelector('.tab');
