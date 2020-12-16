@@ -608,7 +608,6 @@ aside {
       height: 100vh;
 
       background: $black;
-
       .contact-txt {
         width: 70%;
         position: absolute;
@@ -871,3 +870,56 @@ aside {
   }
 }
 
+/* 아이패드 프로 (해상도 2000px ~)*/
+@media (min-width:2000px) {
+  .cursor{
+    display:none;
+  }
+
+  header{
+    .h_container {
+      padding: 70px 70px;
+
+      .logo{
+        svg{
+          .mobile-logo{
+            display:block;
+            font-size:70px;
+          }
+          .pc-logo{
+            display:none;
+          }
+        }
+      }
+      .menu-trigger{
+        width:100px;
+        height:50px;
+      }
+    }
+  }
+
+  .btn-wrap{
+    display: inline-block;
+    margin:25px 0;
+    position: relative;
+  
+    .detail-btn{
+      font-size:28px;
+      font-weight: 300;
+    }
+    .circle{
+      display:none;
+    }
+  }
+
+  .index-txt{
+    font-size:90px;
+    .front{
+        .txt-back{
+          font-size:90px;
+          letter-spacing: 30px;
+  
+        }
+    }
+  }
+}
