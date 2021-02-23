@@ -106,8 +106,6 @@ function index() {
             function saveProjectId(e) {
                 e.preventDefault();
 
-                console.log(e.target);
-
                 let projectId = e.target.closest('a').id;
                 localStorage.setItem('num', projectId);
             }

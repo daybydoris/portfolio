@@ -15,7 +15,7 @@ function common() {
     }
 
     //헤더 불러오기
-    $("header").load("/portfolio/inc_head_foot.html header .h_container", init);
+    $("header").load("/inc_head_foot.html header .h_container", init);
 
     function init() {
 
@@ -257,7 +257,6 @@ function common() {
 
         //nav 열기/닫기
         function navToggle() {
-
             if (menuTrigger.classList.contains('active')) {
                 stopScroll();
 
@@ -271,7 +270,7 @@ function common() {
 
             } else {
 
-                $('nav').fadeTo(100, 0);
+                $('nav').fadeOut(100);
 
                 allowScroll();
 

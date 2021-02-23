@@ -188,8 +188,6 @@ function project() {
 
     });
 
-    console.log('project');
-
 }
 
 export default project;

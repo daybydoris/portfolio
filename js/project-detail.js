@@ -204,7 +204,7 @@ function projectDetail() {
                                 type.id = key;
                                 type.textContent = key;
 
-                                resolution.textContent = p.responsiveType[key] + "px";
+                                resolution.textContent = p.responsiveType[key];
 
                                 resDetail.insertBefore(resolution, lastPx);
                                 resDetail.insertBefore(type, lastPx);
