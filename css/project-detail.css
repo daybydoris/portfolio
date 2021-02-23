@@ -342,6 +342,7 @@ article.project-detail .feature-detail .feature-list li .feat-item {
           justify-content: space-between;
   padding-left: 10px;
   margin-bottom: 70px;
+  width: 100%;
 }
 
 article.project-detail .feature-detail .feature-list li .feat-item .feature-detail {
@@ -781,4 +782,3 @@ article.project-detail .feature-detail .feature-list .detail-box > div {
             flex-flow: column;
   }
 }
-/*# sourceMappingURL=project-detail.css.map */
