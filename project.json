@@ -55,7 +55,7 @@
             "mobileTitle": "<text x='0' y='40' class='title mobile-title'>MyTube Music.</text>",
             "pcTitle": "<text x='100%' y='60' text-anchor='end' class='title pc-title'>MyTube</text><text x='100%' y='120'  text-anchor='end' class='title pc-title'>Music.</text>",
             "elapsed": "2021.01 - 2021.02",
-            "thumb": "img/project-mytubemusic-thumb.jpg",
+            "thumb": "img/project-mytubemusic-thumb.png",
             "siteUrl": "http://mytubemusic.herokuapp.com/",
             "prevTxt": "YouTube Music 클론 코딩 프로젝트",
             "intro": "YouTube Music 클론 코딩 프로젝트. UI 디자인과 음악 재생, 플레이리스트, 보관 기능을 중점으로 구현하였습니다.",
