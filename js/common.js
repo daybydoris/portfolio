@@ -15,7 +15,7 @@ function common() {
     }
 
     //헤더 불러오기
-    $("header").load("/inc_head_foot.html header .h_container", init);
+    $("header").load("/portfolio/inc_head_foot.html header .h_container", init);
 
     function init() {
 
