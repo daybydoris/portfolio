@@ -7,7 +7,7 @@ function project() {
         type: "GET",
         success: function (data) {
 
-            data.project.forEach(function (p, key) {
+            data.project.forEach(function (p) {
 
                 //createElement
 
@@ -94,16 +94,16 @@ function project() {
 
                 function isOdd(num) { return num % 2; }
 
-                if (isOdd(key) == 0) {
-                    projectItem.classList = "project-item odd";
-                } else {
+                if (isOdd(p.num) == 0) {
                     projectItem.classList = "project-item even";
+                } else {
+                    projectItem.classList = "project-item odd";
                 }
                 projectItem.appendChild(thumb);
                 projectItem.appendChild(projectPrev);
                 projectItem.setAttribute('data-aos', 'fade-up');
 
-                if (key == 1) {
+                if (p.num == 1) {
                     projectItem.setAttribute('data-aos-delay', '800');
                 } else {
                     projectItem.setAttribute('data-aos-offset', '500');
