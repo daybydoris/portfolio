@@ -168,18 +168,19 @@ function projectDetail() {
 
                         const pagePrevList = document.querySelector('.page-prev-list');
 
-                        p.prevImg.forEach(function (img, key) {
-                            const pagePrevItem = document.createElement('li');
-                            const pagePrevImg = document.createElement('img');
+                        if (p.prevImg) {
+                            p.prevImg.forEach(function (img, key) {
+                                const pagePrevItem = document.createElement('li');
+                                const pagePrevImg = document.createElement('img');
 
-                            pagePrevImg.setAttribute('src', img);
-                            pagePrevItem.appendChild(pagePrevImg);
-                            pagePrevItem.className = "page-prev-item";
-                            pagePrevItem.setAttribute('data-num', key);
+                                pagePrevImg.setAttribute('src', img);
+                                pagePrevItem.appendChild(pagePrevImg);
+                                pagePrevItem.className = "page-prev-item";
+                                pagePrevItem.setAttribute('data-num', key);
 
-                            pagePrevList.appendChild(pagePrevItem);
-                        });
-
+                                pagePrevList.appendChild(pagePrevItem);
+                            });
+                        }
                     }
 
 
