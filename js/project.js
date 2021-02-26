@@ -106,7 +106,7 @@ function project() {
                 if (p.num == 1) {
                     projectItem.setAttribute('data-aos-delay', '800');
                 } else {
-                    projectItem.setAttribute('data-aos-offset', '500');
+                    projectItem.setAttribute('data-aos-offset', '200');
                 }
 
                 projectList.appendChild(projectItem);
