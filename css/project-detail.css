@@ -49,6 +49,7 @@ article.project-detail .detail-btn {
 
 article.project-detail .btn-wrap {
   position: relative;
+  margin: 0;
 }
 
 article.project-detail .circle {
