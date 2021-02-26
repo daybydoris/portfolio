@@ -53,9 +53,8 @@ function projectDetail() {
                         return false;
                     }
                 } else {
-
                     //next
-                    if (numNow < data.project.length - 1) {
+                    if (numNow < data.project.length) {
                         numNow++;
                         localStorage.setItem('num', numNow);
                         location.href = 'project-detail.html';
