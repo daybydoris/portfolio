@@ -51,47 +51,40 @@ function project() {
                 svgBox.appendChild(titleSvg);
                 projectPrev.appendChild(svgBox);
 
+
                 //responsive
+                if (p.isResponsive == false) {
+                    let pc = document.createElement('p'),
+                        tablet = document.createElement('p'),
+                        mobile = document.createElement('p'),
+                        slash1 = document.createElement('span'),
+                        slash2 = document.createElement('span');
 
-                let pc = document.createElement('p'),
-                    tablet = document.createElement('p'),
-                    mobile = document.createElement('p'),
-                    slash1 = document.createElement('span'),
-                    slash2 = document.createElement('span');
+                    pc.id = "pc",
+                        tablet.id = "tablet",
+                        mobile.id = "mobile";
 
-                pc.id = "pc",
-                    tablet.id = "tablet",
-                    mobile.id = "mobile";
+                    pc.textContent = "PC";
+                    tablet.textContent = "Tablet";
+                    mobile.textContent = "Mobile";
+                    slash1.textContent = "/";
+                    slash2.textContent = "/";
 
-                pc.textContent = "PC";
-                tablet.textContent = "Tablet";
-                mobile.textContent = "Mobile";
-                slash1.textContent = "/";
-                slash2.textContent = "/";
+                    responsive.appendChild(pc);
+                    responsive.appendChild(slash1);
+                    responsive.appendChild(tablet);
+                    responsive.appendChild(slash2);
+                    responsive.appendChild(mobile);
 
-                responsive.appendChild(pc);
-                responsive.appendChild(slash1);
-                responsive.appendChild(tablet);
-                responsive.appendChild(slash2);
-                responsive.appendChild(mobile);
+                    pc.style.color = "#99785F";
+                    tablet.style.color = "#99785F";
+                    mobile.style.color = "#99785F";
 
-                responsive.classList = "responsive";
+                    responsive.classList = "responsive";
 
-                projectPrev.appendChild(responsive);
+                    projectPrev.appendChild(responsive);
+                }
 
-
-                setTimeout(function () {
-
-                    if (p.isResponsive == false) {
-                        pc.style.color = "#202020";
-                        tablet.style.color = "#202020";
-                        mobile.style.color = "#202020";
-                    } else {
-                        pc.style.color = "#99785F";
-                        tablet.style.color = "#99785F";
-                        mobile.style.color = "#99785F";
-                    }
-                }, 500);
 
                 //prev-text
 
@@ -113,7 +106,7 @@ function project() {
                 if (key == 1) {
                     projectItem.setAttribute('data-aos-delay', '800');
                 } else {
-                    projectItem.setAttribute('data-aos-offset', '400');
+                    projectItem.setAttribute('data-aos-offset', '500');
                 }
 
                 projectList.appendChild(projectItem);
