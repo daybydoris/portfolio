@@ -32,7 +32,7 @@ function project() {
                 thumbImg.setAttribute('src', '../' + p.thumb);
 
                 aTag.href = 'project-detail.html';
-                aTag.id = key;
+                aTag.id = p.num;
                 aTag.classList = "atvBtn locate";
 
                 thumb.classList = "thumb";
@@ -110,7 +110,7 @@ function project() {
                 projectItem.appendChild(projectPrev);
                 projectItem.setAttribute('data-aos', 'fade-up');
 
-                if (key == 0) {
+                if (key == 1) {
                     projectItem.setAttribute('data-aos-delay', '800');
                 } else {
                     projectItem.setAttribute('data-aos-offset', '400');
