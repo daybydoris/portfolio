@@ -44,7 +44,7 @@ function projectDetail() {
 
                 //prev
                 if (e.target.closest('div').classList.contains('prev')) {
-                    if (numNow > 0) {
+                    if (numNow > 1) {
                         numNow--;
                         localStorage.setItem('num', numNow);
                         location.href = 'project-detail.html';
